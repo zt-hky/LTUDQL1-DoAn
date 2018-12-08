@@ -1,8 +1,15 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
-/* Created on:     7/12/2018 7:02:28 PM                         */
+/* Created on:     8/12/2018 9:37:34 AM                         */
 /*==============================================================*/
 
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('BANGGIA') and o.name = 'FK_BANGGIA_SANBAYDEN')
+alter table BANGGIA
+   drop constraint FK_BANGGIA_SANBAYDEN
+go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
@@ -120,7 +127,7 @@ go
 create table CHITIETCHUYENBAY (
    STT                  int                  not null,
    MaCB                 char(10)             not null,
-   MaSB                 char(10)             null,
+   MaSBTG               char(10)             null,
    TGDung               int                  null,
    GhiChu               text                 null,
    constraint PK_CHITIETCHUYENBAY primary key (STT, MaCB)
@@ -196,12 +203,17 @@ create table VECHUYENBAY (
 go
 
 alter table BANGGIA
+   add constraint FK_BANGGIA_SANBAYDEN foreign key (SBDen)
+      references SANBAY (MaSB)
+go
+
+alter table BANGGIA
    add constraint FK_BANGGIA_SANBAYDI foreign key (SBDi)
       references SANBAY (MaSB)
 go
 
 alter table CHITIETCHUYENBAY
-   add constraint FK_CHITIETC_REFERENCE_SANBAY foreign key (MaSB)
+   add constraint FK_CHITIETC_REFERENCE_SANBAY foreign key (MaSBTG)
       references SANBAY (MaSB)
 go
 
