@@ -57,57 +57,63 @@
             // 
             // btnThayDoiQuyDinh
             // 
+            this.btnThayDoiQuyDinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnThayDoiQuyDinh.Location = new System.Drawing.Point(0, 423);
             this.btnThayDoiQuyDinh.Name = "btnThayDoiQuyDinh";
             this.btnThayDoiQuyDinh.Size = new System.Drawing.Size(197, 87);
             this.btnThayDoiQuyDinh.TabIndex = 2;
             this.btnThayDoiQuyDinh.Text = "Thay Đổi Quy Định";
-            this.btnThayDoiQuyDinh.UseVisualStyleBackColor = true;
+            this.btnThayDoiQuyDinh.UseVisualStyleBackColor = false;
             // 
             // btnBaoCao
             // 
+            this.btnBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBaoCao.Location = new System.Drawing.Point(0, 338);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(197, 87);
             this.btnBaoCao.TabIndex = 2;
             this.btnBaoCao.Text = "Báo Cáo Cuối Tháng";
-            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.UseVisualStyleBackColor = false;
             // 
             // btnTraCuuChuyenBay
             // 
+            this.btnTraCuuChuyenBay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnTraCuuChuyenBay.Location = new System.Drawing.Point(0, 253);
             this.btnTraCuuChuyenBay.Name = "btnTraCuuChuyenBay";
             this.btnTraCuuChuyenBay.Size = new System.Drawing.Size(197, 87);
             this.btnTraCuuChuyenBay.TabIndex = 2;
             this.btnTraCuuChuyenBay.Text = "Tra Cứu Chuyến Bay";
-            this.btnTraCuuChuyenBay.UseVisualStyleBackColor = true;
+            this.btnTraCuuChuyenBay.UseVisualStyleBackColor = false;
             // 
             // btnBanVe
             // 
+            this.btnBanVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBanVe.Location = new System.Drawing.Point(0, 168);
             this.btnBanVe.Name = "btnBanVe";
             this.btnBanVe.Size = new System.Drawing.Size(197, 87);
             this.btnBanVe.TabIndex = 2;
             this.btnBanVe.Text = "Bán Vé";
-            this.btnBanVe.UseVisualStyleBackColor = true;
+            this.btnBanVe.UseVisualStyleBackColor = false;
             // 
             // btnDatCho
             // 
+            this.btnDatCho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDatCho.Location = new System.Drawing.Point(0, 85);
             this.btnDatCho.Name = "btnDatCho";
             this.btnDatCho.Size = new System.Drawing.Size(197, 85);
             this.btnDatCho.TabIndex = 2;
             this.btnDatCho.Text = "Đặt Chỗ";
-            this.btnDatCho.UseVisualStyleBackColor = true;
+            this.btnDatCho.UseVisualStyleBackColor = false;
             // 
             // btnNhanLichChuyenBay
             // 
+            this.btnNhanLichChuyenBay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnNhanLichChuyenBay.Location = new System.Drawing.Point(0, 0);
             this.btnNhanLichChuyenBay.Name = "btnNhanLichChuyenBay";
             this.btnNhanLichChuyenBay.Size = new System.Drawing.Size(197, 87);
             this.btnNhanLichChuyenBay.TabIndex = 2;
             this.btnNhanLichChuyenBay.Text = "Nhận Lịch Chuyến Bay";
-            this.btnNhanLichChuyenBay.UseVisualStyleBackColor = true;
+            this.btnNhanLichChuyenBay.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -131,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(899, 510);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
