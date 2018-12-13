@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnQLCB_Nhom10.View
 {
-    public partial class MainForm : Form
+    public partial class ctrBanVe : UserControl
     {
-        public MainForm()
+        public ctrBanVe()
         {
             InitializeComponent();
         }
-
-        
     }
 }
