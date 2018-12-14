@@ -59,6 +59,12 @@
     <Compile Include="View\ctrDanhSachChuyenBay.Designer.cs">
       <DependentUpon>ctrDanhSachChuyenBay.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ctrGhiNhanDatVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ctrGhiNhanDatVe.Designer.cs">
+      <DependentUpon>ctrGhiNhanDatVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ctrDanhSachChuyenBay.resx">
       <DependentUpon>ctrDanhSachChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ctrGhiNhanDatVe.resx">
+      <DependentUpon>ctrGhiNhanDatVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
