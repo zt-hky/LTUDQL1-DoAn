@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAnQLCB_Nhom10.View
+namespace DoAnQLCB_Nhom10
 {
-    public partial class MainForm : Form
+    public partial class FrmMain : Form
     {
-        public MainForm()
+        public FrmMain()
         {
             InitializeComponent();
         }
-
-        
     }
 }
