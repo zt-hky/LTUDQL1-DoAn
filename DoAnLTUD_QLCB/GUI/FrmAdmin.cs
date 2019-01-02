@@ -55,7 +55,14 @@ namespace GUI
 
         private void btnThayDoiQuyDinh_Click(object sender, EventArgs e)
         {
-
+            if (!panel.Contains(ucThayDoiQuyDinh.Instance))
+            {
+                panel.Controls.Add(ucThayDoiQuyDinh.Instance);
+                ucThayDoiQuyDinh.Instance.Dock = DockStyle.Fill;
+                ucThayDoiQuyDinh.Instance.BringToFront();
+            }
+            else
+                ucThayDoiQuyDinh.Instance.BringToFront();
         }
     }
 }

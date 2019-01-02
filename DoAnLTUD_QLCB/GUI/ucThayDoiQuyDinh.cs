@@ -12,6 +12,16 @@ namespace GUI
 {
     public partial class ucThayDoiQuyDinh : UserControl
     {
+        private static ucThayDoiQuyDinh _instance;
+        public static ucThayDoiQuyDinh Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ucThayDoiQuyDinh();
+                return _instance;
+            }
+        }
         public ucThayDoiQuyDinh()
         {
             InitializeComponent();
