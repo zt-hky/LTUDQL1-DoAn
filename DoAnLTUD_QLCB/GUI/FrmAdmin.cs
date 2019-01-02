@@ -64,5 +64,10 @@ namespace GUI
             else
                 ucThayDoiQuyDinh.Instance.BringToFront();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

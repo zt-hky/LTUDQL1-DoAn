@@ -76,5 +76,10 @@ namespace GUI
             else
                 ucBanVe.Instance.BringToFront();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

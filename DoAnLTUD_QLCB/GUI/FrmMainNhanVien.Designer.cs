@@ -30,14 +30,14 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBanVe = new System.Windows.Forms.Button();
+            this.btnDatCho = new System.Windows.Forms.Button();
+            this.btnNhanLichChuyenBay = new System.Windows.Forms.Button();
+            this.btnTraCuuKhachHang = new System.Windows.Forms.Button();
             this.btnTraCuuCB = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTraCuuKhachHang = new System.Windows.Forms.Button();
-            this.btnNhanLichChuyenBay = new System.Windows.Forms.Button();
-            this.btnDatCho = new System.Windows.Forms.Button();
-            this.btnBanVe = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,54 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(222, 547);
             this.panel2.TabIndex = 4;
+            // 
+            // btnBanVe
+            // 
+            this.btnBanVe.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBanVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanVe.Location = new System.Drawing.Point(0, 435);
+            this.btnBanVe.Name = "btnBanVe";
+            this.btnBanVe.Size = new System.Drawing.Size(222, 109);
+            this.btnBanVe.TabIndex = 32;
+            this.btnBanVe.Text = "Bán vé";
+            this.btnBanVe.UseVisualStyleBackColor = false;
+            this.btnBanVe.Click += new System.EventHandler(this.btnBanVe_Click);
+            // 
+            // btnDatCho
+            // 
+            this.btnDatCho.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatCho.Location = new System.Drawing.Point(1, 326);
+            this.btnDatCho.Name = "btnDatCho";
+            this.btnDatCho.Size = new System.Drawing.Size(222, 109);
+            this.btnDatCho.TabIndex = 31;
+            this.btnDatCho.Text = "Đặt chổ";
+            this.btnDatCho.UseVisualStyleBackColor = false;
+            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
+            // 
+            // btnNhanLichChuyenBay
+            // 
+            this.btnNhanLichChuyenBay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNhanLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanLichChuyenBay.Location = new System.Drawing.Point(0, 220);
+            this.btnNhanLichChuyenBay.Name = "btnNhanLichChuyenBay";
+            this.btnNhanLichChuyenBay.Size = new System.Drawing.Size(222, 109);
+            this.btnNhanLichChuyenBay.TabIndex = 30;
+            this.btnNhanLichChuyenBay.Text = "Nhận lịch chuyến bay";
+            this.btnNhanLichChuyenBay.UseVisualStyleBackColor = false;
+            this.btnNhanLichChuyenBay.Click += new System.EventHandler(this.btnNhanLichChuyenBay_Click);
+            // 
+            // btnTraCuuKhachHang
+            // 
+            this.btnTraCuuKhachHang.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTraCuuKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraCuuKhachHang.Location = new System.Drawing.Point(0, 110);
+            this.btnTraCuuKhachHang.Name = "btnTraCuuKhachHang";
+            this.btnTraCuuKhachHang.Size = new System.Drawing.Size(222, 109);
+            this.btnTraCuuKhachHang.TabIndex = 29;
+            this.btnTraCuuKhachHang.Text = "Tra cứu khách hàng";
+            this.btnTraCuuKhachHang.UseVisualStyleBackColor = false;
+            this.btnTraCuuKhachHang.Click += new System.EventHandler(this.btnTraCuuKhachHang_Click);
             // 
             // btnTraCuuCB
             // 
@@ -95,6 +143,7 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label1
             // 
@@ -106,54 +155,6 @@
             this.label1.Size = new System.Drawing.Size(158, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = " NHÂN VIÊN";
-            // 
-            // btnTraCuuKhachHang
-            // 
-            this.btnTraCuuKhachHang.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTraCuuKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraCuuKhachHang.Location = new System.Drawing.Point(0, 110);
-            this.btnTraCuuKhachHang.Name = "btnTraCuuKhachHang";
-            this.btnTraCuuKhachHang.Size = new System.Drawing.Size(222, 109);
-            this.btnTraCuuKhachHang.TabIndex = 29;
-            this.btnTraCuuKhachHang.Text = "Tra cứu khách hàng";
-            this.btnTraCuuKhachHang.UseVisualStyleBackColor = false;
-            this.btnTraCuuKhachHang.Click += new System.EventHandler(this.btnTraCuuKhachHang_Click);
-            // 
-            // btnNhanLichChuyenBay
-            // 
-            this.btnNhanLichChuyenBay.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNhanLichChuyenBay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanLichChuyenBay.Location = new System.Drawing.Point(0, 220);
-            this.btnNhanLichChuyenBay.Name = "btnNhanLichChuyenBay";
-            this.btnNhanLichChuyenBay.Size = new System.Drawing.Size(222, 109);
-            this.btnNhanLichChuyenBay.TabIndex = 30;
-            this.btnNhanLichChuyenBay.Text = "Nhận lịch chuyến bay";
-            this.btnNhanLichChuyenBay.UseVisualStyleBackColor = false;
-            this.btnNhanLichChuyenBay.Click += new System.EventHandler(this.btnNhanLichChuyenBay_Click);
-            // 
-            // btnDatCho
-            // 
-            this.btnDatCho.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatCho.Location = new System.Drawing.Point(1, 326);
-            this.btnDatCho.Name = "btnDatCho";
-            this.btnDatCho.Size = new System.Drawing.Size(222, 109);
-            this.btnDatCho.TabIndex = 31;
-            this.btnDatCho.Text = "Đặt chổ";
-            this.btnDatCho.UseVisualStyleBackColor = false;
-            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
-            // 
-            // btnBanVe
-            // 
-            this.btnBanVe.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBanVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanVe.Location = new System.Drawing.Point(0, 435);
-            this.btnBanVe.Name = "btnBanVe";
-            this.btnBanVe.Size = new System.Drawing.Size(222, 109);
-            this.btnBanVe.TabIndex = 32;
-            this.btnBanVe.Text = "Bán vé";
-            this.btnBanVe.UseVisualStyleBackColor = false;
-            this.btnBanVe.Click += new System.EventHandler(this.btnBanVe_Click);
             // 
             // FrmMainNhanVien
             // 

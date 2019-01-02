@@ -57,6 +57,12 @@
     <Compile Include="FrmMainNhanVien.Designer.cs">
       <DependentUpon>FrmMainNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemKhachHang.Designer.cs">
+      <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucBanVe.cs">
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainNhanVien.resx">
       <DependentUpon>FrmMainNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemKhachHang.resx">
+      <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
