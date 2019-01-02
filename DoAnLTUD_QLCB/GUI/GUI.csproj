@@ -59,6 +59,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucBanVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBanVe.Designer.cs">
+      <DependentUpon>ucBanVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDatCho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDatCho.Designer.cs">
+      <DependentUpon>ucDatCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanLichChuyenBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanLichChuyenBay.Designer.cs">
+      <DependentUpon>ucNhanLichChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucThayDoiQuyDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucThayDoiQuyDinh.Designer.cs">
+      <DependentUpon>ucThayDoiQuyDinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucThongKeNam.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +101,12 @@
     <Compile Include="ucTraCuuChuyenBay.Designer.cs">
       <DependentUpon>ucTraCuuChuyenBay.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTraCuuKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTraCuuKhachHang.Designer.cs">
+      <DependentUpon>ucTraCuuKhachHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +122,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucBanVe.resx">
+      <DependentUpon>ucBanVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDatCho.resx">
+      <DependentUpon>ucDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanLichChuyenBay.resx">
+      <DependentUpon>ucNhanLichChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucThayDoiQuyDinh.resx">
+      <DependentUpon>ucThayDoiQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucThongKeNam.resx">
       <DependentUpon>ucThongKeNam.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucTraCuuChuyenBay.resx">
       <DependentUpon>ucTraCuuChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTraCuuKhachHang.resx">
+      <DependentUpon>ucTraCuuKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

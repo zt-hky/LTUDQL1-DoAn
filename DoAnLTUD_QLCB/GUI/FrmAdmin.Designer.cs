@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class FrmMain
+    partial class FrmMainAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.btnThongKeThang = new System.Windows.Forms.Button();
             this.btnTraCuuCB = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.btnThayDoiQuyDinh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnThayDoiQuyDinh);
             this.panel2.Controls.Add(this.btnThongKeNam);
             this.panel2.Controls.Add(this.btnThongKeThang);
             this.panel2.Controls.Add(this.btnTraCuuCB);
@@ -87,9 +89,9 @@
             // 
             this.btnThongKeNam.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThongKeNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeNam.Location = new System.Drawing.Point(0, 362);
+            this.btnThongKeNam.Location = new System.Drawing.Point(0, 277);
             this.btnThongKeNam.Name = "btnThongKeNam";
-            this.btnThongKeNam.Size = new System.Drawing.Size(222, 182);
+            this.btnThongKeNam.Size = new System.Drawing.Size(222, 136);
             this.btnThongKeNam.TabIndex = 30;
             this.btnThongKeNam.Text = "Thống kê theo năm";
             this.btnThongKeNam.UseVisualStyleBackColor = false;
@@ -99,9 +101,9 @@
             // 
             this.btnThongKeThang.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThongKeThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeThang.Location = new System.Drawing.Point(0, 182);
+            this.btnThongKeThang.Location = new System.Drawing.Point(-1, 139);
             this.btnThongKeThang.Name = "btnThongKeThang";
-            this.btnThongKeThang.Size = new System.Drawing.Size(222, 182);
+            this.btnThongKeThang.Size = new System.Drawing.Size(222, 136);
             this.btnThongKeThang.TabIndex = 29;
             this.btnThongKeThang.Text = "Thống kê theo tháng";
             this.btnThongKeThang.UseVisualStyleBackColor = false;
@@ -113,7 +115,7 @@
             this.btnTraCuuCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTraCuuCB.Location = new System.Drawing.Point(0, 3);
             this.btnTraCuuCB.Name = "btnTraCuuCB";
-            this.btnTraCuuCB.Size = new System.Drawing.Size(222, 182);
+            this.btnTraCuuCB.Size = new System.Drawing.Size(222, 136);
             this.btnTraCuuCB.TabIndex = 28;
             this.btnTraCuuCB.Text = "Tra cứu chuyến bay";
             this.btnTraCuuCB.UseVisualStyleBackColor = false;
@@ -127,7 +129,19 @@
             this.panel.Size = new System.Drawing.Size(702, 547);
             this.panel.TabIndex = 2;
             // 
-            // FrmMain
+            // btnThayDoiQuyDinh
+            // 
+            this.btnThayDoiQuyDinh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThayDoiQuyDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThayDoiQuyDinh.Location = new System.Drawing.Point(-1, 411);
+            this.btnThayDoiQuyDinh.Name = "btnThayDoiQuyDinh";
+            this.btnThayDoiQuyDinh.Size = new System.Drawing.Size(222, 136);
+            this.btnThayDoiQuyDinh.TabIndex = 31;
+            this.btnThayDoiQuyDinh.Text = "Thay đổi quy định";
+            this.btnThayDoiQuyDinh.UseVisualStyleBackColor = false;
+            this.btnThayDoiQuyDinh.Click += new System.EventHandler(this.btnThayDoiQuyDinh_Click);
+            // 
+            // FrmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +151,7 @@
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(940, 649);
             this.MinimumSize = new System.Drawing.Size(940, 649);
-            this.Name = "FrmMain";
+            this.Name = "FrmMainAdmin";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -156,6 +170,7 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnThayDoiQuyDinh;
     }
 }
 

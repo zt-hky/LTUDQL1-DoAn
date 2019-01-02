@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class FrmMain : Form
+    public partial class FrmMainAdmin : Form
     {
-        public FrmMain()
+        public FrmMainAdmin()
         {
             InitializeComponent();
         }
@@ -51,6 +51,11 @@ namespace GUI
             }
             else
                 ucThongKeNam.Instance.BringToFront();
+        }
+
+        private void btnThayDoiQuyDinh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
