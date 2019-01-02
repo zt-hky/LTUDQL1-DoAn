@@ -53,6 +53,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucThongKeThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucThongKeThang.Designer.cs">
+      <DependentUpon>ucThongKeThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucTraCuuChuyenBay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +77,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucThongKeThang.resx">
+      <DependentUpon>ucThongKeThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucTraCuuChuyenBay.resx">
       <DependentUpon>ucTraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
