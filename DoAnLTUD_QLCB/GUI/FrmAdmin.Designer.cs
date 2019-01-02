@@ -32,11 +32,11 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnThayDoiQuyDinh = new System.Windows.Forms.Button();
             this.btnThongKeNam = new System.Windows.Forms.Button();
             this.btnThongKeThang = new System.Windows.Forms.Button();
             this.btnTraCuuCB = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.btnThayDoiQuyDinh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,18 @@
             this.panel2.Size = new System.Drawing.Size(222, 547);
             this.panel2.TabIndex = 1;
             // 
+            // btnThayDoiQuyDinh
+            // 
+            this.btnThayDoiQuyDinh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThayDoiQuyDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThayDoiQuyDinh.Location = new System.Drawing.Point(-1, 411);
+            this.btnThayDoiQuyDinh.Name = "btnThayDoiQuyDinh";
+            this.btnThayDoiQuyDinh.Size = new System.Drawing.Size(222, 136);
+            this.btnThayDoiQuyDinh.TabIndex = 31;
+            this.btnThayDoiQuyDinh.Text = "Thay đổi quy định";
+            this.btnThayDoiQuyDinh.UseVisualStyleBackColor = false;
+            this.btnThayDoiQuyDinh.Click += new System.EventHandler(this.btnThayDoiQuyDinh_Click);
+            // 
             // btnThongKeNam
             // 
             this.btnThongKeNam.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -129,18 +141,6 @@
             this.panel.Size = new System.Drawing.Size(702, 547);
             this.panel.TabIndex = 2;
             // 
-            // btnThayDoiQuyDinh
-            // 
-            this.btnThayDoiQuyDinh.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnThayDoiQuyDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThayDoiQuyDinh.Location = new System.Drawing.Point(-1, 411);
-            this.btnThayDoiQuyDinh.Name = "btnThayDoiQuyDinh";
-            this.btnThayDoiQuyDinh.Size = new System.Drawing.Size(222, 136);
-            this.btnThayDoiQuyDinh.TabIndex = 31;
-            this.btnThayDoiQuyDinh.Text = "Thay đổi quy định";
-            this.btnThayDoiQuyDinh.UseVisualStyleBackColor = false;
-            this.btnThayDoiQuyDinh.Click += new System.EventHandler(this.btnThayDoiQuyDinh_Click);
-            // 
             // FrmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,7 +152,7 @@
             this.MaximumSize = new System.Drawing.Size(940, 649);
             this.MinimumSize = new System.Drawing.Size(940, 649);
             this.Name = "FrmMainAdmin";
-            this.Text = "Form1";
+            this.Text = "Quản trị viên";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
