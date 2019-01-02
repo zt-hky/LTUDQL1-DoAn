@@ -12,6 +12,16 @@ namespace GUI
 {
     public partial class ucTraCuuKhachHang : UserControl
     {
+        private static ucTraCuuKhachHang _instance;
+        public static ucTraCuuKhachHang Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ucTraCuuKhachHang();
+                return _instance;
+            }
+        }
         public ucTraCuuKhachHang()
         {
             InitializeComponent();
