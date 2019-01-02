@@ -12,6 +12,16 @@ namespace GUI
 {
     public partial class ucDatCho : UserControl
     {
+        private static ucDatCho _instance;
+        public static ucDatCho Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ucDatCho();
+                return _instance;
+            }
+        }
         public ucDatCho()
         {
             InitializeComponent();
