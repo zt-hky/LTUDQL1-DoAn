@@ -12,6 +12,16 @@ namespace GUI
 {
     public partial class ucTraCuuChuyenBay : UserControl
     {
+        private static ucTraCuuChuyenBay _instance;
+        public static ucTraCuuChuyenBay Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ucTraCuuChuyenBay();
+                return _instance;
+            }
+        }
         public ucTraCuuChuyenBay()
         {
             InitializeComponent();
