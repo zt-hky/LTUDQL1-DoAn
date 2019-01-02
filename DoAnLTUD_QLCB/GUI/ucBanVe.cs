@@ -12,6 +12,16 @@ namespace GUI
 {
     public partial class ucBanVe : UserControl
     {
+        private static ucBanVe _instance;
+        public static ucBanVe Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ucBanVe();
+                return _instance;
+            }
+        }
         public ucBanVe()
         {
             InitializeComponent();
