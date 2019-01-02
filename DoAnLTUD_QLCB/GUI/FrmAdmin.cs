@@ -16,5 +16,17 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btnTraCuuCB_Click(object sender, EventArgs e)
+        {
+            if (!panel.Contains(ucTraCuuChuyenBay.Instance))
+            {
+                panel.Controls.Add(ucTraCuuChuyenBay.Instance);
+                ucTraCuuChuyenBay.Instance.Dock = DockStyle.Fill;
+                ucTraCuuChuyenBay.Instance.BringToFront();
+            }
+            else
+                ucTraCuuChuyenBay.Instance.BringToFront();
+        }
     }
 }

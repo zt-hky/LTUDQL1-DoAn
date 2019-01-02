@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThongKeNam = new System.Windows.Forms.Button();
             this.btnThongKeThang = new System.Windows.Forms.Button();
             this.btnTraCuuCB = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(924, 63);
             this.panel1.TabIndex = 0;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(814, 12);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(107, 44);
+            this.btnThoat.TabIndex = 3;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -105,6 +115,7 @@
             this.btnTraCuuCB.TabIndex = 28;
             this.btnTraCuuCB.Text = "Tra cứu chuyến bay";
             this.btnTraCuuCB.UseVisualStyleBackColor = false;
+            this.btnTraCuuCB.Click += new System.EventHandler(this.btnTraCuuCB_Click);
             // 
             // panel
             // 
@@ -113,16 +124,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(702, 547);
             this.panel.TabIndex = 2;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(814, 12);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(107, 44);
-            this.btnThoat.TabIndex = 3;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
