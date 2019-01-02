@@ -73,6 +73,7 @@
             this.btnTraCuuCB.TabIndex = 28;
             this.btnTraCuuCB.Text = "Tra cứu chuyến bay";
             this.btnTraCuuCB.UseVisualStyleBackColor = false;
+            this.btnTraCuuCB.Click += new System.EventHandler(this.btnTraCuuCB_Click);
             // 
             // panel1
             // 
@@ -116,6 +117,7 @@
             this.btnTraCuuKhachHang.TabIndex = 29;
             this.btnTraCuuKhachHang.Text = "Tra cứu khách hàng";
             this.btnTraCuuKhachHang.UseVisualStyleBackColor = false;
+            this.btnTraCuuKhachHang.Click += new System.EventHandler(this.btnTraCuuKhachHang_Click);
             // 
             // btnNhanLichChuyenBay
             // 
@@ -127,6 +129,7 @@
             this.btnNhanLichChuyenBay.TabIndex = 30;
             this.btnNhanLichChuyenBay.Text = "Nhận lịch chuyến bay";
             this.btnNhanLichChuyenBay.UseVisualStyleBackColor = false;
+            this.btnNhanLichChuyenBay.Click += new System.EventHandler(this.btnNhanLichChuyenBay_Click);
             // 
             // btnDatCho
             // 
@@ -138,6 +141,7 @@
             this.btnDatCho.TabIndex = 31;
             this.btnDatCho.Text = "Đặt chổ";
             this.btnDatCho.UseVisualStyleBackColor = false;
+            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
             // 
             // btnBanVe
             // 
@@ -149,6 +153,7 @@
             this.btnBanVe.TabIndex = 32;
             this.btnBanVe.Text = "Bán vé";
             this.btnBanVe.UseVisualStyleBackColor = false;
+            this.btnBanVe.Click += new System.EventHandler(this.btnBanVe_Click);
             // 
             // FrmMainNhanVien
             // 
