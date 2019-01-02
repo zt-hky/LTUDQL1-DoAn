@@ -93,6 +93,7 @@
             this.btnThongKeNam.TabIndex = 30;
             this.btnThongKeNam.Text = "Thống kê theo năm";
             this.btnThongKeNam.UseVisualStyleBackColor = false;
+            this.btnThongKeNam.Click += new System.EventHandler(this.btnThongKeNam_Click);
             // 
             // btnThongKeThang
             // 
@@ -104,6 +105,7 @@
             this.btnThongKeThang.TabIndex = 29;
             this.btnThongKeThang.Text = "Thống kê theo tháng";
             this.btnThongKeThang.UseVisualStyleBackColor = false;
+            this.btnThongKeThang.Click += new System.EventHandler(this.btnThongKeThang_Click);
             // 
             // btnTraCuuCB
             // 

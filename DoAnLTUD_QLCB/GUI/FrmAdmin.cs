@@ -28,5 +28,29 @@ namespace GUI
             else
                 ucTraCuuChuyenBay.Instance.BringToFront();
         }
+
+        private void btnThongKeThang_Click(object sender, EventArgs e)
+        {
+            if (!panel.Contains(ucThongKeThang.Instance))
+            {
+                panel.Controls.Add(ucThongKeThang.Instance);
+                ucThongKeThang.Instance.Dock = DockStyle.Fill;
+                ucThongKeThang.Instance.BringToFront();
+            }
+            else
+                ucThongKeThang.Instance.BringToFront();
+        }
+
+        private void btnThongKeNam_Click(object sender, EventArgs e)
+        {
+            if (!panel.Contains(ucThongKeNam.Instance))
+            {
+                panel.Controls.Add(ucThongKeNam.Instance);
+                ucThongKeNam.Instance.Dock = DockStyle.Fill;
+                ucThongKeNam.Instance.BringToFront();
+            }
+            else
+                ucThongKeNam.Instance.BringToFront();
+        }
     }
 }

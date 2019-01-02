@@ -12,6 +12,16 @@ namespace GUI
 {
     public partial class ucThongKeNam : UserControl
     {
+        private static ucThongKeNam _instance;
+        public static ucThongKeNam Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ucThongKeNam();
+                return _instance;
+            }
+        }
         public ucThongKeNam()
         {
             InitializeComponent();
