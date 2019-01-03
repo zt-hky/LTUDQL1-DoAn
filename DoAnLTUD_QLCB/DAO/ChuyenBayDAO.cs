@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,21 @@ namespace DAO
 
         private ChuyenBayDAO() { }
 
-    
+        public List<ChuyenBay> getAll()
+        {
+            List<ChuyenBay> chuyenBays = new List<ChuyenBay>();
+
+            string query = "select * from users";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (var item in data.Rows)
+            {
+                ChuyenBay newChuyenBay = new ChuyenBay(item);
+
+                chuyenBays.Add(newChuyenBay);
+            }
+            return chuyenBays;
+        }
     }
 }

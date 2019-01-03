@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,22 @@ namespace DTO
             this.tyLe = tyLe;
             this.DoanhThu = DoanhThu;
     }
+        public ChuyenBay(DataRow _row)
+        {
+            this.maCB = _row["MaCB"].ToString();
+            this.sBDi = _row["SBDi"].ToString();
+            this.sBDen = _row["SBDen"].ToString();
+            this.ngayGio = DateTime.Parse( _row["NgayGio"].ToString());
+            this.tGBay = int.Parse(_row["TGBay"].ToString());
+            this.sLGhe1 = int.Parse(_row["SLGhe1"].ToString());
+            this.sLGhe2 = int.Parse(_row["SLGhe2"].ToString());
+            this.soGheTrong = int.Parse(_row["SoGheTrong"].ToString());
+            this.soGheDat = int.Parse(_row["SoGheDat"].ToString());
+            this.soVe = int.Parse(_row["SoVe"].ToString());
+            this.tyLe = float.Parse(_row["TyLe"].ToString());
+            this.doanhThu = float.Parse(_row["DoanhThu"].ToString());
+        }
+
 
         private string maCB;
         private string sBDi;
@@ -37,7 +54,7 @@ namespace DTO
         private int soGheDat;
         private int soVe;
         private float tyLe;
-        private float DoanhThu;
+        private float doanhThu;
 
         public string MaCB { get => maCB; set => maCB = value; }
         public string SBDi { get => sBDi; set => sBDi = value; }
@@ -50,6 +67,6 @@ namespace DTO
         public int SoGheDat { get => soGheDat; set => soGheDat = value; }
         public int SoVe { get => soVe; set => soVe = value; }
         public float TyLe { get => tyLe; set => tyLe = value; }
-        public float DoanhThu1 { get => DoanhThu; set => DoanhThu = value; }
+        public float DoanhThu { get => doanhThu; set => doanhThu = value; }
     }
 }
