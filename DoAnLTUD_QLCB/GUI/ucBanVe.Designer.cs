@@ -29,15 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtBoxHangVe = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtBoxGiaTien = new System.Windows.Forms.TextBox();
+            this.txtBoxGioKhoiHanh = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtBoxSoDienThoai = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxSBDen = new System.Windows.Forms.TextBox();
+            this.txtBoxCMND = new System.Windows.Forms.TextBox();
+            this.txtBoxHoTen = new System.Windows.Forms.TextBox();
+            this.txtBoxMaKH = new System.Windows.Forms.TextBox();
+            this.txtBoxSBDi = new System.Windows.Forms.TextBox();
+            this.txtBoxMaCB = new System.Windows.Forms.TextBox();
+            this.txtBoxMaDatCho = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,36 +55,28 @@
             this.btnBanVe = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.txtBoxHangVe);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.txtBoxGiaTien);
+            this.groupBox1.Controls.Add(this.txtBoxGioKhoiHanh);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txtBoxSoDienThoai);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtBoxSBDen);
+            this.groupBox1.Controls.Add(this.txtBoxCMND);
+            this.groupBox1.Controls.Add(this.txtBoxHoTen);
+            this.groupBox1.Controls.Add(this.txtBoxMaKH);
+            this.groupBox1.Controls.Add(this.txtBoxSBDi);
+            this.groupBox1.Controls.Add(this.txtBoxMaCB);
+            this.groupBox1.Controls.Add(this.txtBoxMaDatCho);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
@@ -94,14 +94,92 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // textBox8
+            // txtBoxHangVe
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(475, 294);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(186, 27);
-            this.textBox8.TabIndex = 18;
+            this.txtBoxHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHangVe.Location = new System.Drawing.Point(475, 364);
+            this.txtBoxHangVe.Name = "txtBoxHangVe";
+            this.txtBoxHangVe.ReadOnly = true;
+            this.txtBoxHangVe.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxHangVe.TabIndex = 27;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(343, 371);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 20);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Hạng vé :";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txtBoxGiaTien
+            // 
+            this.txtBoxGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxGiaTien.Location = new System.Drawing.Point(145, 437);
+            this.txtBoxGiaTien.Name = "txtBoxGiaTien";
+            this.txtBoxGiaTien.ReadOnly = true;
+            this.txtBoxGiaTien.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxGiaTien.TabIndex = 24;
+            // 
+            // txtBoxGioKhoiHanh
+            // 
+            this.txtBoxGioKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxGioKhoiHanh.Location = new System.Drawing.Point(145, 364);
+            this.txtBoxGioKhoiHanh.Name = "txtBoxGioKhoiHanh";
+            this.txtBoxGioKhoiHanh.ReadOnly = true;
+            this.txtBoxGioKhoiHanh.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxGioKhoiHanh.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 440);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 20);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Tổng tiền :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(16, 371);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 20);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Giờ khởi hành :";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Location = new System.Drawing.Point(6, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(689, 42);
+            this.panel1.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(283, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 29);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "BÁN VÉ";
+            // 
+            // txtBoxSoDienThoai
+            // 
+            this.txtBoxSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSoDienThoai.Location = new System.Drawing.Point(475, 294);
+            this.txtBoxSoDienThoai.Name = "txtBoxSoDienThoai";
+            this.txtBoxSoDienThoai.ReadOnly = true;
+            this.txtBoxSoDienThoai.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxSoDienThoai.TabIndex = 18;
             // 
             // label8
             // 
@@ -113,67 +191,67 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Mã đặt chổ :";
             // 
-            // textBox7
+            // txtBoxSBDen
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(145, 294);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(186, 27);
-            this.textBox7.TabIndex = 16;
+            this.txtBoxSBDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSBDen.Location = new System.Drawing.Point(145, 294);
+            this.txtBoxSBDen.Name = "txtBoxSBDen";
+            this.txtBoxSBDen.ReadOnly = true;
+            this.txtBoxSBDen.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxSBDen.TabIndex = 16;
             // 
-            // textBox4
+            // txtBoxCMND
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(475, 218);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(186, 27);
-            this.textBox4.TabIndex = 15;
+            this.txtBoxCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxCMND.Location = new System.Drawing.Point(475, 218);
+            this.txtBoxCMND.Name = "txtBoxCMND";
+            this.txtBoxCMND.ReadOnly = true;
+            this.txtBoxCMND.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxCMND.TabIndex = 15;
             // 
-            // textBox5
+            // txtBoxHoTen
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(475, 149);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(186, 27);
-            this.textBox5.TabIndex = 14;
+            this.txtBoxHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHoTen.Location = new System.Drawing.Point(475, 149);
+            this.txtBoxHoTen.Name = "txtBoxHoTen";
+            this.txtBoxHoTen.ReadOnly = true;
+            this.txtBoxHoTen.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxHoTen.TabIndex = 14;
             // 
-            // textBox6
+            // txtBoxMaKH
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(475, 87);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(186, 27);
-            this.textBox6.TabIndex = 13;
+            this.txtBoxMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMaKH.Location = new System.Drawing.Point(475, 87);
+            this.txtBoxMaKH.Name = "txtBoxMaKH";
+            this.txtBoxMaKH.ReadOnly = true;
+            this.txtBoxMaKH.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxMaKH.TabIndex = 13;
             // 
-            // textBox3
+            // txtBoxSBDi
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(145, 222);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(186, 27);
-            this.textBox3.TabIndex = 12;
+            this.txtBoxSBDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSBDi.Location = new System.Drawing.Point(145, 222);
+            this.txtBoxSBDi.Name = "txtBoxSBDi";
+            this.txtBoxSBDi.ReadOnly = true;
+            this.txtBoxSBDi.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxSBDi.TabIndex = 12;
             // 
-            // textBox2
+            // txtBoxMaCB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(145, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(186, 27);
-            this.textBox2.TabIndex = 11;
+            this.txtBoxMaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMaCB.Location = new System.Drawing.Point(145, 149);
+            this.txtBoxMaCB.Name = "txtBoxMaCB";
+            this.txtBoxMaCB.ReadOnly = true;
+            this.txtBoxMaCB.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxMaCB.TabIndex = 11;
             // 
-            // textBox1
+            // txtBoxMaDatCho
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(142, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 27);
-            this.textBox1.TabIndex = 10;
+            this.txtBoxMaDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMaDatCho.Location = new System.Drawing.Point(142, 83);
+            this.txtBoxMaDatCho.Name = "txtBoxMaDatCho";
+            this.txtBoxMaDatCho.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxMaDatCho.TabIndex = 10;
             // 
             // label7
             // 
@@ -266,84 +344,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã chuyến bay :";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(6, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(689, 42);
-            this.panel1.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(283, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 29);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "BÁN VÉ";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(145, 437);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(186, 27);
-            this.textBox10.TabIndex = 24;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(145, 364);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(186, 27);
-            this.textBox11.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 440);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 20);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Tổng tiền :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 371);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 20);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Giờ khởi hành :";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(475, 364);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(186, 27);
-            this.textBox9.TabIndex = 27;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(343, 371);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 20);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Hạng vé :";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
             // ucBanVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,21 +371,21 @@
         private System.Windows.Forms.Button btnBanVe;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtBoxSBDen;
+        private System.Windows.Forms.TextBox txtBoxCMND;
+        private System.Windows.Forms.TextBox txtBoxHoTen;
+        private System.Windows.Forms.TextBox txtBoxMaKH;
+        private System.Windows.Forms.TextBox txtBoxSBDi;
+        private System.Windows.Forms.TextBox txtBoxMaCB;
+        private System.Windows.Forms.TextBox txtBoxMaDatCho;
+        private System.Windows.Forms.TextBox txtBoxSoDienThoai;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtBoxHangVe;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBoxGiaTien;
+        private System.Windows.Forms.TextBox txtBoxGioKhoiHanh;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
     }

@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxGiaTien = new System.Windows.Forms.TextBox();
+            this.txtBoxMaKH = new System.Windows.Forms.TextBox();
+            this.txtBoxHangVe = new System.Windows.Forms.TextBox();
+            this.txtBoxCMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxMaCB = new System.Windows.Forms.TextBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnDatCho = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtBoxHoTen = new System.Windows.Forms.TextBox();
+            this.txtBoxSoDienThoai = new System.Windows.Forms.TextBox();
+            this.txtBoxGioKhoiHanh = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtBoxSBDen = new System.Windows.Forms.TextBox();
+            this.txtBoxSBDi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,39 +57,39 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox7
+            // txtBoxGiaTien
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(148, 437);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(186, 27);
-            this.textBox7.TabIndex = 33;
+            this.txtBoxGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxGiaTien.Location = new System.Drawing.Point(148, 437);
+            this.txtBoxGiaTien.Name = "txtBoxGiaTien";
+            this.txtBoxGiaTien.ReadOnly = true;
+            this.txtBoxGiaTien.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxGiaTien.TabIndex = 33;
             // 
-            // textBox6
+            // txtBoxMaKH
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(482, 147);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(189, 27);
-            this.textBox6.TabIndex = 30;
+            this.txtBoxMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMaKH.Location = new System.Drawing.Point(482, 147);
+            this.txtBoxMaKH.Name = "txtBoxMaKH";
+            this.txtBoxMaKH.ReadOnly = true;
+            this.txtBoxMaKH.Size = new System.Drawing.Size(189, 27);
+            this.txtBoxMaKH.TabIndex = 30;
             // 
-            // textBox3
+            // txtBoxHangVe
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(482, 370);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 27);
-            this.textBox3.TabIndex = 29;
+            this.txtBoxHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHangVe.Location = new System.Drawing.Point(482, 370);
+            this.txtBoxHangVe.Name = "txtBoxHangVe";
+            this.txtBoxHangVe.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxHangVe.TabIndex = 29;
             // 
-            // textBox2
+            // txtBoxCMND
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(482, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 27);
-            this.textBox2.TabIndex = 28;
+            this.txtBoxCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxCMND.Location = new System.Drawing.Point(482, 80);
+            this.txtBoxCMND.Name = "txtBoxCMND";
+            this.txtBoxCMND.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxCMND.TabIndex = 28;
             // 
             // label7
             // 
@@ -141,13 +141,13 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Mã chuyến bay :";
             // 
-            // textBox1
+            // txtBoxMaCB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(148, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 27);
-            this.textBox1.TabIndex = 27;
+            this.txtBoxMaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMaCB.Location = new System.Drawing.Point(148, 80);
+            this.txtBoxMaCB.Name = "txtBoxMaCB";
+            this.txtBoxMaCB.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxMaCB.TabIndex = 27;
             // 
             // btnHuy
             // 
@@ -189,32 +189,32 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Số điện thoại :";
             // 
-            // textBox5
+            // txtBoxHoTen
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(482, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(186, 27);
-            this.textBox5.TabIndex = 31;
+            this.txtBoxHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHoTen.Location = new System.Drawing.Point(482, 219);
+            this.txtBoxHoTen.Name = "txtBoxHoTen";
+            this.txtBoxHoTen.ReadOnly = true;
+            this.txtBoxHoTen.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxHoTen.TabIndex = 31;
             // 
-            // textBox4
+            // txtBoxSoDienThoai
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(482, 293);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(186, 27);
-            this.textBox4.TabIndex = 32;
+            this.txtBoxSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSoDienThoai.Location = new System.Drawing.Point(482, 293);
+            this.txtBoxSoDienThoai.Name = "txtBoxSoDienThoai";
+            this.txtBoxSoDienThoai.ReadOnly = true;
+            this.txtBoxSoDienThoai.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxSoDienThoai.TabIndex = 32;
             // 
-            // textBox11
+            // txtBoxGioKhoiHanh
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(148, 289);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(186, 27);
-            this.textBox11.TabIndex = 41;
+            this.txtBoxGioKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxGioKhoiHanh.Location = new System.Drawing.Point(148, 289);
+            this.txtBoxGioKhoiHanh.Name = "txtBoxGioKhoiHanh";
+            this.txtBoxGioKhoiHanh.ReadOnly = true;
+            this.txtBoxGioKhoiHanh.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxGioKhoiHanh.TabIndex = 41;
             // 
             // label12
             // 
@@ -226,23 +226,23 @@
             this.label12.TabIndex = 40;
             this.label12.Text = "Giờ khởi hành :";
             // 
-            // textBox8
+            // txtBoxSBDen
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(148, 219);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(186, 27);
-            this.textBox8.TabIndex = 39;
+            this.txtBoxSBDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSBDen.Location = new System.Drawing.Point(148, 219);
+            this.txtBoxSBDen.Name = "txtBoxSBDen";
+            this.txtBoxSBDen.ReadOnly = true;
+            this.txtBoxSBDen.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxSBDen.TabIndex = 39;
             // 
-            // textBox9
+            // txtBoxSBDi
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(148, 147);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(186, 27);
-            this.textBox9.TabIndex = 38;
+            this.txtBoxSBDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSBDi.Location = new System.Drawing.Point(148, 147);
+            this.txtBoxSBDi.Name = "txtBoxSBDi";
+            this.txtBoxSBDi.ReadOnly = true;
+            this.txtBoxSBDi.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxSBDi.TabIndex = 38;
             // 
             // label11
             // 
@@ -309,19 +309,19 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtBoxGioKhoiHanh);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtBoxSBDen);
+            this.Controls.Add(this.txtBoxSBDi);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxGiaTien);
+            this.Controls.Add(this.txtBoxSoDienThoai);
+            this.Controls.Add(this.txtBoxHoTen);
+            this.Controls.Add(this.txtBoxMaKH);
+            this.Controls.Add(this.txtBoxHangVe);
+            this.Controls.Add(this.txtBoxCMND);
+            this.Controls.Add(this.txtBoxMaCB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -342,26 +342,26 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxGiaTien;
+        private System.Windows.Forms.TextBox txtBoxMaKH;
+        private System.Windows.Forms.TextBox txtBoxHangVe;
+        private System.Windows.Forms.TextBox txtBoxCMND;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxMaCB;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnDatCho;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBoxHoTen;
+        private System.Windows.Forms.TextBox txtBoxSoDienThoai;
+        private System.Windows.Forms.TextBox txtBoxGioKhoiHanh;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtBoxSBDen;
+        private System.Windows.Forms.TextBox txtBoxSBDi;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel1;
