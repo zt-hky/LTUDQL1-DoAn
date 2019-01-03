@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace DAO
 {
-    class DataProvider //DataProvider
+    class DataProvider 
     {
         private static DataProvider instance;
 
@@ -22,10 +22,11 @@ namespace DAO
             {
                 if (instance == null)
                     instance = new DataProvider();
-                return instance;
+                return DataProvider.instance;
             }
             private set
             {
+                DataProvider.instance = value;
             }
         }
 
@@ -34,6 +35,7 @@ namespace DAO
             connectionString = ConfigurationManager.ConnectionStrings["DB"].ToString();
         }
 
+        // Dùng cho select
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -68,6 +70,7 @@ namespace DAO
             return data;
         }
 
+        // Dùng cho Insert, update, delete
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
@@ -100,6 +103,7 @@ namespace DAO
             return data;
         }
 
+        // Lấy về dòng đầu tiên và cột đầu tiên: dùng cho count()
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;
