@@ -26,5 +26,15 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvChuyenBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
