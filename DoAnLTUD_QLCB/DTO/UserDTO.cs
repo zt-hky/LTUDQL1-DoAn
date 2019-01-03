@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class UserDTO
+    public class UserDTO
     {
         private string user;
         private string password;

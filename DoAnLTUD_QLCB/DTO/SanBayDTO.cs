@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class SanBayDTO
+    public class SanBayDTO
     {
+        public SanBayDTO(string maSB, string tenSB)
+        {
+            this.maSB = maSB;
+            this.tenSB = tenSB;
+        }
+
         private string maSB;
         private string tenSB;
 

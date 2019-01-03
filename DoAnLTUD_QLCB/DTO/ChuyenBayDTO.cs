@@ -6,8 +6,26 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class ChuyenBayDTO
+    public class ChuyenBayDTO
     {
+        public ChuyenBayDTO(string maCB, string sBDi, string sBDen, 
+            DateTime ngayGio, int tGBay, int sLGhe1, int sLGhe2, 
+            int soGheTrong, int soGheDat, int soVe, float tyLe, float DoanhThu )
+        {
+            this.maCB = maCB;
+            this.sBDi = sBDi;
+            this.sBDen = sBDen;
+            this.ngayGio = ngayGio;
+            this.tGBay = tGBay;
+            this.sLGhe1 = sLGhe1;
+            this.sLGhe2 = sLGhe2;
+            this.soGheTrong = soGheTrong;
+            this.soGheDat = soGheDat;
+            this.soVe = soVe;
+            this.tyLe = tyLe;
+            this.DoanhThu = DoanhThu;
+    }
+
         private string maCB;
         private string sBDi;
         private string sBDen;
