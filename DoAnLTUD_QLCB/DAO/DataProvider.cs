@@ -24,10 +24,7 @@ namespace DAO
                     instance = new DataProvider();
                 return DataProvider.instance;
             }
-            private set
-            {
-                DataProvider.instance = value;
-            }
+          
         }
 
         private DataProvider()
