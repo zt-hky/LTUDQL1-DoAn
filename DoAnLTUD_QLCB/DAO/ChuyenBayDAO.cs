@@ -32,7 +32,7 @@ namespace DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
-            foreach (var item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 ChuyenBay newChuyenBay = new ChuyenBay(item);
 
