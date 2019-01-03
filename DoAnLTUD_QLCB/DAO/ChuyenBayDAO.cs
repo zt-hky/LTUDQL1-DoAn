@@ -28,7 +28,7 @@ namespace DAO
         {
             List<ChuyenBay> chuyenBays = new List<ChuyenBay>();
 
-            string query = "select * from users";
+            string query = "select * from CHUYENBAY";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 

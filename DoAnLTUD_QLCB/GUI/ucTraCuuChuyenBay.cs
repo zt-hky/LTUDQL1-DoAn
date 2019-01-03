@@ -26,7 +26,12 @@ namespace GUI
         public ucTraCuuChuyenBay()
         {
             InitializeComponent();
-           
+            Init();
+        }
+
+        private void Init()
+        {
+            ChuyenBayBUS.Instance.LoadAll(this.dgvChuyenBay);
         }
 
         private void label9_Click(object sender, EventArgs e)

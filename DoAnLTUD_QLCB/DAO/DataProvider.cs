@@ -29,7 +29,9 @@ namespace DAO
 
         private DataProvider()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["DB"].ToString();
+            this.connectionString = @"Data Source=HONGKY-G505\SQLEXPRESS;Initial Catalog=DoAnUDQL;User ID=sa;Password=123456";
+
+
         }
 
         // Dùng cho select

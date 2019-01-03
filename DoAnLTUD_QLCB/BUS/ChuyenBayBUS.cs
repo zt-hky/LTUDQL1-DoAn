@@ -9,7 +9,7 @@ using DAO;
 
 namespace BUS
 {
-    class ChuyenBayBUS
+    public class ChuyenBayBUS
     {
 
         private static ChuyenBayBUS instance;   
