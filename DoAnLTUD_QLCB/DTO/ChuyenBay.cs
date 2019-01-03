@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ChuyenBayDTO
+    public class ChuyenBay
     {
-        public ChuyenBayDTO(string maCB, string sBDi, string sBDen, 
+        public ChuyenBay(string maCB, string sBDi, string sBDen, 
             DateTime ngayGio, int tGBay, int sLGhe1, int sLGhe2, 
             int soGheTrong, int soGheDat, int soVe, float tyLe, float DoanhThu )
         {

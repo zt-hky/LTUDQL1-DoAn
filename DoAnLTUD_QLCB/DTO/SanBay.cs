@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class SanBayDTO
+    public class SanBay
     {
-        public SanBayDTO(string maSB, string tenSB)
+        public SanBay(string maSB, string tenSB)
         {
             this.maSB = maSB;
             this.tenSB = tenSB;
