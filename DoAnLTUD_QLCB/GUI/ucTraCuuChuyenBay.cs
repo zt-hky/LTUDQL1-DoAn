@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -25,6 +26,22 @@ namespace GUI
         public ucTraCuuChuyenBay()
         {
             InitializeComponent();
+            Init();
+        }
+
+        private void Init()
+        {
+            ChuyenBayBUS.Instance.LoadAll(this.dgvChuyenBay);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvChuyenBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
