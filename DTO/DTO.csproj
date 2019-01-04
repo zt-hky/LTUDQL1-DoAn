@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FF7EBBC-A708-4690-84EE-157E7E4FB1F6}</ProjectGuid>
+    <ProjectGuid>{6D2AE08D-3210-4E52-ABFC-A2D1E5CC562F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DTO</RootNamespace>
@@ -40,13 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChiTietChuyenBay.cs" />
+<<<<<<< HEAD
+    <Compile Include="ChiTietChuyenBayDTO.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="KhachHangDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeChuyenBay.cs" />
+=======
     <Compile Include="ChuyenBay.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanBay.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="VeChuyenBay.cs" />
+>>>>>>> b6f5dd0be2d521c337c073c24c3bc10b99b97dee
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

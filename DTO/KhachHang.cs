@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
+<<<<<<< HEAD:DoAnLTUD_QLCB/DTO/KhachHangDTO.cs
+    public class KhachHangDTO
+=======
     public class KhachHang
+>>>>>>> b6f5dd0be2d521c337c073c24c3bc10b99b97dee:DoAnLTUD_QLCB/DTO/KhachHang.cs
     {
         string _maKH;
         string _tenKH;

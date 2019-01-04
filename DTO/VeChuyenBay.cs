@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class KhachHang
+    class VeChuyenBay
     {
+        int _loai;// 0:dat cho, 1: da ban
+        string _maCB;
         string _maKH;
-        string _tenKH;
-        string _CMND;
-        string _dienThoai;
+        string _gheHang;
+        DateTime _ngayDat;
         public string MaKH
         {
             get
@@ -24,40 +25,52 @@ namespace DTO
                 _maKH = value;
             }
         }
-        public string CMND
+        public string MaCB
         {
             get
             {
-                return _CMND;
+                return _maCB;
             }
 
             set
             {
-                _CMND = value;
+                _maCB = value;
             }
         }
-        public string TenKH
+        public string GheHang
         {
             get
             {
-                return _tenKH;
+                return _gheHang;
             }
 
             set
             {
-                _tenKH = value;
+                _gheHang = value;
             }
         }
-        public string DienThoai
+        public int Loai
         {
             get
             {
-                return _dienThoai;
+                return _loai;
             }
 
             set
             {
-                _dienThoai = value;
+                _loai = value;
+            }
+        }
+        public DateTime NgayDat
+        {
+            get
+            {
+                return _ngayDat;
+            }
+
+            set
+            {
+                _ngayDat = value;
             }
         }
     }
