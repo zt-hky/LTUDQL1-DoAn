@@ -47,9 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{9ff7ebbc-a708-4690-84ee-157e7e4fb1f6}</Project>
       <Name>DTO</Name>

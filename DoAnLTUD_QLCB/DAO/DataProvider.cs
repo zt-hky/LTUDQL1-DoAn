@@ -31,7 +31,9 @@ namespace DAO
         {
             // this.connectionString = @"Data Source=HONGKY-G505\SQLEXPRESS;Initial Catalog=DoAnUDQL;User ID=sa;Password=123456";
 
-            this.connectionString = string.Format("Server= {0}; Database={1};User Id={2};Password={3};", @"WINDEV1802EVAL", "QuanLyChuyenBay", "sa", "123456");
+            //this.connectionString = string.Format("Server= {0}; Database={1};User Id={2};Password={3};", @"WINDEV1802EVAL", "QuanLyChuyenBay", "sa", "123456");
+            this.connectionString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+
         }
 
         // Dùng cho select
