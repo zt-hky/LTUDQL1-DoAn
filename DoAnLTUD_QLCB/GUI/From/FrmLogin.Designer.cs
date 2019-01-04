@@ -35,14 +35,13 @@
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.bunifuElipse1.TargetControl = null;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 413);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
             this.ResumeLayout(false);
