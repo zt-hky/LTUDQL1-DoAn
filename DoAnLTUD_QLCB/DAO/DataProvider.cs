@@ -21,7 +21,7 @@ namespace DAO
             get
             {
                 if (instance == null)
-                    instance = new DataProvider();
+                    DataProvider.instance = new DataProvider();
                 return DataProvider.instance;
             }
 
