@@ -20,24 +20,24 @@ if OBJECT_ID('ThemCMNDKhachHang','p') is not null
 DROP proc ThemCMNDKhachHang
 GO
 create procedure ThemCMNDKhachHang
-@CMND char(10),@ketQua int out
+@CMND char(10)
 AS
 	begin 
-		if exists (select* from KHACHHANG where CMND=@CMND)
-		begin 
-			set @ketQua =0
-			return
-		end
-		else
-		begin
-			set @ketQua=1
-			insert into KHACHHANG(CMND) values(@CMND)
-		end
+		insert into KHACHHANG(CMND) values(@CMND)
 	end
 GO
 --button CapNhat (FrmKhachHang)
 --update Khach hang
-
+if OBJECT_ID('CapNhatKhachHang','p') is not null
+DROP proc CapNhatKhachHang
+GO
+create procedure CapNhatKhachHang
+@CMND char(10),@MaKH int,@TenKH nvarchar(30),@DienThoai varchar(10)
+AS
+	begin 
+		update KHACHHANG set TenKH=@TenKH,DienThoai=@DienThoai
+	end
+GO
 --search Khach hang theo CMND
 if OBJECT_ID('TimKiemKhachHang','p') is not null
 DROP proc TimKiemKhachHang

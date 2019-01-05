@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThayDoiQuyDinh = new System.Windows.Forms.Button();
             this.btnThongKeNam = new System.Windows.Forms.Button();
-            this.btnThongKeThang = new System.Windows.Forms.Button();
             this.btnTraCuuCB = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -78,7 +77,6 @@
             // 
             this.panel2.Controls.Add(this.btnThayDoiQuyDinh);
             this.panel2.Controls.Add(this.btnThongKeNam);
-            this.panel2.Controls.Add(this.btnThongKeThang);
             this.panel2.Controls.Add(this.btnTraCuuCB);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 63);
@@ -90,9 +88,9 @@
             // 
             this.btnThayDoiQuyDinh.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThayDoiQuyDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThayDoiQuyDinh.Location = new System.Drawing.Point(-1, 411);
+            this.btnThayDoiQuyDinh.Location = new System.Drawing.Point(0, 362);
             this.btnThayDoiQuyDinh.Name = "btnThayDoiQuyDinh";
-            this.btnThayDoiQuyDinh.Size = new System.Drawing.Size(222, 136);
+            this.btnThayDoiQuyDinh.Size = new System.Drawing.Size(222, 182);
             this.btnThayDoiQuyDinh.TabIndex = 31;
             this.btnThayDoiQuyDinh.Text = "Thay đổi quy định";
             this.btnThayDoiQuyDinh.UseVisualStyleBackColor = false;
@@ -102,33 +100,21 @@
             // 
             this.btnThongKeNam.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThongKeNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeNam.Location = new System.Drawing.Point(0, 277);
+            this.btnThongKeNam.Location = new System.Drawing.Point(0, 180);
             this.btnThongKeNam.Name = "btnThongKeNam";
-            this.btnThongKeNam.Size = new System.Drawing.Size(222, 136);
+            this.btnThongKeNam.Size = new System.Drawing.Size(222, 182);
             this.btnThongKeNam.TabIndex = 30;
-            this.btnThongKeNam.Text = "Thống kê theo năm";
+            this.btnThongKeNam.Text = "Thống kê";
             this.btnThongKeNam.UseVisualStyleBackColor = false;
             this.btnThongKeNam.Click += new System.EventHandler(this.btnThongKeNam_Click);
-            // 
-            // btnThongKeThang
-            // 
-            this.btnThongKeThang.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnThongKeThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeThang.Location = new System.Drawing.Point(-1, 139);
-            this.btnThongKeThang.Name = "btnThongKeThang";
-            this.btnThongKeThang.Size = new System.Drawing.Size(222, 136);
-            this.btnThongKeThang.TabIndex = 29;
-            this.btnThongKeThang.Text = "Thống kê theo tháng";
-            this.btnThongKeThang.UseVisualStyleBackColor = false;
-            this.btnThongKeThang.Click += new System.EventHandler(this.btnThongKeThang_Click);
             // 
             // btnTraCuuCB
             // 
             this.btnTraCuuCB.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTraCuuCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraCuuCB.Location = new System.Drawing.Point(0, 3);
+            this.btnTraCuuCB.Location = new System.Drawing.Point(0, 2);
             this.btnTraCuuCB.Name = "btnTraCuuCB";
-            this.btnTraCuuCB.Size = new System.Drawing.Size(222, 136);
+            this.btnTraCuuCB.Size = new System.Drawing.Size(222, 182);
             this.btnTraCuuCB.TabIndex = 28;
             this.btnTraCuuCB.Text = "Tra cứu chuyến bay";
             this.btnTraCuuCB.UseVisualStyleBackColor = false;
@@ -166,7 +152,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThongKeNam;
-        private System.Windows.Forms.Button btnThongKeThang;
         private System.Windows.Forms.Button btnTraCuuCB;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label label1;

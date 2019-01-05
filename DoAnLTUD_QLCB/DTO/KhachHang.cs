@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ namespace DTO
 {
     public class KhachHang
     {
-        string _maKH;
+        int _maKH;
         string _tenKH;
         string _CMND;
         string _dienThoai;
-        public string MaKH
+        public int MaKH
         {
             get
             {
@@ -60,5 +61,17 @@ namespace DTO
                 _dienThoai = value;
             }
         }
+        public KhachHang()
+        {
+
+        }
+        public KhachHang(DataRow _row)
+        {
+            this._maKH = int.Parse(_row["MaKH"].ToString());
+            this._tenKH = _row["TenKH"].ToString();
+            this._CMND = _row["CMND"].ToString();
+            this._dienThoai = _row["DienThoai"].ToString();
+        }
+
     }
 }
