@@ -26,12 +26,12 @@ namespace GUI
         public ucDatCho()
         {
             InitializeComponent();
-            List<string> dsChuyenBay = ChuyenBayBUS.Instance.DatCho_DanhSachChuyenBay();
-            foreach(string cb in dsChuyenBay)
-            {
-                cbMaCB.DisplayMember = cb;
-                cbMaCB.ValueMember = cb;
-            }
+           
+            var dsChuyenBay = ChuyenBayBUS.Instance.DatCho_DanhSachChuyenBay();
+            cbMaCB.DataSource = dsChuyenBay;
+            cbMaCB.DisplayMember = "MaCB";
+            cbMaCB.ValueMember ="MaCB";
+           
         }
 
         private void cbMaCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,7 +44,19 @@ namespace GUI
 
         private void txtBoxCMND_TextChanged(object sender, EventArgs e)
         {
-
+           
+            DataTable res = KhachHangBUS.Instance.TimKiemKhachHang(txtBoxCMND.Text.ToString());
+            if(res.Rows.Count==0)
+            {
+                MessageBox.Show("CMND không có trong danh sách, vui lòng trở lại tra cứu khách hàng!", "Thông báo");
+            }
+            else
+            {
+                KhachHang kh = new KhachHang(res.Rows[0]);
+                txtBoxHoTen.Text = kh.TenKH;
+                txtBoxMaKH.Text = kh.MaKH.ToString();
+                txtBoxSoDienThoai.Text = kh.DienThoai;
+            }
         }
     }
 }

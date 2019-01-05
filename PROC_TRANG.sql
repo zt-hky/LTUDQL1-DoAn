@@ -69,7 +69,7 @@ if OBJECT_ID('TimKiemKhachHang','p') is not null
 DROP proc TimKiemKhachHang
 GO
 create procedure TimKiemKhachHang
-@CMND char(10)
+@CMND varchar(20)
 AS
 	begin 
 		select* from KHACHHANG where CMND=@CMND
@@ -84,7 +84,7 @@ GO
 create procedure DatCho_DanhSachChuyenBay
 AS
 	begin 
-		select* from CHUYENBAY where DATEDIFF(day, NgayGio ,GETDATE()) >=all (select TGDatVe from RANGBUOC)
+		select* from CHUYENBAY where DATEDIFF(HOUR, NgayGio ,GETDATE()) <=all (select TGDatVe from RANGBUOC)
 	end
 GO
 --Tìm kiếm chuyến bay theo Mã chuyến bay (đặt chổ)
@@ -100,3 +100,4 @@ AS
 GO
 
 --======================================== HẾT phần của Trang ==================================================
+select*from CHUYENBAY

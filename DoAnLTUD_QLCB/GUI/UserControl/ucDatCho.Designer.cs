@@ -162,7 +162,7 @@ namespace GUI
             this.btnDatCho.Name = "btnDatCho";
             this.btnDatCho.Size = new System.Drawing.Size(97, 29);
             this.btnDatCho.TabIndex = 20;
-            this.btnDatCho.Text = "Đặ chổ";
+            this.btnDatCho.Text = "Đặt chổ";
             this.btnDatCho.UseVisualStyleBackColor = true;
             // 
             // label5

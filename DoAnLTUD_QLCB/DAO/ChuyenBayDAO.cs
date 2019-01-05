@@ -41,14 +41,14 @@ namespace DAO
             return chuyenBays;
         }
         //=========================== 1660637 - TRANG =======================
-        public List<string> DatCho_DanhSachChuyenBay()
+        public List<ChuyenBay> DatCho_DanhSachChuyenBay()
         {
-            List<string> ds = new List<string>();
+            List<ChuyenBay> ds = new List<ChuyenBay>();
             string query = "DatCho_DanhSachChuyenBay";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
-                string cb = item.ToString();
+                ChuyenBay cb = new ChuyenBay(item);
                 ds.Add(cb);
             }
             return ds;
