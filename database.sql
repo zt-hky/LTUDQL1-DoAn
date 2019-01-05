@@ -2,7 +2,10 @@
 /* DBMS name:      Microsoft SQL Server 2008                    */
 /* Created on:     12/30/2018 11:31:18 AM                       */
 /*==============================================================*/
-
+create database DoAnUDQL
+go
+use DoAnUDQL
+go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
