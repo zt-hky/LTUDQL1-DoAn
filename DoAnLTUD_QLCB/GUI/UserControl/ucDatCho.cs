@@ -26,12 +26,25 @@ namespace GUI
         public ucDatCho()
         {
             InitializeComponent();
-            List<ChuyenBay> dsChuyenBay = ChuyenBayBUS.Instance.DatCho_DanhSachChuyenBay();
-            foreach(ChuyenBay cb in dsChuyenBay)
+            List<string> dsChuyenBay = ChuyenBayBUS.Instance.DatCho_DanhSachChuyenBay();
+            foreach(string cb in dsChuyenBay)
             {
-                cbMaCB.DisplayMember = cb.MaCB;
-                cbMaCB.ValueMember = cb.MaCB;
+                cbMaCB.DisplayMember = cb;
+                cbMaCB.ValueMember = cb;
             }
+        }
+
+        private void cbMaCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChuyenBay cb = ChuyenBayBUS.Instance.TimKiemChuyenBay(cbMaCB.SelectedValue.ToString());
+            txtBoxSBDi.Text = cb.SBDi;
+            txtBoxSBDen.Text = cb.SBDen;
+            dateTimePickerNgayGioDi.Text = cb.NgayGio.ToString();
+        }
+
+        private void txtBoxCMND_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

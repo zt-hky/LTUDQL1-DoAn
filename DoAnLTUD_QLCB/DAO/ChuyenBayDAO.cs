@@ -40,17 +40,31 @@ namespace DAO
             }
             return chuyenBays;
         }
-        public List<ChuyenBay> DatCho_DanhSachChuyenBay()
+        //=========================== 1660637 - TRANG =======================
+        public List<string> DatCho_DanhSachChuyenBay()
         {
-            List<ChuyenBay> ds = new List<ChuyenBay>();
+            List<string> ds = new List<string>();
             string query = "DatCho_DanhSachChuyenBay";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
-                ChuyenBay cb = new ChuyenBay(item);
+                string cb = item.ToString();
                 ds.Add(cb);
             }
             return ds;
         }
+        public DataTable TimKiemKhachHang(string CMND)
+        {
+            string query = "TimKiemKhachHang @CMND";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { CMND });
+            return data;
+        }
+        public DataTable TimKiemChuyenBay(string MaKH)
+        {
+            string query = "TimKiemChuyenBay @MaKH";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaKH });
+            return data;
+        }
+        //========================== Het phần của 1660647 - Trang =======================
     }
 }
