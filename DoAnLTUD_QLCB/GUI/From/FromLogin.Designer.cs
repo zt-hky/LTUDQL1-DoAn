@@ -89,7 +89,7 @@
             // btnLogin
             // 
             this.btnLogin.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.BorderRadius = 0;
             this.btnLogin.ButtonText = "    Đăng nhập";
@@ -109,8 +109,8 @@
             this.btnLogin.IsTab = false;
             this.btnLogin.Location = new System.Drawing.Point(398, 267);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnLogin.OnHovercolor = System.Drawing.Color.SeaGreen;
             this.btnLogin.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogin.selected = false;
             this.btnLogin.Size = new System.Drawing.Size(250, 48);
@@ -190,9 +190,11 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(29, 378);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(302, 13);
+            this.label4.Size = new System.Drawing.Size(289, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Nguyễn Hồng Kỳ - Nguyễn Thị Như Trang - Trần Xuân Trường";
+            this.label4.Text = "Nguyễn Hồng Kỳ - Phan Thị Như Trang - Hà Quang Trường";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -232,7 +234,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FromLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FromLogin";
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
