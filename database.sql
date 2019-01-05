@@ -165,7 +165,7 @@ go
 /* Table: KHACHHANG                                             */
 /*==============================================================*/
 create table KHACHHANG (
-   MaKH                 char(10)             not null,
+   MaKH                 int IDENTITY(1,1) ,
    TenKH                nvarchar(50)         null,
    CMND                 char(20)             null,
    DienThoai            char(20)             null,
@@ -217,7 +217,7 @@ go
 create table VECHUYENBAY (
    Loai                 int                  not null,
    MaCB                 char(10)             not null,
-   MaKH                 char(10)             not null,
+   MaKH                 int             not null,
    GheHang              char(10)             null,
    NgayDat              datetime             null,
    constraint PK_VECHUYENBAY primary key (MaCB, MaKH)
