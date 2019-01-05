@@ -55,12 +55,6 @@
     <Compile Include="From\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="From\FrmMainNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +66,12 @@
     </Compile>
     <Compile Include="From\FrmThemKhachHang.Designer.cs">
       <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\FromLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\FromLogin.Designer.cs">
+      <DependentUpon>FromLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,14 +132,14 @@
     <EmbeddedResource Include="From\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="From\FrmMainNhanVien.resx">
       <DependentUpon>FrmMainNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\FrmThemKhachHang.resx">
       <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\FromLogin.resx">
+      <DependentUpon>FromLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TEST.resx">
       <DependentUpon>TEST.cs</DependentUpon>
@@ -199,10 +200,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bunifu_UI_v1.5.3.dll" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Content Include="Bunifu_UI_v1.5.3.dll" />
+    <None Include="Resources\out02.png" />
+    <None Include="Resources\out01.png" />
+    <None Include="Resources\pic01.png" />
+    <None Include="Resources\logoLogin2.png" />
+    <None Include="Resources\logoLogin.png" />
+    <None Include="Resources\Password.png" />
+    <None Include="Resources\logoUser.png" />
+    <None Include="Resources\logoPassword.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

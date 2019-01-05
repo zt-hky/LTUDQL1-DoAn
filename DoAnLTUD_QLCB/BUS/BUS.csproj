@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="ChuyenBayBUS.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="KhachHangBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

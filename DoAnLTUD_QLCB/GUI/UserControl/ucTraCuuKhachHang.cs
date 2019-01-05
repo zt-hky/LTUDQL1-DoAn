@@ -26,7 +26,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+        private void init()
+        {
 
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
