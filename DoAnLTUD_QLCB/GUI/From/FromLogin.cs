@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,36 @@ namespace GUI.From
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void EventLogin(object sender, EventArgs e)
+        {
+            string username = this.tbUsername.text;
+            string password = this.tbPassword.text;
+
+            int login = TaiKhoanBUS.Instance.Login(username, password);
+
+            switch (login)
+            {
+                case -1:
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
+                    break;
+                case 0:
+                    FrmMainNhanVien frmNhanVien = new FrmMainNhanVien();
+                    this.Hide();
+                    frmNhanVien.ShowDialog();
+                    Application.Exit();
+                    break;
+                case 1:
+                    FrmMainAdmin frmAdmin = new FrmMainAdmin();
+                    this.Hide();
+                    frmAdmin.ShowDialog();
+                    Application.Exit();
+                    break;
+            }
+
+            
 
         }
 
