@@ -32,6 +32,7 @@
             this.tabSoLuongSanBay = new System.Windows.Forms.TabControl();
             this.tabSanBay = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnThayDoiThoiGianBay = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtThoiGianBayMin = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nmThoiGianBayMin = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnThayDoiThoiGianDung = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -52,11 +54,13 @@
             this.nmThoiGianDungMax = new System.Windows.Forms.NumericUpDown();
             this.nmThoiGianDungMin = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnThayDoiSoSanBayTrungGianMax = new System.Windows.Forms.Button();
             this.txtSLSanBayTrungGian = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.nmSLSanBayTrungGianMax = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThayDoiSoLuongSanBay = new System.Windows.Forms.Button();
             this.txtSLSanBay = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,26 +73,22 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabDatVe = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.nmThoiGianChamNhatDatVeMoi = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.nmThoiGianHuyDatVe = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtThoiGianHuyDatVe = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtThoiGianChamNhatDatVe = new System.Windows.Forms.TextBox();
-            this.btnThayDoiDatVe = new System.Windows.Forms.Button();
             this.btnThayDoiHuyDatVe = new System.Windows.Forms.Button();
-            this.btnThayDoiSoLuongSanBay = new System.Windows.Forms.Button();
-            this.btnThayDoiThoiGianBay = new System.Windows.Forms.Button();
-            this.btnThayDoiSoSanBayTrungGianMax = new System.Windows.Forms.Button();
-            this.btnThayDoiThoiGianDung = new System.Windows.Forms.Button();
+            this.txtThoiGianHuyDatVe = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.nmThoiGianHuyDatVe = new System.Windows.Forms.NumericUpDown();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnThayDoiDatVe = new System.Windows.Forms.Button();
+            this.txtThoiGianChamNhatDatVe = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.nmThoiGianChamNhatDatVeMoi = new System.Windows.Forms.NumericUpDown();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabSoLuongSanBay.SuspendLayout();
             this.tabSanBay.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,10 +104,10 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVeMoi)).BeginInit();
             this.tabDatVe.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianHuyDatVe)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianChamNhatDatVeMoi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianHuyDatVe)).BeginInit();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -160,6 +160,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thay Đổi Thời Gian Bay";
             // 
+            // btnThayDoiThoiGianBay
+            // 
+            this.btnThayDoiThoiGianBay.Location = new System.Drawing.Point(127, 118);
+            this.btnThayDoiThoiGianBay.Name = "btnThayDoiThoiGianBay";
+            this.btnThayDoiThoiGianBay.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiThoiGianBay.TabIndex = 2;
+            this.btnThayDoiThoiGianBay.Text = "Thay Đổi";
+            this.btnThayDoiThoiGianBay.UseVisualStyleBackColor = true;
+            this.btnThayDoiThoiGianBay.Click += new System.EventHandler(this.btnThayDoiThoiGianBay_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -207,6 +217,11 @@
             // nmThoiGianBayMin
             // 
             this.nmThoiGianBayMin.Location = new System.Drawing.Point(169, 26);
+            this.nmThoiGianBayMin.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
             this.nmThoiGianBayMin.Name = "nmThoiGianBayMin";
             this.nmThoiGianBayMin.Size = new System.Drawing.Size(62, 20);
             this.nmThoiGianBayMin.TabIndex = 0;
@@ -232,6 +247,16 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thay Đổi Thời Gian Dừng Tại Sân Bay Trung Gian";
+            // 
+            // btnThayDoiThoiGianDung
+            // 
+            this.btnThayDoiThoiGianDung.Location = new System.Drawing.Point(127, 173);
+            this.btnThayDoiThoiGianDung.Name = "btnThayDoiThoiGianDung";
+            this.btnThayDoiThoiGianDung.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiThoiGianDung.TabIndex = 2;
+            this.btnThayDoiThoiGianDung.Text = "Thay Đổi";
+            this.btnThayDoiThoiGianDung.UseVisualStyleBackColor = true;
+            this.btnThayDoiThoiGianDung.Click += new System.EventHandler(this.btnThayDoiThoiGianDung_Click);
             // 
             // label17
             // 
@@ -324,6 +349,11 @@
             // nmThoiGianDungMax
             // 
             this.nmThoiGianDungMax.Location = new System.Drawing.Point(184, 60);
+            this.nmThoiGianDungMax.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
             this.nmThoiGianDungMax.Name = "nmThoiGianDungMax";
             this.nmThoiGianDungMax.Size = new System.Drawing.Size(62, 20);
             this.nmThoiGianDungMax.TabIndex = 0;
@@ -331,6 +361,11 @@
             // nmThoiGianDungMin
             // 
             this.nmThoiGianDungMin.Location = new System.Drawing.Point(183, 26);
+            this.nmThoiGianDungMin.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
             this.nmThoiGianDungMin.Name = "nmThoiGianDungMin";
             this.nmThoiGianDungMin.Size = new System.Drawing.Size(62, 20);
             this.nmThoiGianDungMin.TabIndex = 0;
@@ -348,6 +383,16 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thay Đổi Số Sân Bay Trung Gian Tối Đa";
+            // 
+            // btnThayDoiSoSanBayTrungGianMax
+            // 
+            this.btnThayDoiSoSanBayTrungGianMax.Location = new System.Drawing.Point(115, 173);
+            this.btnThayDoiSoSanBayTrungGianMax.Name = "btnThayDoiSoSanBayTrungGianMax";
+            this.btnThayDoiSoSanBayTrungGianMax.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiSoSanBayTrungGianMax.TabIndex = 2;
+            this.btnThayDoiSoSanBayTrungGianMax.Text = "Thay Đổi";
+            this.btnThayDoiSoSanBayTrungGianMax.UseVisualStyleBackColor = true;
+            this.btnThayDoiSoSanBayTrungGianMax.Click += new System.EventHandler(this.btnThayDoiSoSanBayTrungGianMax_Click);
             // 
             // txtSLSanBayTrungGian
             // 
@@ -378,6 +423,11 @@
             // nmSLSanBayTrungGianMax
             // 
             this.nmSLSanBayTrungGianMax.Location = new System.Drawing.Point(207, 26);
+            this.nmSLSanBayTrungGianMax.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
             this.nmSLSanBayTrungGianMax.Name = "nmSLSanBayTrungGianMax";
             this.nmSLSanBayTrungGianMax.Size = new System.Drawing.Size(62, 20);
             this.nmSLSanBayTrungGianMax.TabIndex = 0;
@@ -395,6 +445,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thay Đổi Số Lượng Sân Bay";
+            // 
+            // btnThayDoiSoLuongSanBay
+            // 
+            this.btnThayDoiSoLuongSanBay.Location = new System.Drawing.Point(115, 118);
+            this.btnThayDoiSoLuongSanBay.Name = "btnThayDoiSoLuongSanBay";
+            this.btnThayDoiSoLuongSanBay.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiSoLuongSanBay.TabIndex = 2;
+            this.btnThayDoiSoLuongSanBay.Text = "Thay Đổi";
+            this.btnThayDoiSoLuongSanBay.UseVisualStyleBackColor = true;
+            this.btnThayDoiSoLuongSanBay.Click += new System.EventHandler(this.btnThayDoiSoLuongSanBay_Click);
             // 
             // txtSLSanBay
             // 
@@ -425,6 +485,11 @@
             // nmSoLuongSanBayMoi
             // 
             this.nmSoLuongSanBayMoi.Location = new System.Drawing.Point(156, 26);
+            this.nmSoLuongSanBayMoi.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
             this.nmSoLuongSanBayMoi.Name = "nmSoLuongSanBayMoi";
             this.nmSoLuongSanBayMoi.Size = new System.Drawing.Size(62, 20);
             this.nmSoLuongSanBayMoi.TabIndex = 0;
@@ -508,72 +573,6 @@
             this.tabDatVe.Text = "Đặt Vé";
             this.tabDatVe.UseVisualStyleBackColor = true;
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.btnThayDoiDatVe);
-            this.groupBox7.Controls.Add(this.txtThoiGianChamNhatDatVe);
-            this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Controls.Add(this.label21);
-            this.groupBox7.Controls.Add(this.nmThoiGianChamNhatDatVeMoi);
-            this.groupBox7.Controls.Add(this.label22);
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Location = new System.Drawing.Point(3, 12);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(336, 463);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Thay Đổi Thời Gian Chậm Nhất Để Đặt Vé";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 57);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(176, 13);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Thời gian chậm nhất để đặt vé mới:";
-            // 
-            // nmThoiGianChamNhatDatVeMoi
-            // 
-            this.nmThoiGianChamNhatDatVeMoi.Location = new System.Drawing.Point(191, 55);
-            this.nmThoiGianChamNhatDatVeMoi.Name = "nmThoiGianChamNhatDatVeMoi";
-            this.nmThoiGianChamNhatDatVeMoi.Size = new System.Drawing.Size(45, 20);
-            this.nmThoiGianChamNhatDatVeMoi.TabIndex = 1;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(255, 57);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(27, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "(giờ)";
-            // 
-            // nmThoiGianHuyDatVe
-            // 
-            this.nmThoiGianHuyDatVe.Location = new System.Drawing.Point(205, 55);
-            this.nmThoiGianHuyDatVe.Name = "nmThoiGianHuyDatVe";
-            this.nmThoiGianHuyDatVe.Size = new System.Drawing.Size(45, 20);
-            this.nmThoiGianHuyDatVe.TabIndex = 1;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(269, 57);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(34, 13);
-            this.label26.TabIndex = 2;
-            this.label26.Text = "(phút)";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(20, 57);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(127, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Thời gian hủy đặt vé mới:";
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.btnThayDoiHuyDatVe);
@@ -590,14 +589,32 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Thay Đổi Thời Gian Hủy Đặt Vé";
             // 
-            // label25
+            // btnThayDoiHuyDatVe
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(20, 119);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(108, 13);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Thời gian hủy đặt vé:";
+            this.btnThayDoiHuyDatVe.Location = new System.Drawing.Point(130, 201);
+            this.btnThayDoiHuyDatVe.Name = "btnThayDoiHuyDatVe";
+            this.btnThayDoiHuyDatVe.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiHuyDatVe.TabIndex = 4;
+            this.btnThayDoiHuyDatVe.Text = "Thay Đổi";
+            this.btnThayDoiHuyDatVe.UseVisualStyleBackColor = true;
+            this.btnThayDoiHuyDatVe.Click += new System.EventHandler(this.btnThayDoiHuyDatVe_Click);
+            // 
+            // txtThoiGianHuyDatVe
+            // 
+            this.txtThoiGianHuyDatVe.Location = new System.Drawing.Point(205, 116);
+            this.txtThoiGianHuyDatVe.Name = "txtThoiGianHuyDatVe";
+            this.txtThoiGianHuyDatVe.ReadOnly = true;
+            this.txtThoiGianHuyDatVe.Size = new System.Drawing.Size(45, 20);
+            this.txtThoiGianHuyDatVe.TabIndex = 3;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(20, 57);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(127, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Thời gian hủy đặt vé mới:";
             // 
             // label27
             // 
@@ -608,22 +625,69 @@
             this.label27.TabIndex = 2;
             this.label27.Text = "(phút)";
             // 
-            // txtThoiGianHuyDatVe
+            // label25
             // 
-            this.txtThoiGianHuyDatVe.Location = new System.Drawing.Point(205, 116);
-            this.txtThoiGianHuyDatVe.Name = "txtThoiGianHuyDatVe";
-            this.txtThoiGianHuyDatVe.ReadOnly = true;
-            this.txtThoiGianHuyDatVe.Size = new System.Drawing.Size(45, 20);
-            this.txtThoiGianHuyDatVe.TabIndex = 3;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(20, 119);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(108, 13);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Thời gian hủy đặt vé:";
             // 
-            // label22
+            // label26
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 119);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(157, 13);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Thời gian chậm nhất để đặt vé:";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(269, 57);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(34, 13);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "(phút)";
+            // 
+            // nmThoiGianHuyDatVe
+            // 
+            this.nmThoiGianHuyDatVe.Location = new System.Drawing.Point(205, 55);
+            this.nmThoiGianHuyDatVe.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
+            this.nmThoiGianHuyDatVe.Name = "nmThoiGianHuyDatVe";
+            this.nmThoiGianHuyDatVe.Size = new System.Drawing.Size(45, 20);
+            this.nmThoiGianHuyDatVe.TabIndex = 1;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnThayDoiDatVe);
+            this.groupBox7.Controls.Add(this.txtThoiGianChamNhatDatVe);
+            this.groupBox7.Controls.Add(this.label23);
+            this.groupBox7.Controls.Add(this.label21);
+            this.groupBox7.Controls.Add(this.nmThoiGianChamNhatDatVeMoi);
+            this.groupBox7.Controls.Add(this.label22);
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Location = new System.Drawing.Point(3, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(336, 463);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Thay Đổi Thời Gian Chậm Nhất Để Đặt Vé";
+            // 
+            // btnThayDoiDatVe
+            // 
+            this.btnThayDoiDatVe.Location = new System.Drawing.Point(125, 201);
+            this.btnThayDoiDatVe.Name = "btnThayDoiDatVe";
+            this.btnThayDoiDatVe.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiDatVe.TabIndex = 4;
+            this.btnThayDoiDatVe.Text = "Thay Đổi";
+            this.btnThayDoiDatVe.UseVisualStyleBackColor = true;
+            this.btnThayDoiDatVe.Click += new System.EventHandler(this.btnThayDoiDatVe_Click);
+            // 
+            // txtThoiGianChamNhatDatVe
+            // 
+            this.txtThoiGianChamNhatDatVe.Location = new System.Drawing.Point(191, 116);
+            this.txtThoiGianChamNhatDatVe.Name = "txtThoiGianChamNhatDatVe";
+            this.txtThoiGianChamNhatDatVe.ReadOnly = true;
+            this.txtThoiGianChamNhatDatVe.Size = new System.Drawing.Size(45, 20);
+            this.txtThoiGianChamNhatDatVe.TabIndex = 3;
             // 
             // label23
             // 
@@ -634,67 +698,44 @@
             this.label23.TabIndex = 2;
             this.label23.Text = "(giờ)";
             // 
-            // txtThoiGianChamNhatDatVe
+            // label21
             // 
-            this.txtThoiGianChamNhatDatVe.Location = new System.Drawing.Point(191, 116);
-            this.txtThoiGianChamNhatDatVe.Name = "txtThoiGianChamNhatDatVe";
-            this.txtThoiGianChamNhatDatVe.ReadOnly = true;
-            this.txtThoiGianChamNhatDatVe.Size = new System.Drawing.Size(45, 20);
-            this.txtThoiGianChamNhatDatVe.TabIndex = 3;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(255, 57);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(27, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "(giờ)";
             // 
-            // btnThayDoiDatVe
+            // nmThoiGianChamNhatDatVeMoi
             // 
-            this.btnThayDoiDatVe.Location = new System.Drawing.Point(125, 201);
-            this.btnThayDoiDatVe.Name = "btnThayDoiDatVe";
-            this.btnThayDoiDatVe.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiDatVe.TabIndex = 4;
-            this.btnThayDoiDatVe.Text = "Thay Đổi";
-            this.btnThayDoiDatVe.UseVisualStyleBackColor = true;
+            this.nmThoiGianChamNhatDatVeMoi.Location = new System.Drawing.Point(191, 55);
+            this.nmThoiGianChamNhatDatVeMoi.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
+            this.nmThoiGianChamNhatDatVeMoi.Name = "nmThoiGianChamNhatDatVeMoi";
+            this.nmThoiGianChamNhatDatVeMoi.Size = new System.Drawing.Size(45, 20);
+            this.nmThoiGianChamNhatDatVeMoi.TabIndex = 1;
             // 
-            // btnThayDoiHuyDatVe
+            // label22
             // 
-            this.btnThayDoiHuyDatVe.Location = new System.Drawing.Point(130, 201);
-            this.btnThayDoiHuyDatVe.Name = "btnThayDoiHuyDatVe";
-            this.btnThayDoiHuyDatVe.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiHuyDatVe.TabIndex = 4;
-            this.btnThayDoiHuyDatVe.Text = "Thay Đổi";
-            this.btnThayDoiHuyDatVe.UseVisualStyleBackColor = true;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 119);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(157, 13);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Thời gian chậm nhất để đặt vé:";
             // 
-            // btnThayDoiSoLuongSanBay
+            // label20
             // 
-            this.btnThayDoiSoLuongSanBay.Location = new System.Drawing.Point(115, 118);
-            this.btnThayDoiSoLuongSanBay.Name = "btnThayDoiSoLuongSanBay";
-            this.btnThayDoiSoLuongSanBay.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiSoLuongSanBay.TabIndex = 2;
-            this.btnThayDoiSoLuongSanBay.Text = "Thay Đổi";
-            this.btnThayDoiSoLuongSanBay.UseVisualStyleBackColor = true;
-            // 
-            // btnThayDoiThoiGianBay
-            // 
-            this.btnThayDoiThoiGianBay.Location = new System.Drawing.Point(127, 118);
-            this.btnThayDoiThoiGianBay.Name = "btnThayDoiThoiGianBay";
-            this.btnThayDoiThoiGianBay.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiThoiGianBay.TabIndex = 2;
-            this.btnThayDoiThoiGianBay.Text = "Thay Đổi";
-            this.btnThayDoiThoiGianBay.UseVisualStyleBackColor = true;
-            // 
-            // btnThayDoiSoSanBayTrungGianMax
-            // 
-            this.btnThayDoiSoSanBayTrungGianMax.Location = new System.Drawing.Point(115, 173);
-            this.btnThayDoiSoSanBayTrungGianMax.Name = "btnThayDoiSoSanBayTrungGianMax";
-            this.btnThayDoiSoSanBayTrungGianMax.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiSoSanBayTrungGianMax.TabIndex = 2;
-            this.btnThayDoiSoSanBayTrungGianMax.Text = "Thay Đổi";
-            this.btnThayDoiSoSanBayTrungGianMax.UseVisualStyleBackColor = true;
-            // 
-            // btnThayDoiThoiGianDung
-            // 
-            this.btnThayDoiThoiGianDung.Location = new System.Drawing.Point(127, 173);
-            this.btnThayDoiThoiGianDung.Name = "btnThayDoiThoiGianDung";
-            this.btnThayDoiThoiGianDung.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiThoiGianDung.TabIndex = 2;
-            this.btnThayDoiThoiGianDung.Text = "Thay Đổi";
-            this.btnThayDoiThoiGianDung.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 57);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(176, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Thời gian chậm nhất để đặt vé mới:";
             // 
             // ucThayDoiQuyDinh
             // 
@@ -704,6 +745,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ucThayDoiQuyDinh";
             this.Size = new System.Drawing.Size(702, 547);
+            this.Load += new System.EventHandler(this.ucThayDoiQuyDinh_Load);
             this.tabSoLuongSanBay.ResumeLayout(false);
             this.tabSanBay.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -724,12 +766,12 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVeMoi)).EndInit();
             this.tabDatVe.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianHuyDatVe)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianChamNhatDatVeMoi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianHuyDatVe)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
