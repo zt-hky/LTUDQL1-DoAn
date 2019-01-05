@@ -35,7 +35,7 @@ create procedure CapNhatKhachHang
 @CMND char(10),@MaKH int,@TenKH nvarchar(30),@DienThoai varchar(10)
 AS
 	begin 
-		update KHACHHANG set TenKH=@TenKH,DienThoai=@DienThoai
+		update KHACHHANG set TenKH=@TenKH,DienThoai=@DienThoai,CMND=@CMND Where MaKH =@MaKH
 	end
 GO
 --search Khach hang theo CMND
@@ -50,3 +50,4 @@ AS
 	end
 GO
 --======================================== HẾT phần của Trang ==================================================
+select*from KHACHHANG

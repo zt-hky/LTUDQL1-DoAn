@@ -52,7 +52,7 @@ namespace DAO
             {
                 // ThemCMNDKhachHang
                 //@CMND char(10),@ketQua int out
-                string strSQL = "CapNhatKhachHang @CMND,@MaKH,@TenKH,@DienThoai";
+                string strSQL = "CapNhatKhachHang @CMND , @MaKH , @TenKH , @DienThoai";
                 int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] {kh.CMND,kh.MaKH,kh.TenKH,kh.DienThoai });
                 return res;
             }

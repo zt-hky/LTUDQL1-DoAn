@@ -42,13 +42,13 @@ namespace GUI
         private void btnInsert_Click(object sender, EventArgs e)
         {
             int res = KhachHangBUS.Instance.ThemCMNDKhachHang(txtBoxCMND.Text);
-            if(res==0)
+            if (res == 0)
             {
                 MessageBox.Show("Không thể thêm Khách hàng");
             }
             else
             {
-                FrmThemKhachHang frmKH = new FrmThemKhachHang();
+                FrmThemKhachHang frmKH = new FrmThemKhachHang(txtBoxCMND.Text);
                 frmKH.ShowDialog();
                 MessageBox.Show("Thêm khách hàng thành công!");
             }
