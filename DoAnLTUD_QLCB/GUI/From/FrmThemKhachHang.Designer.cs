@@ -53,7 +53,6 @@
             this.txtBoxCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCMND.Location = new System.Drawing.Point(173, 155);
             this.txtBoxCMND.Name = "txtBoxCMND";
-            this.txtBoxCMND.ReadOnly = true;
             this.txtBoxCMND.Size = new System.Drawing.Size(186, 27);
             this.txtBoxCMND.TabIndex = 25;
             // 
