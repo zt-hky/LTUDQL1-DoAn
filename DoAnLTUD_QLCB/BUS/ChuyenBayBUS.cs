@@ -33,5 +33,9 @@ namespace BUS
         {
             return ChuyenBayDAO.Instance.DatCho_DanhSachChuyenBay();
         }
+        public ChuyenBay TimKiemChuyenBay(string MaCB)
+        {
+            return ChuyenBayDAO.Instance.TimKiemChuyenBay(MaCB);
+        }
     }
 }

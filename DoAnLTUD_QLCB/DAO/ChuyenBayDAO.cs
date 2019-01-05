@@ -59,11 +59,16 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { CMND });
             return data;
         }
-        public DataTable TimKiemChuyenBay(string MaKH)
+        public ChuyenBay TimKiemChuyenBay(string MaCB)
         {
-            string query = "TimKiemChuyenBay @MaKH";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaKH });
-            return data;
+            string query = "TimKiemChuyenBay @MaCB";
+            ChuyenBay cb = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaCB });
+            if(data.Rows.Count !=0)
+            {
+                cb = new ChuyenBay(data.Rows[0]);
+            }
+            return cb;
         }
         //========================== Het phần của 1660647 - Trang =======================
     }
