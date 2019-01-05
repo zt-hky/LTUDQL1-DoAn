@@ -188,8 +188,8 @@ create table RANGBUOC (
    TGDungMin            int                  null,
    TGDungMax            int                  null,
    SLHangVe             int                  null,
-   TGDatVe              datetime             null,
-   TGHuyVe              datetime             null,
+   TGDatVe              int			         null,
+   TGHuyVe              int					 null,
    constraint PK_RANGBUOC primary key (PK)
 )
 go

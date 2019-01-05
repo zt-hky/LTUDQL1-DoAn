@@ -49,5 +49,18 @@ AS
 		select* from KHACHHANG where CMND=@CMND
 	end
 GO
+--Liệt kê danh sách chuyến bay sau n ngày của ngày hiện tại( chưa bay) - n: là thời gian chậm nhất trước n ngày để đặt vé
+--n : là TGDatVe
+--liệt kê ra combobox trong DatCho
+if OBJECT_ID('DatCho_DanhSachChuyenBay','p') is not null
+DROP proc DatCho_DanhSachChuyenBay
+GO
+create procedure DatCho_DanhSachChuyenBay
+AS
+	begin 
+		select* from CHUYENBAY where DATEDIFF(day, NgayGio ,GETDATE()) >=all (select TGDatVe from RANGBUOC)
+	end
+GO
 --======================================== HẾT phần của Trang ==================================================
-select*from KHACHHANG
+
+

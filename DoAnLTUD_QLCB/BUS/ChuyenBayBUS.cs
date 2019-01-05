@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using DAO;
-
+using DTO;
 namespace BUS
 {
     public class ChuyenBayBUS
@@ -28,6 +28,10 @@ namespace BUS
         public void LoadAll(DataGridView data)
         {
             data.DataSource = ChuyenBayDAO.Instance.getAll();
+        }
+        public List<ChuyenBay> DatCho_DanhSachChuyenBay()
+        {
+            return ChuyenBayDAO.Instance.DatCho_DanhSachChuyenBay();
         }
     }
 }
