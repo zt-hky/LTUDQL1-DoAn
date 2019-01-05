@@ -107,7 +107,7 @@ go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('"USER"')
+           where  id = object_id('TAIKHOAN')
             and   type = 'U')
    drop table "USER"
 go
@@ -205,13 +205,13 @@ create table SANBAY (
 go
 
 /*==============================================================*/
-/* Table: "USER"                                                */
+/* Table: TAIKHOAN                                               */
 /*==============================================================*/
-create table "USER" (
-   "user"               varchar(30)          not null,
-   password             char(120)            null,
+create table TAIKHOAN(
+   username               varchar(30)          not null,
+   password             varchar(120)            null,
    loaiUSER             int                  null,
-   constraint PK_USER primary key ("user")
+   constraint PK_USER primary key (username)
 )
 go
 

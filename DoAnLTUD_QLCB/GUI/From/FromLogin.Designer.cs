@@ -119,7 +119,7 @@
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.Textcolor = System.Drawing.Color.White;
             this.btnLogin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.EventLogin);
             // 
             // tbPassword
             // 
