@@ -124,7 +124,6 @@
             this.Controls.Add(this.label1);
             this.Name = "ucThongKeNam";
             this.Size = new System.Drawing.Size(702, 547);
-            this.Load += new System.EventHandler(this.ucThongKeNam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
