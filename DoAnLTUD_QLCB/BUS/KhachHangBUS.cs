@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAO;
+using System.Data;
+
 namespace BUS
 {
     public class KhachHangBUS
@@ -23,9 +25,17 @@ namespace BUS
 
         private KhachHangBUS() { }
 
-        //public KhachHang TimKiemKhachHang(string CMND)
-        //{
-        //    //return kh.TimKiemKhachHang(CMND);
-        //}
+        public DataTable TimKiemKhachHang(string CMND)
+        {
+            return KhachHangDAO.Instance.TimKiemKhachHang(CMND); 
+        }
+        public int ThemCMNDKhachHang(string CMND)
+        {
+            return KhachHangDAO.Instance.ThemCMNDKhachHang(CMND);
+        }
+        public int CapNhatKhachHang(KhachHang kh)
+        {
+            return KhachHangDAO.Instance.CapNhatKhachHang(kh);
+        }
     }
 }

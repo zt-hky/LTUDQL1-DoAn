@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBoxDienThoai = new System.Windows.Forms.TextBox();
+            this.txtBoxCMND = new System.Windows.Forms.TextBox();
+            this.txtBoxHoTen = new System.Windows.Forms.TextBox();
+            this.txtBoxMaKH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,39 +40,38 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox8
+            // txtBoxDienThoai
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(173, 231);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(186, 27);
-            this.textBox8.TabIndex = 26;
+            this.txtBoxDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxDienThoai.Location = new System.Drawing.Point(173, 231);
+            this.txtBoxDienThoai.Name = "txtBoxDienThoai";
+            this.txtBoxDienThoai.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxDienThoai.TabIndex = 26;
             // 
-            // textBox4
+            // txtBoxCMND
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(173, 155);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(186, 27);
-            this.textBox4.TabIndex = 25;
+            this.txtBoxCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxCMND.Location = new System.Drawing.Point(173, 155);
+            this.txtBoxCMND.Name = "txtBoxCMND";
+            this.txtBoxCMND.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxCMND.TabIndex = 25;
             // 
-            // textBox5
+            // txtBoxHoTen
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(173, 86);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(186, 27);
-            this.textBox5.TabIndex = 24;
+            this.txtBoxHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHoTen.Location = new System.Drawing.Point(173, 86);
+            this.txtBoxHoTen.Name = "txtBoxHoTen";
+            this.txtBoxHoTen.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxHoTen.TabIndex = 24;
             // 
-            // textBox6
+            // txtBoxMaKH
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(173, 24);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(186, 27);
-            this.textBox6.TabIndex = 23;
+            this.txtBoxMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMaKH.Location = new System.Drawing.Point(173, 24);
+            this.txtBoxMaKH.Name = "txtBoxMaKH";
+            this.txtBoxMaKH.ReadOnly = true;
+            this.txtBoxMaKH.Size = new System.Drawing.Size(186, 27);
+            this.txtBoxMaKH.TabIndex = 23;
             // 
             // label7
             // 
@@ -123,6 +122,7 @@
             this.btnInsert.TabIndex = 33;
             this.btnInsert.Text = "Thêm";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
@@ -133,6 +133,7 @@
             this.btnUpdate.TabIndex = 34;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmThemKhachHang
             // 
@@ -141,10 +142,10 @@
             this.ClientSize = new System.Drawing.Size(440, 359);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtBoxDienThoai);
+            this.Controls.Add(this.txtBoxCMND);
+            this.Controls.Add(this.txtBoxHoTen);
+            this.Controls.Add(this.txtBoxMaKH);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -158,10 +159,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBoxDienThoai;
+        private System.Windows.Forms.TextBox txtBoxCMND;
+        private System.Windows.Forms.TextBox txtBoxHoTen;
+        private System.Windows.Forms.TextBox txtBoxMaKH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

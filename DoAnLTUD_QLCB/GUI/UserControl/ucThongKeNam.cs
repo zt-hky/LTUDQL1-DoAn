@@ -26,5 +26,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ucThongKeNam_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
