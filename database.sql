@@ -132,7 +132,7 @@ go
 /* Table: CHITIETCHUYENBAY                                      */
 /*==============================================================*/
 create table CHITIETCHUYENBAY (
-   STT                  int                  not null,
+   STT                  int IDENTITY(1,1)      not null,
    MaCB                 char(10)             not null,
    MaSBTG               char(10)             null,
    TGDung               int                  null,
@@ -165,11 +165,12 @@ go
 /* Table: KHACHHANG                                             */
 /*==============================================================*/
 create table KHACHHANG (
-   MaKH                 int IDENTITY(1,1) ,
+   MaKH                 int IDENTITY(1,1)    not null,
    TenKH                nvarchar(50)         null,
    CMND                 char(20)             null,
    DienThoai            char(20)             null,
-   constraint PK_KHACHHANG primary key (MaKH)
+   constraint PK_KHACHHANG primary key (MaKH),
+    constraint UQ_CMND unique (CMND)
 )
 go
 
@@ -215,12 +216,15 @@ go
 /* Table: VECHUYENBAY                                           */
 /*==============================================================*/
 create table VECHUYENBAY (
+	MaVe				int IDENTITY(1,1)    not null,
    Loai                 int                  not null,
    MaCB                 char(10)             not null,
    MaKH                 int             not null,
    GheHang              char(10)             null,
    NgayDat              datetime             null,
-   constraint PK_VECHUYENBAY primary key (MaCB, MaKH)
+   GiaVe				int						null,
+   constraint PK_VECHUYENBAY primary key (MaVe),
+   constraint UQ_MaCB_MaKH unique (MaCB,MaKH)
 )
 go
 
