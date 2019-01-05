@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DTO
 {
-    class VeChuyenBay
+    public class VeChuyenBay
     {
         int _loai;// 0:dat cho, 1: da ban
         string _maCB;
-        string _maKH;
+        int _maKH;
         string _gheHang;
         DateTime _ngayDat;
-        public string MaKH
+        int _giaVe;
+        int _maVe;
+        public int MaKH
         {
             get
             {
@@ -72,6 +75,41 @@ namespace DTO
             {
                 _ngayDat = value;
             }
+        }
+        public int GiaVe
+        {
+            get
+            {
+                return _giaVe;
+            }
+
+            set
+            {
+                _giaVe = value;
+            }
+        }
+        public int MaVe
+        {
+            get
+            {
+                return _maVe;
+            }
+
+            set
+            {
+                _maVe = value;
+            }
+        }
+        public VeChuyenBay(DataRow row)
+        {
+            this._gheHang = row["GheHang"].ToString();
+            //Loai 0: đặt chổ, 1: đã mua vé
+            this._loai = int.Parse(row["Loai"].ToString());
+            this._maCB = row["MaCB"].ToString();
+            this._maKH = int.Parse(row["MaKH"].ToString());
+            this._ngayDat = DateTime.Parse(row["NgayDat"].ToString());
+            this._giaVe = int.Parse(row["GiaVe"].ToString());
+            this._maVe = int.Parse(row["MaVe"].ToString());
         }
     }
 }

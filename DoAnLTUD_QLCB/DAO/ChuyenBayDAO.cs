@@ -40,5 +40,17 @@ namespace DAO
             }
             return chuyenBays;
         }
+        public List<ChuyenBay> DatCho_DanhSachChuyenBay()
+        {
+            List<ChuyenBay> ds = new List<ChuyenBay>();
+            string query = "DatCho_DanhSachChuyenBay";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ChuyenBay cb = new ChuyenBay(item);
+                ds.Add(cb);
+            }
+            return ds;
+        }
     }
 }

@@ -1,4 +1,4 @@
-CREATE PROC uc_getTK_by_Username @username VARCHAR(30)
+alter PROC uc_getTK_by_Username @username VARCHAR(30)
 AS
 begin
 SELECT * FROM dbo.TAIKHOAN WHERE username = @username

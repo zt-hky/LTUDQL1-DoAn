@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxMaCB = new System.Windows.Forms.TextBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnDatCho = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +53,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbMaCB = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,14 +141,6 @@
             this.label1.Size = new System.Drawing.Size(123, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Mã chuyến bay :";
-            // 
-            // txtBoxMaCB
-            // 
-            this.txtBoxMaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMaCB.Location = new System.Drawing.Point(148, 80);
-            this.txtBoxMaCB.Name = "txtBoxMaCB";
-            this.txtBoxMaCB.Size = new System.Drawing.Size(186, 27);
-            this.txtBoxMaCB.TabIndex = 27;
             // 
             // btnHuy
             // 
@@ -302,10 +295,20 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(187, 26);
             this.dateTimePicker1.TabIndex = 44;
             // 
+            // cbMaCB
+            // 
+            this.cbMaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaCB.FormattingEnabled = true;
+            this.cbMaCB.Location = new System.Drawing.Point(149, 85);
+            this.cbMaCB.Name = "cbMaCB";
+            this.cbMaCB.Size = new System.Drawing.Size(185, 28);
+            this.cbMaCB.TabIndex = 45;
+            // 
             // ucDatCho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbMaCB);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
@@ -321,7 +324,6 @@
             this.Controls.Add(this.txtBoxMaKH);
             this.Controls.Add(this.txtBoxHangVe);
             this.Controls.Add(this.txtBoxCMND);
-            this.Controls.Add(this.txtBoxMaCB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -351,7 +353,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxMaCB;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnDatCho;
         private System.Windows.Forms.Label label5;
@@ -368,5 +369,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbMaCB;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
