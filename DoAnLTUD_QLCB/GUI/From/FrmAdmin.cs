@@ -29,17 +29,6 @@ namespace GUI
                 ucTraCuuChuyenBay.Instance.BringToFront();
         }
 
-        private void btnThongKeThang_Click(object sender, EventArgs e)
-        {
-            if (!panel.Contains(ucThongKeThang.Instance))
-            {
-                panel.Controls.Add(ucThongKeThang.Instance);
-                ucThongKeThang.Instance.Dock = DockStyle.Fill;
-                ucThongKeThang.Instance.BringToFront();
-            }
-            else
-                ucThongKeThang.Instance.BringToFront();
-        }
 
         private void btnThongKeNam_Click(object sender, EventArgs e)
         {

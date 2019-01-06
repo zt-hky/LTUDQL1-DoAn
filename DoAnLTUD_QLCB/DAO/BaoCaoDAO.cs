@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
+
 namespace DAO
 {
-    public class VeChuyenBayDAO
+    public class BaoCaoDAO
     {
-        private static VeChuyenBayDAO instance;
+        private static BaoCaoDAO instance;
 
-        public static VeChuyenBayDAO Instance
+        public static BaoCaoDAO Instance
         {
             get
             {
                 if (instance == null)
-                    VeChuyenBayDAO.instance = new VeChuyenBayDAO();
+                    BaoCaoDAO.instance = new BaoCaoDAO();
                 return instance;
             }
         }
-      
     }
 }

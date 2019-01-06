@@ -26,11 +26,36 @@ namespace GUI
         public ucDatCho()
         {
             InitializeComponent();
-            List<ChuyenBay> dsChuyenBay = ChuyenBayBUS.Instance.DatCho_DanhSachChuyenBay();
-            foreach(ChuyenBay cb in dsChuyenBay)
+           
+            var dsChuyenBay = ChuyenBayBUS.Instance.DatCho_DanhSachChuyenBay();
+            cbMaCB.DataSource = dsChuyenBay;
+            cbMaCB.DisplayMember = "MaCB";
+            cbMaCB.ValueMember ="MaCB";
+           
+        }
+
+        private void cbMaCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChuyenBay cb = ChuyenBayBUS.Instance.TimKiemChuyenBay(cbMaCB.SelectedValue.ToString());
+            txtBoxSBDi.Text = cb.SBDi;
+            txtBoxSBDen.Text = cb.SBDen;
+            dateTimePickerNgayGioDi.Text = cb.NgayGio.ToString();
+        }
+
+        private void txtBoxCMND_TextChanged(object sender, EventArgs e)
+        {
+           
+            DataTable res = KhachHangBUS.Instance.TimKiemKhachHang(txtBoxCMND.Text.ToString());
+            if(res.Rows.Count==0)
             {
-                cbMaCB.DisplayMember = cb.MaCB;
-                cbMaCB.ValueMember = cb.MaCB;
+                MessageBox.Show("CMND không có trong danh sách, vui lòng trở lại tra cứu khách hàng!", "Thông báo");
+            }
+            else
+            {
+                KhachHang kh = new KhachHang(res.Rows[0]);
+                txtBoxHoTen.Text = kh.TenKH;
+                txtBoxMaKH.Text = kh.MaKH.ToString();
+                txtBoxSoDienThoai.Text = kh.DienThoai;
             }
         }
     }
