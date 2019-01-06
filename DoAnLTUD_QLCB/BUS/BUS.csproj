@@ -44,7 +44,9 @@
     <Compile Include="BaoCaoBUS.cs" />
     <Compile Include="ChiTietChuyenBayBUS.cs" />
     <Compile Include="ChuyenBayBUS.cs" />
+    <Compile Include="ChuyenBay_KhachHang_MaVeBUS.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="ExportToExcelBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangBuocBUS.cs" />

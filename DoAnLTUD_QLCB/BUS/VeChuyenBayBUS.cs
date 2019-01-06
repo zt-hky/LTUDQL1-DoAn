@@ -29,5 +29,13 @@ namespace BUS
         {
             return VeChuyenBayDAO.Instance.ThemVe_DatCho(ve);
         }
+        public int TimKiemMaDatCho(int maKH, string maCB)
+        {
+            return VeChuyenBayDAO.Instance.TimKiemMaDatCho(maKH, maCB);
+        }
+        public int CapNhatLoaiVe_BanVe(int maDatCho)
+        {
+            return VeChuyenBayDAO.Instance.CapNhatLoaiVe_BanVe(maDatCho);
+        }
     }
 }

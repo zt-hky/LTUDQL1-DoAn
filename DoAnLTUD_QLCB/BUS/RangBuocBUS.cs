@@ -49,5 +49,21 @@ namespace BUS
         {
             return RangBuocDAO.Instance.UpdateThoiGianDung(rb);
         }
+
+        public int UpdateThoiGianThoiGianChamNhatDatVe(RangBuoc rb)
+        {
+            return RangBuocDAO.Instance.UpdateThoiGianThoiGianChamNhatDatVe(rb);
+        }
+
+        public int UpdateThoiGianThoiGianHuyDatVe(RangBuoc rb)
+        {
+            return RangBuocDAO.Instance.UpdateThoiGianThoiGianHuyDatVe(rb);
+        }
+
+        public int UpdateSoLuongHangVe(RangBuoc rb)
+        {
+            return RangBuocDAO.Instance.UpdateSoLuongHangVe(rb);
+        }
+
     }
 }

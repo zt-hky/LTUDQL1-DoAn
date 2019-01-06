@@ -68,8 +68,9 @@
             this.tabVe = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtSoLuongHangVe = new System.Windows.Forms.TextBox();
-            this.nmSoLuongHangVeMoi = new System.Windows.Forms.NumericUpDown();
+            this.btnThayDoiSoLuongHangVe = new System.Windows.Forms.Button();
+            this.txtSoLuongHangVe1 = new System.Windows.Forms.TextBox();
+            this.nmSoLuongHangVe1Moi = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabDatVe = new System.Windows.Forms.TabPage();
@@ -89,7 +90,10 @@
             this.nmThoiGianChamNhatDatVeMoi = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnThayDoiSoLuongHangVe = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.nmSoLuongHangVe2Moi = new System.Windows.Forms.NumericUpDown();
+            this.txtSoLuongHangVe2 = new System.Windows.Forms.TextBox();
             this.tabSoLuongSanBay.SuspendLayout();
             this.tabSanBay.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,12 +107,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongSanBayMoi)).BeginInit();
             this.tabVe.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVeMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVe1Moi)).BeginInit();
             this.tabDatVe.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianHuyDatVe)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianChamNhatDatVeMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVe2Moi)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -519,9 +524,13 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.btnThayDoiSoLuongHangVe);
-            this.groupBox5.Controls.Add(this.txtSoLuongHangVe);
-            this.groupBox5.Controls.Add(this.nmSoLuongHangVeMoi);
+            this.groupBox5.Controls.Add(this.txtSoLuongHangVe2);
+            this.groupBox5.Controls.Add(this.txtSoLuongHangVe1);
+            this.groupBox5.Controls.Add(this.nmSoLuongHangVe2Moi);
+            this.groupBox5.Controls.Add(this.nmSoLuongHangVe1Moi);
+            this.groupBox5.Controls.Add(this.label29);
             this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.label28);
             this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
@@ -529,40 +538,54 @@
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thay Đổi Số Lượng Hạng Vé";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
-            // txtSoLuongHangVe
+            // btnThayDoiSoLuongHangVe
             // 
-            this.txtSoLuongHangVe.Location = new System.Drawing.Point(482, 24);
-            this.txtSoLuongHangVe.Name = "txtSoLuongHangVe";
-            this.txtSoLuongHangVe.ReadOnly = true;
-            this.txtSoLuongHangVe.Size = new System.Drawing.Size(43, 20);
-            this.txtSoLuongHangVe.TabIndex = 2;
+            this.btnThayDoiSoLuongHangVe.Location = new System.Drawing.Point(281, 101);
+            this.btnThayDoiSoLuongHangVe.Name = "btnThayDoiSoLuongHangVe";
+            this.btnThayDoiSoLuongHangVe.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiSoLuongHangVe.TabIndex = 3;
+            this.btnThayDoiSoLuongHangVe.Text = "Thay đổi";
+            this.btnThayDoiSoLuongHangVe.UseVisualStyleBackColor = true;
+            this.btnThayDoiSoLuongHangVe.Click += new System.EventHandler(this.btnThayDoiSoLuongHangVe_Click);
             // 
-            // nmSoLuongHangVeMoi
+            // txtSoLuongHangVe1
             // 
-            this.nmSoLuongHangVeMoi.Location = new System.Drawing.Point(191, 25);
-            this.nmSoLuongHangVeMoi.Name = "nmSoLuongHangVeMoi";
-            this.nmSoLuongHangVeMoi.Size = new System.Drawing.Size(52, 20);
-            this.nmSoLuongHangVeMoi.TabIndex = 1;
+            this.txtSoLuongHangVe1.Location = new System.Drawing.Point(482, 24);
+            this.txtSoLuongHangVe1.Name = "txtSoLuongHangVe1";
+            this.txtSoLuongHangVe1.ReadOnly = true;
+            this.txtSoLuongHangVe1.Size = new System.Drawing.Size(43, 20);
+            this.txtSoLuongHangVe1.TabIndex = 2;
+            // 
+            // nmSoLuongHangVe1Moi
+            // 
+            this.nmSoLuongHangVe1Moi.Location = new System.Drawing.Point(191, 25);
+            this.nmSoLuongHangVe1Moi.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
+            this.nmSoLuongHangVe1Moi.Name = "nmSoLuongHangVe1Moi";
+            this.nmSoLuongHangVe1Moi.Size = new System.Drawing.Size(52, 20);
+            this.nmSoLuongHangVe1Moi.TabIndex = 1;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(349, 27);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(94, 13);
+            this.label19.Size = new System.Drawing.Size(103, 13);
             this.label19.TabIndex = 0;
-            this.label19.Text = "Số lượng hạng vé:";
+            this.label19.Text = "Số lượng hạng vé 1:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(62, 27);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 13);
+            this.label18.Size = new System.Drawing.Size(122, 13);
             this.label18.TabIndex = 0;
-            this.label18.Text = "Số lượng hạng vé mới:";
+            this.label18.Text = "Số lượng hạng vé 1 mới:";
             // 
             // tabDatVe
             // 
@@ -739,14 +762,43 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Thời gian chậm nhất để đặt vé mới:";
             // 
-            // btnThayDoiSoLuongHangVe
+            // label28
             // 
-            this.btnThayDoiSoLuongHangVe.Location = new System.Drawing.Point(263, 84);
-            this.btnThayDoiSoLuongHangVe.Name = "btnThayDoiSoLuongHangVe";
-            this.btnThayDoiSoLuongHangVe.Size = new System.Drawing.Size(75, 23);
-            this.btnThayDoiSoLuongHangVe.TabIndex = 3;
-            this.btnThayDoiSoLuongHangVe.Text = "Thay đổi";
-            this.btnThayDoiSoLuongHangVe.UseVisualStyleBackColor = true;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(62, 63);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(122, 13);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Số lượng hạng vé 2 mới:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(349, 63);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(103, 13);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Số lượng hạng vé 2:";
+            // 
+            // nmSoLuongHangVe2Moi
+            // 
+            this.nmSoLuongHangVe2Moi.Location = new System.Drawing.Point(191, 61);
+            this.nmSoLuongHangVe2Moi.Maximum = new decimal(new int[] {
+            2147483645,
+            0,
+            0,
+            0});
+            this.nmSoLuongHangVe2Moi.Name = "nmSoLuongHangVe2Moi";
+            this.nmSoLuongHangVe2Moi.Size = new System.Drawing.Size(52, 20);
+            this.nmSoLuongHangVe2Moi.TabIndex = 1;
+            // 
+            // txtSoLuongHangVe2
+            // 
+            this.txtSoLuongHangVe2.Location = new System.Drawing.Point(482, 60);
+            this.txtSoLuongHangVe2.Name = "txtSoLuongHangVe2";
+            this.txtSoLuongHangVe2.ReadOnly = true;
+            this.txtSoLuongHangVe2.Size = new System.Drawing.Size(43, 20);
+            this.txtSoLuongHangVe2.TabIndex = 2;
             // 
             // ucThayDoiQuyDinh
             // 
@@ -775,7 +827,7 @@
             this.tabVe.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVeMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVe1Moi)).EndInit();
             this.tabDatVe.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
@@ -783,6 +835,7 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmThoiGianChamNhatDatVeMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHangVe2Moi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -827,8 +880,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtSoLuongHangVe;
-        private System.Windows.Forms.NumericUpDown nmSoLuongHangVeMoi;
+        private System.Windows.Forms.TextBox txtSoLuongHangVe1;
+        private System.Windows.Forms.NumericUpDown nmSoLuongHangVe1Moi;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -852,5 +905,9 @@
         private System.Windows.Forms.Button btnThayDoiThoiGianDung;
         private System.Windows.Forms.Button btnThayDoiSoSanBayTrungGianMax;
         private System.Windows.Forms.Button btnThayDoiSoLuongHangVe;
+        private System.Windows.Forms.TextBox txtSoLuongHangVe2;
+        private System.Windows.Forms.NumericUpDown nmSoLuongHangVe2Moi;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
     }
 }

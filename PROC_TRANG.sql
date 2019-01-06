@@ -42,7 +42,6 @@ AS
 		end
 		insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe,Loai)
 		values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe,0)
-
 	end
 GO
 
@@ -64,7 +63,36 @@ AS
 		update VECHUYENBAY set Loai =1 where MaVe = @maVe
 	end
 GO
+--search MaDatCho theo MaKH va MaCB - Xuất ra Cho khách hàng thấy sau khi đặt chổ
+if OBJECT_ID('TimKiemMaDatCho','p') is not null
+DROP proc TimKiemMaDatCho
+GO
+create procedure TimKiemMaDatCho
+@maKH int, @maCB varchar(10)
+AS
+	begin 
+		select MaVe from VECHUYENBAY where MaCB=@maCB and MaKH = @maKH
+	end
+GO
+--Hiển thị thông tin đặt chổ từ mã đặt chổ
+if OBJECT_ID('ThongTinDatCho','p') is not null
+DROP proc ThongTinDatCho
+GO
+create procedure ThongTinDatCho
+@maVe int
+AS
+	begin 
+		if not exists (select*from VECHUYENBAY where MaVe = @maVe)
+		begin
+			return
+		end
+		select ve.MaVe,cb.MaCB,cb.SBDi,cb.SBDen,cb.NgayGio,kh.MaKH,kh.TenKH,kh.CMND,kh.DienThoai,ve.GiaVe,ve.GheHang
+		from VECHUYENBAY as ve join CHUYENBAY as cb on cb.MaCB= ve.MaCB join KHACHHANG as kh on kh.MaKH = ve.MaKH
+		where ve.MaVe=@maVe
+	end
+GO
 
+--Them KH
 if OBJECT_ID('ThemCMNDKhachHang','p') is not null
 DROP proc ThemCMNDKhachHang
 GO
@@ -130,4 +158,4 @@ AS
 GO
 
 --======================================== HẾT phần của Trang ==================================================
-alter table RANGBUOC add SLHangVe2 int
+select*from KHACHHANG
