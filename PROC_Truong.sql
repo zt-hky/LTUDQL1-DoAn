@@ -47,15 +47,43 @@ as
 	update RANGBUOC set TGDatVe = @tgDat
 go
 
+CREATE FUNCTION TinhTyLe (@maCB nchar(10)) 
+RETURNS float 
+AS 
+BEGIN 
+	declare @tong float = (select (SLHangVe1+SLHangVe2) as TongVe from RANGBUOC)
+	declare @count float = (	select dem.SoVeBan
+									from (  select MaCB, count(MaVe) as SoVeBan 
+											from VECHUYENBAY where MaCB = @maCB
+											group by MaCB) as dem )
+	declare @tyle float = (@count / @tong) * 100
+ RETURN  @tyle
+END
+
+--drop proc ThongKeThang
 create proc ThongKeThang
 @thang int,
 @nam int
 as
-	select cb.MaCB, count(ve.MaVe) as SoVe,   ,SUM(ve.GiaVe) as DoanhThu
-	from CHUYENBAY cb, VECHUYENBAY ve
+	select cb.MaCB, count(ve.MaVe) as SoVe, round(dbo.TinhTyLe(cb.MaCB), 2) as TyLe ,SUM(ve.GiaVe) as DoanhThu
+	from CHUYENBAY cb, VECHUYENBAY ve, (select SLHangVe1, SLHangVe2, (SLHangVe1+SLHangVe2) as TongVe from RANGBUOC) as rb
 	where cb.MaCB=ve.MaCB and MONTH(ve.NgayDat) = @thang and YEAR(ve.NgayDat) = @nam
 	group by cb.MaCB
 go
+
+
+CREATE FUNCTION TinhTyLe (@maCB nchar(10)) 
+RETURNS float 
+AS 
+BEGIN 
+	declare @tong float = (select (SLHangVe1+SLHangVe2) as TongVe from RANGBUOC)
+	declare @count float = (	select dem.SoVeBan
+									from (  select MaCB, count(MaVe) as SoVeBan 
+											from VECHUYENBAY where MaCB = @maCB
+											group by MaCB) as dem )
+	declare @tyle float = (@count / @tong) * 100
+ RETURN  @tyle
+END
 
 --drop proc ThongKeNam
 create proc ThongKeNam
