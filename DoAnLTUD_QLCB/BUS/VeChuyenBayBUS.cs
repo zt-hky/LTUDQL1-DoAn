@@ -21,6 +21,13 @@ namespace BUS
                 return instance;
             }
         }
-        
+        public int XemGiaVe_DatCho(VeChuyenBay ve)
+        {
+            return VeChuyenBayDAO.Instance.XemGiaVe_DatCho(ve);
+        }
+        public int ThemVe_DatCho(VeChuyenBay ve)
+        {
+            return VeChuyenBayDAO.Instance.ThemVe_DatCho(ve);
+        }
     }
 }

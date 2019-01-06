@@ -12,7 +12,7 @@ namespace DTO
         int _loai;// 0:dat cho, 1: da ban
         string _maCB;
         int _maKH;
-        string _gheHang;
+        int _gheHang;
         DateTime _ngayDat;
         int _giaVe;
         int _maVe;
@@ -40,7 +40,7 @@ namespace DTO
                 _maCB = value;
             }
         }
-        public string GheHang
+        public int GheHang
         {
             get
             {
@@ -100,9 +100,13 @@ namespace DTO
                 _maVe = value;
             }
         }
+        public VeChuyenBay()
+        {
+
+        }
         public VeChuyenBay(DataRow row)
         {
-            this._gheHang = row["GheHang"].ToString();
+            this._gheHang = int.Parse(row["GheHang"].ToString());
             //Loai 0: đặt chổ, 1: đã mua vé
             this._loai = int.Parse(row["Loai"].ToString());
             this._maCB = row["MaCB"].ToString();

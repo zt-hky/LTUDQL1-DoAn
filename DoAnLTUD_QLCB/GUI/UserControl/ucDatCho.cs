@@ -37,9 +37,13 @@ namespace GUI
         private void cbMaCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChuyenBay cb = ChuyenBayBUS.Instance.TimKiemChuyenBay(cbMaCB.SelectedValue.ToString());
-            txtBoxSBDi.Text = cb.SBDi;
-            txtBoxSBDen.Text = cb.SBDen;
-            dateTimePickerNgayGioDi.Text = cb.NgayGio.ToString();
+            if(cb !=null)
+            {
+                txtBoxSBDi.Text = cb.SBDi;
+                txtBoxSBDen.Text = cb.SBDen;
+                dateTimePickerNgayGioDi.Text = cb.NgayGio.ToString();
+            }
+           
         }
 
         private void txtBoxCMND_TextChanged(object sender, EventArgs e)
@@ -56,6 +60,34 @@ namespace GUI
                 txtBoxHoTen.Text = kh.TenKH;
                 txtBoxMaKH.Text = kh.MaKH.ToString();
                 txtBoxSoDienThoai.Text = kh.DienThoai;
+            }
+        }
+
+        private void txtBoxHangVe_TextChanged(object sender, EventArgs e)
+        {
+            VeChuyenBay ve = new VeChuyenBay();
+            ve.MaCB = cbMaCB.Text;
+            //ve.MaKH = int.Parse(txtBoxMaKH.Text);
+            ve.GheHang = int.Parse(txtBoxHangVe.Text);
+            int Gia = VeChuyenBayBUS.Instance.XemGiaVe_DatCho(ve);
+            txtBoxGiaTien.Text = Gia.ToString();
+        }
+
+        private void btnDatCho_Click(object sender, EventArgs e)
+        {
+            VeChuyenBay ve = new VeChuyenBay();
+            ve.MaCB = cbMaCB.Text;
+            ve.MaKH = int.Parse(txtBoxMaKH.Text);
+            ve.GheHang = int.Parse(txtBoxHangVe.Text);
+            ve.NgayDat = DateTime.Parse(dateTimePickerNgayDat.Text);
+            int res = VeChuyenBayBUS.Instance.ThemVe_DatCho(ve);
+            if(res==0)
+            {
+                MessageBox.Show("Xin lỗi không thể đặt vé! Xin hãy kiểm tra lại dữ liệu!", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Đã đặt chỗ thành công!");
             }
         }
     }

@@ -223,14 +223,23 @@ create table VECHUYENBAY (
    Loai                 int                  not null,
    MaCB                 char(10)             not null,
    MaKH                 int             not null,
-   GheHang              char(10)             null,
+   GheHang              int             null,
    NgayDat              datetime             null,
    GiaVe				int						null,
    constraint PK_VECHUYENBAY primary key (MaVe),
    constraint UQ_MaCB_MaKH unique (MaCB,MaKH)
 )
 go
-
+/*==============================================================*/
+/* Table: HANGVE                                           */
+/*==============================================================*/
+create table HANGVE (
+	MaHangVe int not null,
+	TenHangVe nvarchar(30) 
+	constraint PK_HANGVE primary key (MaHangVe),
+	constraint UQ_TenHangVe unique (TenHangVe)
+)
+go
 alter table BANGGIA
    add constraint FK_BANGGIA_FK_BANGGI_SANBAYDEN foreign key (SBDen)
       references SANBAY (MaSB)
@@ -270,4 +279,7 @@ alter table VECHUYENBAY
    add constraint FK_VECHUYEN_REFERENCE_KHACHHAN foreign key (MaKH)
       references KHACHHANG (MaKH)
 go
-
+alter table VECHUYENBAY
+   add constraint FK_VECHUYEN_REFERENCE_HANGVE foreign key (GheHang)
+      references HANGVE (MaHangVe)
+go

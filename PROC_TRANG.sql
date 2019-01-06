@@ -5,6 +5,31 @@
 --Kiểm tra còn chỗ không
 --Kiểm tra MaKH tồn tại
 --Kiểm tra Hạng vé thuộc (1,2) không?
+--Hàm tính giá vé
+if OBJECT_ID('GiaVe_DatCho','p') is not null
+DROP proc GiaVe_DatCho
+GO
+create proc GiaVe_DatCho
+@MaCB char(10),@GheHang varchar(10)
+AS
+	begin
+		if not exists(select* from HANGVE where MaHangVe =@GheHang)
+		begin 
+			return 0
+		end
+		if not exists(select* from CHUYENBAY where MaCB = @MaCB)
+		begin 
+			return 0
+		end
+		Declare @giaVe int
+		select @giaVe = g.Gia
+		from BANGGIA as g join CHUYENBAY as cb on cb.SBDen = g.SBDen and cb.SBDi = g.SBDi join VECHUYENBAY as ve on ve.GheHang = g.GheHang and ve.MaCB = cb.MaCB
+		where cb.MaCB = @MaCB and g.GheHang = @GheHang--Fix sau Kiểm tra @gheHang có hợp lệ
+
+		return @giaVe
+
+	end
+GO
 if OBJECT_ID('ThemVe_DatCho','p') is not null
 DROP proc ThemVe_DatCho
 GO
@@ -16,12 +41,9 @@ AS
 		begin 
 			return
 		end
-		Declare @giaVe int
-		select @giaVe = g.Gia
-		from BANGGIA as g join CHUYENBAY as cb on cb.SBDen = g.SBDen and cb.SBDi = g.SBDi join VECHUYENBAY as ve on ve.GheHang = g.GheHang and ve.MaCB = cb.MaCB
-		where cb.MaCB = @MaCB and g.GheHang = @GheHang
-		insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe)
-		values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe)
+		Declare @giaVe int = dbo.GiaVe_DatCho(@MaCB,@GheHang)
+		insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe,Loai)
+		values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe,0)
 
 	end
 GO
@@ -84,7 +106,7 @@ GO
 create procedure DatCho_DanhSachChuyenBay
 AS
 	begin 
-		select* from CHUYENBAY where DATEDIFF(HOUR, NgayGio ,GETDATE()) <=all (select TGDatVe from RANGBUOC)
+		select * from CHUYENBAY where DATEDIFF(HOUR,GETDATE(), NgayGio) >=all (select TGDatVe from RANGBUOC)
 	end
 GO
 --Tìm kiếm chuyến bay theo Mã chuyến bay (đặt chổ)
@@ -100,4 +122,4 @@ AS
 GO
 
 --======================================== HẾT phần của Trang ==================================================
-select*from CHUYENBAY
+select*from KHACHHANG

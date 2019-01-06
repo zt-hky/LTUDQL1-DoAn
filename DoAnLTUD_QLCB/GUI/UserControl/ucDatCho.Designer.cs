@@ -85,6 +85,7 @@ namespace GUI
             this.txtBoxHangVe.Name = "txtBoxHangVe";
             this.txtBoxHangVe.Size = new System.Drawing.Size(186, 27);
             this.txtBoxHangVe.TabIndex = 29;
+            this.txtBoxHangVe.TextChanged += new System.EventHandler(this.txtBoxHangVe_TextChanged);
             // 
             // txtBoxCMND
             // 
@@ -164,6 +165,7 @@ namespace GUI
             this.btnDatCho.TabIndex = 20;
             this.btnDatCho.Text = "Đặt chổ";
             this.btnDatCho.UseVisualStyleBackColor = true;
+            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
             // 
             // label5
             // 

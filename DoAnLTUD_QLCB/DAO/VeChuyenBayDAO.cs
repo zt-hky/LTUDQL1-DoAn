@@ -20,6 +20,42 @@ namespace DAO
                 return instance;
             }
         }
-      
+        public int ThemVe_DatCho(VeChuyenBay ve)
+        {
+            try
+            {
+                //@MaCB char(10),@MaKH int,@GheHang varchar(10),@NgayDat datetime
+                string strSQL = "ThemVe_DatCho @MaCB , @MaKH , @GheHang , @NgayDat";
+                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] {ve.MaCB,ve.MaKH,ve.GheHang,ve.NgayDat});
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+        public int XemGiaVe_DatCho(VeChuyenBay ve)
+        {
+            try
+            {
+                //@MaCB char(10),@GheHang varchar(10)
+                int giaVe = 0;
+                string strSQL = "GiaVe_DatCho @MaCB , @GheHang";
+                DataTable dt = DataProvider.Instance.ExecuteQuery(strSQL, new object[] { ve.MaCB, ve.GheHang });
+                if(dt.Rows.Count!=0)
+                {
+                    giaVe = int.Parse(dt.Rows[0]["Gia"].ToString());
+                }
+                return giaVe;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
     }
 }
