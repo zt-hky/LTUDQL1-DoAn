@@ -149,6 +149,8 @@
             this.tbUsername.Size = new System.Drawing.Size(250, 42);
             this.tbUsername.TabIndex = 0;
             this.tbUsername.text = "";
+            this.tbUsername.KeyPress += new System.EventHandler(this.tbUsername_KeyPress);
+           
             // 
             // bunifuGradientPanel1
             // 

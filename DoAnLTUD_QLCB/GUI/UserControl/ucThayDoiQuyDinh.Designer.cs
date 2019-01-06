@@ -89,6 +89,7 @@
             this.nmThoiGianChamNhatDatVeMoi = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnThayDoiSoLuongHangVe = new System.Windows.Forms.Button();
             this.tabSoLuongSanBay.SuspendLayout();
             this.tabSanBay.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -517,6 +518,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnThayDoiSoLuongHangVe);
             this.groupBox5.Controls.Add(this.txtSoLuongHangVe);
             this.groupBox5.Controls.Add(this.nmSoLuongHangVeMoi);
             this.groupBox5.Controls.Add(this.label19);
@@ -737,6 +739,15 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Thời gian chậm nhất để đặt vé mới:";
             // 
+            // btnThayDoiSoLuongHangVe
+            // 
+            this.btnThayDoiSoLuongHangVe.Location = new System.Drawing.Point(263, 84);
+            this.btnThayDoiSoLuongHangVe.Name = "btnThayDoiSoLuongHangVe";
+            this.btnThayDoiSoLuongHangVe.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiSoLuongHangVe.TabIndex = 3;
+            this.btnThayDoiSoLuongHangVe.Text = "Thay đổi";
+            this.btnThayDoiSoLuongHangVe.UseVisualStyleBackColor = true;
+            // 
             // ucThayDoiQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -840,5 +851,6 @@
         private System.Windows.Forms.Button btnThayDoiThoiGianBay;
         private System.Windows.Forms.Button btnThayDoiThoiGianDung;
         private System.Windows.Forms.Button btnThayDoiSoSanBayTrungGianMax;
+        private System.Windows.Forms.Button btnThayDoiSoLuongHangVe;
     }
 }

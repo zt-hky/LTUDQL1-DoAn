@@ -30,6 +30,11 @@ namespace BUS
             data.DataSource = ChuyenBayDAO.Instance.getAll();
         }
 
+        public List<ChuyenBay> getAll()
+        {
+            return ChuyenBayDAO.Instance.getAll();
+        }
+
         public List<ChuyenBay> DatCho_DanhSachChuyenBay()
         {
             return ChuyenBayDAO.Instance.DatCho_DanhSachChuyenBay();

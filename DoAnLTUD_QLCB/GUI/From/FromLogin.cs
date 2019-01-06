@@ -18,7 +18,8 @@ namespace GUI.From
             InitializeComponent();
 
             this.tbPassword._TextBox.PasswordChar = '*';
-
+            this.tbUsername._TextBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+            this.tbPassword._TextBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
         }
 
         private void bunifuTextbox2_OnTextChange(object sender, EventArgs e)
@@ -61,6 +62,15 @@ namespace GUI.From
 
         }
 
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                EventLogin(this, new EventArgs());
+            }
+        }
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +82,11 @@ namespace GUI.From
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_KeyPress(object sender, EventArgs e)
         {
 
         }

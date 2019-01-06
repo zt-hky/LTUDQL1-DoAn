@@ -48,11 +48,13 @@ namespace GUI
 
         private void txtBoxCMND_TextChanged(object sender, EventArgs e)
         {
-           
+            txtBoxMaKH.Clear();
+            txtBoxHoTen.Clear();
+            txtBoxSoDienThoai.Clear();
             DataTable res = KhachHangBUS.Instance.TimKiemKhachHang(txtBoxCMND.Text.ToString());
             if(res.Rows.Count==0)
             {
-                MessageBox.Show("CMND không có trong danh sách, vui lòng trở lại tra cứu khách hàng!", "Thông báo");
+               // MessageBox.Show("CMND không có trong danh sách, vui lòng trở lại tra cứu khách hàng!", "Thông báo");
             }
             else
             {
@@ -65,29 +67,40 @@ namespace GUI
 
         private void txtBoxHangVe_TextChanged(object sender, EventArgs e)
         {
-            VeChuyenBay ve = new VeChuyenBay();
-            ve.MaCB = cbMaCB.Text;
-            //ve.MaKH = int.Parse(txtBoxMaKH.Text);
-            ve.GheHang = int.Parse(txtBoxHangVe.Text);
-            int Gia = VeChuyenBayBUS.Instance.XemGiaVe_DatCho(ve);
-            txtBoxGiaTien.Text = Gia.ToString();
+            if(txtBoxHangVe.Text!="")
+            {
+                VeChuyenBay ve = new VeChuyenBay();
+                ve.MaCB = cbMaCB.Text;
+                //ve.MaKH = int.Parse(txtBoxMaKH.Text);
+                ve.GheHang = int.Parse(txtBoxHangVe.Text);
+                int Gia = VeChuyenBayBUS.Instance.XemGiaVe_DatCho(ve);
+                txtBoxGiaTien.Text = Gia.ToString();
+            } 
         }
 
         private void btnDatCho_Click(object sender, EventArgs e)
         {
-            VeChuyenBay ve = new VeChuyenBay();
-            ve.MaCB = cbMaCB.Text;
-            ve.MaKH = int.Parse(txtBoxMaKH.Text);
-            ve.GheHang = int.Parse(txtBoxHangVe.Text);
-            ve.NgayDat = DateTime.Parse(dateTimePickerNgayDat.Text);
-            int res = VeChuyenBayBUS.Instance.ThemVe_DatCho(ve);
-            if(res==0)
+            if(txtBoxHangVe.Text=="" || txtBoxCMND.Text==""||cbMaCB.SelectedValue ==null)
             {
-                MessageBox.Show("Xin lỗi không thể đặt vé! Xin hãy kiểm tra lại dữ liệu!", "Thông báo");
+                MessageBox.Show("Không được để dữ liệu trống!", "Thông báo");
             }
             else
             {
-                MessageBox.Show("Đã đặt chỗ thành công!");
+                VeChuyenBay ve = new VeChuyenBay();
+                ve.MaCB = cbMaCB.Text;
+                ve.MaKH = int.Parse(txtBoxMaKH.Text);
+                ve.GheHang = int.Parse(txtBoxHangVe.Text);
+                ve.NgayDat = DateTime.Parse(dateTimePickerNgayDat.Value.ToString());
+                ve.GiaVe = int.Parse(txtBoxGiaTien.Text);
+                int res = VeChuyenBayBUS.Instance.ThemVe_DatCho(ve);
+                if (res == 0)
+                {
+                    MessageBox.Show("Xin lỗi không thể đặt vé! Xin hãy kiểm tra lại dữ liệu!", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Đã đặt chỗ thành công!");
+                }
             }
         }
     }

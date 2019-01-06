@@ -100,6 +100,7 @@
             this.btnBaoCaoThang.TabIndex = 6;
             this.btnBaoCaoThang.Text = "Báo Cáo Tháng";
             this.btnBaoCaoThang.UseVisualStyleBackColor = true;
+            this.btnBaoCaoThang.Click += new System.EventHandler(this.btnBaoCaoThang_Click);
             // 
             // btnBaoCaoNam
             // 
@@ -109,6 +110,7 @@
             this.btnBaoCaoNam.TabIndex = 6;
             this.btnBaoCaoNam.Text = "Báo Cáo Năm";
             this.btnBaoCaoNam.UseVisualStyleBackColor = true;
+            this.btnBaoCaoNam.Click += new System.EventHandler(this.btnBaoCaoNam_Click);
             // 
             // ucThongKeNam
             // 

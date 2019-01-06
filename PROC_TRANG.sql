@@ -1,11 +1,6 @@
 ﻿--============================= PROC 1660637 -	PHAN THỊ NHƯ TRANG ===========================
---insert vào bảng Vechuyenbay,
---Yêu cầu Đặt chổ
---Kiểm tra MaCB tồn tại
---Kiểm tra còn chỗ không
---Kiểm tra MaKH tồn tại
---Kiểm tra Hạng vé thuộc (1,2) không?
---Hàm tính giá vé
+
+-- tính giá vé - hiển thị ra màn hình giá tiền cho khách hàng biết
 if OBJECT_ID('GiaVe_DatCho','p') is not null
 DROP proc GiaVe_DatCho
 GO
@@ -27,34 +22,49 @@ AS
 		where cb.MaCB = @MaCB and g.GheHang =@GheHang
 	end
 GO
-
+--insert vào bảng Vechuyenbay,
+--Yêu cầu Đặt chổ
+--Kiểm tra MaCB tồn tại
+--Kiểm tra còn chỗ không
+--Kiểm tra MaKH tồn tại
+--Kiểm tra Hạng vé thuộc (1,2) không?
+-->insert loai =0
 if OBJECT_ID('ThemVe_DatCho','p') is not null
 DROP proc ThemVe_DatCho
 GO
 create procedure ThemVe_DatCho
-@MaCB char(10),@MaKH int,@GheHang varchar(10),@NgayDat datetime
+@MaCB char(10),@MaKH int,@GheHang varchar(10),@NgayDat datetime,@giaVe int
 AS
 	begin
 		if not exists(select* from CHUYENBAY where MaCB = @MaCB)
 		begin 
 			return
 		end
-		Declare @giaVe int = dbo.GiaVe_DatCho(@MaCB,@GheHang)
 		insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe,Loai)
 		values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe,0)
 
 	end
 GO
--->insert loai =0
+
 
 --yêu cầu bán vé
 --Kiểm tra mã đặt chỗ
 --update Loai = 1
+if OBJECT_ID('CapNhatLoaiVe_BanVe','p') is not null
+DROP proc CapNhatLoaiVe_BanVe
+GO
+create procedure CapNhatLoaiVe_BanVe
+@maVe int
+AS
+	begin
+		if not exists(select* from VECHUYENBAY where MaVe = @maVe)
+		begin 
+			return
+		end
+		update VECHUYENBAY set Loai =1 where MaVe = @maVe
+	end
+GO
 
---button Them (CMND)
--- Phat sinh mã
--- Kiểm tra CMND tồn tại
---insert
 if OBJECT_ID('ThemCMNDKhachHang','p') is not null
 DROP proc ThemCMNDKhachHang
 GO
@@ -120,6 +130,4 @@ AS
 GO
 
 --======================================== HẾT phần của Trang ==================================================
-select*from KHACHHANG
-insert into HANGVE values(1,N'Thương gia'),(2,N'Vé thường')
-select*from KHACHHANG
+alter table RANGBUOC add SLHangVe2 int

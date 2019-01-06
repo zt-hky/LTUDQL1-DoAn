@@ -25,8 +25,8 @@ namespace DAO
             try
             {
                 //@MaCB char(10),@MaKH int,@GheHang varchar(10),@NgayDat datetime
-                string strSQL = "ThemVe_DatCho @MaCB , @MaKH , @GheHang , @NgayDat";
-                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] {ve.MaCB,ve.MaKH,ve.GheHang,ve.NgayDat});
+                string strSQL = "ThemVe_DatCho @MaCB , @MaKH , @GheHang , @NgayDat , @giaVe";
+                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] {ve.MaCB,ve.MaKH,ve.GheHang,ve.NgayDat,ve.GiaVe});
                 return res;
             }
             catch (Exception ex)
