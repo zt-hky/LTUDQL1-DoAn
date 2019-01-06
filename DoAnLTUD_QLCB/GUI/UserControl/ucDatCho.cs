@@ -99,7 +99,16 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Đã đặt chỗ thành công!");
+                    int maVe = VeChuyenBayBUS.Instance.TimKiemMaDatCho(int.Parse(txtBoxMaKH.Text), cbMaCB.Text);
+                    if(maVe ==0)
+                    {
+                        MessageBox.Show("Xin lỗi không thể đặt vé! Xin hãy kiểm tra lại dữ liệu!", "Thông báo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã đặt chỗ của bạn là : "+maVe);
+                    }
+                   
                 }
             }
         }

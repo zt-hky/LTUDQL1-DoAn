@@ -45,6 +45,7 @@
     <Compile Include="BaoCaoThang.cs" />
     <Compile Include="ChiTietChuyenBay.cs" />
     <Compile Include="ChuyenBay.cs" />
+    <Compile Include="ChuyenBay_KhachHang_MaVe.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
