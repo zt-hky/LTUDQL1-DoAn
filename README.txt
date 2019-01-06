@@ -6,6 +6,6 @@ II.Thông tin thành viên:
 III. Link Google Docs: https://docs.google.com/document/d/1v2Me7cQUNdqsQ5oYrT0dxDgv_DD2s18HaotZXsXXXIc/edit?usp=sharing
 IV.Phân chia công việc
    1. Phan Thị Như Trang - công việc:Làm tất cả các vấn đề liên quan: Bán vé máy bay; Đặt chổ;Tra cứu khách hàng - Đóng góp 33%
-   2. Nguyễn Hồng Kỳ - Công việc:Làm tất cả các vấn đề liên quan: Nhận lịch chuyến bay; Tra cứu chuyến bay; Đăng nhập - Đóng ghóp 34%
-   3. Hà Quang Trường - Công việc: Làm tất cả các vấn đề liên quan:Thống kê tháng, năm; Thay đổi quy định -  Đóng góp 33%
+   2. Nguyễn Hồng Kỳ - Công việc:Làm tất cả các vấn đề liên quan: Nhận lịch chuyến bay; Tra cứu chuyến bay; Đăng nhập - Đóng ghóp 33%
+   3. Hà Quang Trường - Công việc: Làm tất cả các vấn đề liên quan:Thống kê tháng, năm; Thay đổi quy định -  Đóng góp 34%
    Tổng đóng ghóp : 100%
