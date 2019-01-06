@@ -42,13 +42,23 @@ namespace GUI
                 foreach(DataRow r in dt.Rows)
                 {
                     txtSLSanBay.Text = r["SLSanBay"].ToString();
+                    nmSoLuongSanBayMoi.Value = int.Parse(r["SLSanBay"].ToString());
                     txtThoiGianBayMin.Text = r["ThoiGianBayMin"].ToString();
+                    nmThoiGianBayMin.Value = int.Parse( r["ThoiGianBayMin"].ToString());
                     txtSLSanBayTrungGian.Text = r["SBTGMax"].ToString();
+                    nmSLSanBayTrungGianMax.Value = int.Parse(r["SBTGMax"].ToString());
                     txtThoiGianDungToiThieu.Text = r["TGDungMin"].ToString();
+                    nmThoiGianDungMin.Value = int.Parse(r["TGDungMin"].ToString());
                     txtThoiGianDungToiDa.Text = r["TGDungMax"].ToString();
-                    txtSoLuongHangVe.Text = r["SLHangVe"].ToString();
+                    nmThoiGianDungMax.Value = int.Parse(r["TGDungMax"].ToString());
+                    txtSoLuongHangVe1.Text = r["SLHangVe1"].ToString();
+                    nmSoLuongHangVe1Moi.Value = int.Parse(r["SLHangVe1"].ToString());
+                    txtSoLuongHangVe2.Text = r["SLHangVe2"].ToString();
+                    nmSoLuongHangVe2Moi.Value = int.Parse(r["SLHangVe2"].ToString());
                     txtThoiGianChamNhatDatVe.Text = r["TGDatVe"].ToString();
+                    nmThoiGianChamNhatDatVeMoi.Value = int.Parse(r["TGDatVe"].ToString());
                     txtThoiGianHuyDatVe.Text = r["TGHuyVe"].ToString();
+                    nmThoiGianHuyDatVe.Value = int.Parse(r["TGHuyVe"].ToString());
                     break;
                 }
             }
@@ -79,7 +89,20 @@ namespace GUI
 
         private void btnThayDoiDatVe_Click(object sender, EventArgs e)
         {
+            int tgDatVe = unchecked((int)nmThoiGianChamNhatDatVeMoi.Value);
+            rb = new RangBuoc();
+            rb.TGDatVe = tgDatVe;
 
+            int res = RangBuocBUS.Instance.UpdateThoiGianThoiGianChamNhatDatVe(rb);
+            if (res == 0)
+            {
+                MessageBox.Show("Update Không thành công!");
+            }
+            else
+            {
+                loadThongTin();
+                MessageBox.Show("Update thành công!");
+            }
         }
 
         private void btnThayDoiThoiGianBay_Click(object sender, EventArgs e)
@@ -139,17 +162,46 @@ namespace GUI
             }
         }
 
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
+      
 
             
         private void btnThayDoiHuyDatVe_Click(object sender, EventArgs e)
         {
+            int tgHuyVe = unchecked((int)nmThoiGianHuyDatVe.Value);
+            rb = new RangBuoc();
+            rb.TGHuyVe = tgHuyVe;
 
+            int res = RangBuocBUS.Instance.UpdateThoiGianThoiGianHuyDatVe(rb);
+            if (res == 0)
+            {
+                MessageBox.Show("Update Không thành công!");
+            }
+            else
+            {
+                loadThongTin();
+                MessageBox.Show("Update thành công!");
+            }
         }
 
-       
-    }
+        private void btnThayDoiSoLuongHangVe_Click(object sender, EventArgs e)
+        {
+            int slHang1 = unchecked((int)nmSoLuongHangVe1Moi.Value);
+            int slHang2 = unchecked((int)nmSoLuongHangVe2Moi.Value);
+
+            rb = new RangBuoc();
+            rb.SLHangVe1 = slHang1;
+            rb.SLHangVe2 = slHang2;
+
+            int res = RangBuocBUS.Instance.UpdateSoLuongHangVe(rb);
+            if (res == 0)
+            {
+                MessageBox.Show("Update Không thành công!");
+            }
+            else
+            {
+                loadThongTin();
+                MessageBox.Show("Update thành công!");
+            }
+        }
+    }   
 }

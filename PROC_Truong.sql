@@ -41,17 +41,17 @@ as
 	update RANGBUOC set TGDungMin = @tgMin, TGDungMax = @tgMax
 go
 
---create proc ThayDoiThoiGianChamNhatDatVe
---@tgDat datetime
---as
---	update TG
---go
+create proc ThayDoiThoiGianChamNhatDatVe
+@tgDat int
+as
+	update RANGBUOC set TGDatVe = @tgDat
+go
 
 create proc ThongKeThang
 @thang int,
 @nam int
 as
-	select cb.MaCB, count(ve.MaVe) as SoVe  ,SUM(ve.GiaVe) as DoanhThu
+	select cb.MaCB, count(ve.MaVe) as SoVe,   ,SUM(ve.GiaVe) as DoanhThu
 	from CHUYENBAY cb, VECHUYENBAY ve
 	where cb.MaCB=ve.MaCB and MONTH(ve.NgayDat) = @thang and YEAR(ve.NgayDat) = @nam
 	group by cb.MaCB
@@ -67,3 +67,16 @@ as
 	group by MONTH(ve.NgayDat)
 go
 
+
+create proc ThayDoiThoiGianHuyDatVe
+@tgHuy int
+as
+	update RANGBUOC set TGHuyVe = @tgHuy
+go
+
+create proc ThayDoiSLHangVe
+@slHang1 int,
+@slHang2 int
+as
+	update RANGBUOC set SLHangVe1 = @slHang1, SLHangVe2 = @slHang2
+go
