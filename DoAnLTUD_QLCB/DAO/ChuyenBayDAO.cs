@@ -24,6 +24,13 @@ namespace DAO
 
         private ChuyenBayDAO() { }
 
+
+        public bool Delete(string MaCB)
+        {
+            string sql = "uc_deleteChuyenBay @MACB";
+            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { MaCB }) > 0;
+        }
+
         public List<ChuyenBay> getAll()
         {
             List<ChuyenBay> chuyenBays = new List<ChuyenBay>();

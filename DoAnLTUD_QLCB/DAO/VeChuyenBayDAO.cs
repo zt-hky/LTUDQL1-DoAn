@@ -93,5 +93,12 @@ namespace DAO
                 throw ex;
             }
         }
+
+        public int countByMaCB(string MaCB)
+        {
+            string query = "uc_countVebyMaCB @MaCB";
+
+            return (int)DataProvider.Instance.ExecuteScalar(query, new object[] { MaCB });
+        }
     }
 }

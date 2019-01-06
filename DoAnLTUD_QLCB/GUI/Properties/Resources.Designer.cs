@@ -93,6 +93,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoRefresh {
+            get {
+                object obj = ResourceManager.GetObject("logoRefresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoUser {
             get {
                 object obj = ResourceManager.GetObject("logoUser", resourceCulture);
@@ -136,6 +146,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap pic01 {
             get {
                 object obj = ResourceManager.GetObject("pic01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refesh {
+            get {
+                object obj = ResourceManager.GetObject("refesh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
