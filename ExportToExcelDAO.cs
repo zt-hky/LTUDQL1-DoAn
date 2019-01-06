@@ -56,7 +56,7 @@ namespace DAO
 
             // Tạo phần đầu nếu muốn
 
-            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "D1");
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "C1");
 
             head.MergeCells = true;
 
@@ -86,17 +86,11 @@ namespace DAO
 
             Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
 
-            cl3.Value2 = "Tỷ Lệ";
+            cl3.Value2 = "Doanh Thu";
 
-            cl3.ColumnWidth = 25.0;
+            cl3.ColumnWidth = 40.0;
 
-            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
-
-            cl4.Value2 = "Doanh Thu";
-
-            cl4.ColumnWidth = 40.0;
-
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "D3");
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "C3");
 
             rowHead.Font.Bold = true;
 
@@ -169,7 +163,6 @@ namespace DAO
 
             oSheet.get_Range(c3, c4).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
         }
-
 
         public void ExportNam(DataTable dt, string sheetName, string title)
         {

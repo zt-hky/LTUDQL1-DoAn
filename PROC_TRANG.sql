@@ -40,11 +40,27 @@ AS
 		begin 
 			return
 		end
-		insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe,Loai)
-		values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe,0)
+		if(@GheHang = 1)
+		begin 
+			if exists(select cb.MaCB,cb.SLGhe1,count(*) as SL from CHUYENBAY as cb join VECHUYENBAY as ve on ve.MaCB = cb.MaCB where cb.MaCB = @MaCB group by cb.MaCB,cb.SLGhe1 having count(*) < cb.SLGhe1)
+			begin 
+				insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe,Loai)
+				values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe,0)
+				update CHUYENBAY set SLGhe1 = SLGhe1+1 where MaCB = @MaCB
+			end
+		end
+		if(@GheHang = 2)
+		begin
+			if exists(select cb.MaCB,cb.SLGhe2,count(*) as SL from CHUYENBAY as cb join VECHUYENBAY as ve on ve.MaCB = cb.MaCB where cb.MaCB = @MaCB group by cb.MaCB,cb.SLGhe2 having count(*) < cb.SLGhe2)
+			begin 
+				insert into VECHUYENBAY(MaCB,MaKH,GheHang,NgayDat,GiaVe,Loai)
+				values (@MaCB,@MaKH,@GheHang,@NgayDat,@giaVe,0)
+				update CHUYENBAY set SLGhe1 = SLGhe2+1 where MaCB = @MaCB
+			end
+		end
+		
 	end
 GO
-
 
 --yêu cầu bán vé
 --Kiểm tra mã đặt chỗ
@@ -158,4 +174,3 @@ AS
 GO
 
 --======================================== HẾT phần của Trang ==================================================
-select*from KHACHHANG

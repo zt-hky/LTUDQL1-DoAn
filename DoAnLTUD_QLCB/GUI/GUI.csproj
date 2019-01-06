@@ -49,34 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="From\FrmAdmin.cs">
+    <Compile Include="Form\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\FrmAdmin.Designer.cs">
+    <Compile Include="Form\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\FrmChuyenBay.cs">
+    <Compile Include="Form\FrmMainNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\FrmChuyenBay.Designer.cs">
-      <DependentUpon>FrmChuyenBay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="From\FrmMainNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\FrmMainNhanVien.Designer.cs">
+    <Compile Include="Form\FrmMainNhanVien.Designer.cs">
       <DependentUpon>FrmMainNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\FrmThemKhachHang.cs">
+    <Compile Include="Form\FrmThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\FrmThemKhachHang.Designer.cs">
+    <Compile Include="Form\FrmThemKhachHang.Designer.cs">
       <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\FromLogin.cs">
+    <Compile Include="Form\FromLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\FromLogin.Designer.cs">
+    <Compile Include="Form\FromLogin.Designer.cs">
       <DependentUpon>FromLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -123,19 +117,16 @@
     <Compile Include="UserControl\ucTraCuuKhachHang.Designer.cs">
       <DependentUpon>ucTraCuuKhachHang.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="From\FrmAdmin.resx">
+    <EmbeddedResource Include="Form\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\FrmChuyenBay.resx">
-      <DependentUpon>FrmChuyenBay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From\FrmMainNhanVien.resx">
+    <EmbeddedResource Include="Form\FrmMainNhanVien.resx">
       <DependentUpon>FrmMainNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\FrmThemKhachHang.resx">
+    <EmbeddedResource Include="Form\FrmThemKhachHang.resx">
       <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\FromLogin.resx">
+    <EmbeddedResource Include="Form\FromLogin.resx">
       <DependentUpon>FromLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
