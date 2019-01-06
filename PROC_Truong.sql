@@ -100,12 +100,24 @@ as
 	select * from HANGVE
 go
 
+--drop proc loadDonGia
 create proc loadDonGia
 @sbDi char(10),
 @sbDen char(10), 
-@tenHang nvarchar(30)
+@hang int
 as
-	select SBDi, SBDen, GheHang, TenHangVe, Gia
-	from BANGGIA b join HANGVE h on h.MaHangVe=b.GheHang
-	where h.TenHangVe = @tenHang and b.SBDi = @sbDi and b.SBDen = @sbDen
+	select SBDi, SBDen, GheHang, Gia
+	from BANGGIA b
+	where b.GheHang = @hang and b.SBDi = @sbDi and b.SBDen = @sbDen
+go
+
+
+
+create proc ThayDoiDonGia
+@sbDi char(10),
+@sbDen char(10), 
+@hang int,
+@gia float
+as
+	update BANGGIA set Gia = @gia where SBDi=@sbDi and SBDen=@sbDen and GheHang=@hang
 go

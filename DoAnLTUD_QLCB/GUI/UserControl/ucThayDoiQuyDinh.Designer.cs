@@ -106,7 +106,7 @@
             this.nmThoiGianChamNhatDatVeMoi = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThayDoiDonGia = new System.Windows.Forms.Button();
             this.tabSoLuongSanBay.SuspendLayout();
             this.tabSanBay.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -533,7 +533,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.btnThayDoiDonGia);
             this.groupBox6.Controls.Add(this.cbHangVe);
             this.groupBox6.Controls.Add(this.cbMaSanBayDen);
             this.groupBox6.Controls.Add(this.label33);
@@ -560,6 +560,7 @@
             this.cbHangVe.Name = "cbHangVe";
             this.cbHangVe.Size = new System.Drawing.Size(149, 24);
             this.cbHangVe.TabIndex = 1;
+            this.cbHangVe.SelectedIndexChanged += new System.EventHandler(this.cbHangVe_SelectedIndexChanged);
             // 
             // cbMaSanBayDen
             // 
@@ -680,7 +681,7 @@
             this.btnThayDoiSoLuongHangVe.Name = "btnThayDoiSoLuongHangVe";
             this.btnThayDoiSoLuongHangVe.Size = new System.Drawing.Size(75, 23);
             this.btnThayDoiSoLuongHangVe.TabIndex = 3;
-            this.btnThayDoiSoLuongHangVe.Text = "Thay đổi";
+            this.btnThayDoiSoLuongHangVe.Text = "Thay Đổi";
             this.btnThayDoiSoLuongHangVe.UseVisualStyleBackColor = true;
             this.btnThayDoiSoLuongHangVe.Click += new System.EventHandler(this.btnThayDoiSoLuongHangVe_Click);
             // 
@@ -936,15 +937,15 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Thời gian chậm nhất để đặt vé mới:";
             // 
-            // button1
+            // btnThayDoiDonGia
             // 
-            this.button1.Location = new System.Drawing.Point(281, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Thay đổi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnThayDoiSoLuongHangVe_Click);
+            this.btnThayDoiDonGia.Location = new System.Drawing.Point(281, 190);
+            this.btnThayDoiDonGia.Name = "btnThayDoiDonGia";
+            this.btnThayDoiDonGia.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoiDonGia.TabIndex = 3;
+            this.btnThayDoiDonGia.Text = "Thay Đổi";
+            this.btnThayDoiDonGia.UseVisualStyleBackColor = true;
+            this.btnThayDoiDonGia.Click += new System.EventHandler(this.btnThayDoiDonGia_Click);
             // 
             // ucThayDoiQuyDinh
             // 
@@ -1069,6 +1070,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox cbHangVe;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThayDoiDonGia;
     }
 }
