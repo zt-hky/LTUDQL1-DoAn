@@ -82,6 +82,20 @@ namespace GUI
                     cbMaSanBayDen.Items.Add(r["MaSB"]);
                 }
             }
+
+            DataTable hang = HangVeBUS.Instance.LoadHangVe();
+            if (hang.Rows.Count == 0)
+            {
+                MessageBox.Show("Không Load được ten hang ve!");
+            }
+            else
+            {
+                foreach (DataRow r in hang.Rows)
+                {
+                    cbHangVe.Items.Add(r["TenHangVe"]);
+                }
+            }
+
         }
 
         private void btnThayDoiSoLuongSanBay_Click(object sender, EventArgs e)
@@ -237,7 +251,26 @@ namespace GUI
                 }
             }
 
-
+            if(FullNhap() == true)
+            {
+                BangGia bangGia = new BangGia();
+                bangGia.SBDi = cbMaSanBayDi.Text;
+                bangGia.SBDen = cbMaSanBayDen.Text;
+                if(cbHangVe.Text == "Thương gia")
+                {
+                    bangGia.GheHang = 1;
+                }
+                else
+                {
+                    bangGia.GheHang = 2;
+                }
+                DataTable gia = BangGiaBUS.Instance.LoadDonGia(bangGia);
+                foreach (DataRow r in gia.Rows)
+                {
+                    txtDonGia.Text = r["Gia"].ToString();
+                    break;
+                }
+            }
         }
 
         private void cbMaSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,6 +291,97 @@ namespace GUI
                 }
             }
 
+            if (FullNhap() == true)
+            {
+                BangGia bangGia = new BangGia();
+                bangGia.SBDi = cbMaSanBayDi.Text;
+                bangGia.SBDen = cbMaSanBayDen.Text;
+                if (cbHangVe.Text == "Thương gia")
+                {
+                    bangGia.GheHang = 1;
+                }
+                else
+                {
+                    bangGia.GheHang = 2;
+                }
+                DataTable gia = BangGiaBUS.Instance.LoadDonGia(bangGia);
+                foreach (DataRow r in gia.Rows)
+                {
+                    txtDonGia.Text = r["Gia"].ToString();
+                    break;
+                }
+            }
+
+        }
+
+        bool FullNhap()
+        {
+            string di = cbMaSanBayDi.Text;
+            string den = cbMaSanBayDen.Text;
+            string hang = cbHangVe.Text;
+            if (di != "" && den != "" && hang != "")
+                return true;
+            return false;
+        }
+
+        private void cbHangVe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FullNhap() == true)
+            {
+                BangGia bangGia = new BangGia();
+                bangGia.SBDi = cbMaSanBayDi.Text;
+                bangGia.SBDen = cbMaSanBayDen.Text;
+                if (cbHangVe.Text == "Thương gia")
+                {
+                    bangGia.GheHang = 1;
+                }
+                else
+                {
+                    bangGia.GheHang = 2;
+                }
+                DataTable gia = BangGiaBUS.Instance.LoadDonGia(bangGia);
+                foreach (DataRow r in gia.Rows)
+                {
+                    txtDonGia.Text = r["Gia"].ToString();
+                    break;
+                }
+                
+            }
+        }
+
+        private void btnThayDoiDonGia_Click(object sender, EventArgs e)
+        {
+            if(cbMaSanBayDi.Text != "" && cbMaSanBayDen.Text != "" && cbHangVe.Text != "" && txtDonGia.Text != "")
+            {
+                BangGia bangGia = new BangGia();
+                bangGia.SBDi = cbMaSanBayDi.Text;
+                bangGia.SBDen = cbMaSanBayDen.Text;
+                if (cbHangVe.Text == "Thương gia")
+                {
+                    bangGia.GheHang = 1;
+                }
+                else
+                {
+                    bangGia.GheHang = 2;
+                }
+                bangGia.Gia = float.Parse(txtDonGia.Text);
+                int res = BangGiaBUS.Instance.UpdateDonGia(bangGia);
+                if (res == 0)
+                {
+                    MessageBox.Show("Update Không thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Update thành công!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải nhập đủ các trường!");
+            }
+           
+
+           
         }
     }   
 }
