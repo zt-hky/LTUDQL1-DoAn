@@ -15,21 +15,19 @@ AS
 	begin
 		if not exists(select* from HANGVE where MaHangVe =@GheHang)
 		begin 
-			return 0
+			return
 		end
 		if not exists(select* from CHUYENBAY where MaCB = @MaCB)
 		begin 
-			return 0
+			return
 		end
-		Declare @giaVe int
-		select @giaVe = g.Gia
-		from BANGGIA as g join CHUYENBAY as cb on cb.SBDen = g.SBDen and cb.SBDi = g.SBDi join VECHUYENBAY as ve on ve.GheHang = g.GheHang and ve.MaCB = cb.MaCB
-		where cb.MaCB = @MaCB and g.GheHang = @GheHang--Fix sau Kiểm tra @gheHang có hợp lệ
-
-		return @giaVe
-
+		
+		select g.Gia
+		from BANGGIA as g join CHUYENBAY as cb on cb.SBDen = g.SBDen and cb.SBDi = g.SBDi
+		where cb.MaCB = @MaCB and g.GheHang =@GheHang
 	end
 GO
+
 if OBJECT_ID('ThemVe_DatCho','p') is not null
 DROP proc ThemVe_DatCho
 GO
@@ -122,4 +120,6 @@ AS
 GO
 
 --======================================== HẾT phần của Trang ==================================================
+select*from KHACHHANG
+insert into HANGVE values(1,N'Thương gia'),(2,N'Vé thường')
 select*from KHACHHANG
