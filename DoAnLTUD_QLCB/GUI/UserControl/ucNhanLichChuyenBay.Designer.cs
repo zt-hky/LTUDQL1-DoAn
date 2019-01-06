@@ -318,6 +318,7 @@
             // 
             this.dgwChuyenBay.AllowUserToAddRows = false;
             this.dgwChuyenBay.AllowUserToDeleteRows = false;
+            this.dgwChuyenBay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwChuyenBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwChuyenBay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCB,
