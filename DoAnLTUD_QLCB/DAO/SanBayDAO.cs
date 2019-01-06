@@ -42,5 +42,13 @@ namespace DAO
 
         }
 
+
+        public DataTable LoadSanBay()
+        {
+            string query = "LoadSanBay";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
     }
 }

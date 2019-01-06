@@ -1,4 +1,4 @@
-
+﻿
 create proc LoadRangBuoc
 as
 	select * from RANGBUOC
@@ -79,4 +79,33 @@ create proc ThayDoiSLHangVe
 @slHang2 int
 as
 	update RANGBUOC set SLHangVe1 = @slHang1, SLHangVe2 = @slHang2
+go
+
+--drop proc LoadSanBayTheoMa
+create proc LoadSanBayTheoMa
+@maSB nchar(10)
+as
+select *
+from SANBAY sb
+where MaSB= @maSB
+go
+
+create proc LoadSanBay
+as
+	select * from SANBAY
+go
+
+create proc LoadHangVe
+as
+	select * from HANGVE
+go
+
+create proc loadDonGia
+@sbDi char(10),
+@sbDen char(10), 
+@tenHang nvarchar(30)
+as
+	select SBDi, SBDen, GheHang, TenHangVe, Gia
+	from BANGGIA b join HANGVE h on h.MaHangVe=b.GheHang
+	where h.TenHangVe = @tenHang and b.SBDi = @sbDi and b.SBDen = @sbDen
 go
