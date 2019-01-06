@@ -16,6 +16,7 @@ namespace GUI
     {
         private static ucThayDoiQuyDinh _instance;
         RangBuoc rb;
+        SanBay sb;
         public static ucThayDoiQuyDinh Instance
         {
             get
@@ -67,6 +68,20 @@ namespace GUI
         private void ucThayDoiQuyDinh_Load(object sender, EventArgs e)
         {
             loadThongTin();
+
+            DataTable sb = SanBayBUS.Instance.LoadSanBay();
+            if (sb.Rows.Count == 0)
+            {
+                MessageBox.Show("Không Load được sân bay!");
+            }
+            else
+            {
+                foreach(DataRow r in sb.Rows)
+                {
+                    cbMaSanBayDi.Items.Add(r["MaSB"]);
+                    cbMaSanBayDen.Items.Add(r["MaSB"]);
+                }
+            }
         }
 
         private void btnThayDoiSoLuongSanBay_Click(object sender, EventArgs e)
@@ -204,6 +219,45 @@ namespace GUI
             }
         }
 
-       
+        private void cbMaSanBayDi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sb = new SanBay();
+            sb.MaSB = cbMaSanBayDi.Text;
+
+            DataTable dt = SanBayBUS.Instance.LoadSanBayTheoMa(sb);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Không Load được sân bay theo ma!");
+            }
+            else
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    txtTenSanBayDi.Text = r["TenSB"].ToString();
+                }
+            }
+
+
+        }
+
+        private void cbMaSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sb = new SanBay();
+            sb.MaSB = cbMaSanBayDen.Text;
+
+            DataTable dt = SanBayBUS.Instance.LoadSanBayTheoMa(sb);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Không Load được sân bay theo ma!");
+            }
+            else
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    txtTenSanBayDen.Text = r["TenSB"].ToString();
+                }
+            }
+
+        }
     }   
 }

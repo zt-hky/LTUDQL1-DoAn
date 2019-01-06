@@ -33,5 +33,10 @@ namespace BUS
         {
             return SanBayDAO.Instance.LoadSanBay();
         }
+
+        public DataTable LoadSanBayTheoMa(SanBay sb)
+        {
+            return SanBayDAO.Instance.LoadSanBayTheoMa(sb);
+        }
     }
 }

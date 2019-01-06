@@ -50,5 +50,12 @@ namespace DAO
             return data;
         }
 
+        public DataTable LoadSanBayTheoMa(SanBay sb)
+        {
+            string query = "LoadSanBayTheoMa @maSB";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { sb.MaSB });
+            return data;
+        }
+
     }
 }

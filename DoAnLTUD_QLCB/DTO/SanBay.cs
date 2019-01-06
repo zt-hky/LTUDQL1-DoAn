@@ -24,6 +24,8 @@ namespace DTO
         private string maSB;
         private string tenSB;
 
+        public SanBay() { }
+
 
         public string MaSB { get => maSB; set => maSB = value; }
         public string TenSB { get => tenSB; set => tenSB = value; }

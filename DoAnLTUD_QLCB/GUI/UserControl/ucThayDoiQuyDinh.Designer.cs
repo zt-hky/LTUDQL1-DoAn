@@ -106,6 +106,7 @@
             this.nmThoiGianChamNhatDatVeMoi = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabSoLuongSanBay.SuspendLayout();
             this.tabSanBay.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -532,6 +533,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.cbHangVe);
             this.groupBox6.Controls.Add(this.cbMaSanBayDen);
             this.groupBox6.Controls.Add(this.label33);
@@ -566,6 +568,7 @@
             this.cbMaSanBayDen.Name = "cbMaSanBayDen";
             this.cbMaSanBayDen.Size = new System.Drawing.Size(131, 24);
             this.cbMaSanBayDen.TabIndex = 1;
+            this.cbMaSanBayDen.SelectedIndexChanged += new System.EventHandler(this.cbMaSanBayDen_SelectedIndexChanged);
             // 
             // label33
             // 
@@ -633,6 +636,7 @@
             this.cbMaSanBayDi.Name = "cbMaSanBayDi";
             this.cbMaSanBayDi.Size = new System.Drawing.Size(149, 24);
             this.cbMaSanBayDi.TabIndex = 1;
+            this.cbMaSanBayDi.SelectedIndexChanged += new System.EventHandler(this.cbMaSanBayDi_SelectedIndexChanged);
             // 
             // label32
             // 
@@ -932,6 +936,16 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Thời gian chậm nhất để đặt vé mới:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(281, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Thay đổi";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnThayDoiSoLuongHangVe_Click);
+            // 
             // ucThayDoiQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1055,5 +1069,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox cbHangVe;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button button1;
     }
 }
