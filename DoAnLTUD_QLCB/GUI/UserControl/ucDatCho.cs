@@ -57,7 +57,7 @@ namespace GUI
             DataTable res = KhachHangBUS.Instance.TimKiemKhachHang(txtBoxCMND.Text.ToString());
             if(res.Rows.Count==0)
             {
-               // MessageBox.Show("CMND không có trong danh sách, vui lòng trở lại tra cứu khách hàng!", "Thông báo");
+              // MessageBox.Show("CMND không có trong danh sách, vui lòng trở lại tra cứu khách hàng!", "Thông báo");
             }
             else
             {

@@ -55,6 +55,12 @@
     <Compile Include="Form\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FrmChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmChuyenBay.Designer.cs">
+      <DependentUpon>FrmChuyenBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FrmMainNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="Form\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmChuyenBay.resx">
+      <DependentUpon>FrmChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmMainNhanVien.resx">
       <DependentUpon>FrmMainNhanVien.cs</DependentUpon>
