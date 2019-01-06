@@ -41,7 +41,16 @@ namespace GUI
             else
             {
                 dgvBaoCao.DataSource = dt;
+                DialogResult dlr = MessageBox.Show("Xuất ra File Excel?", "Xuất Báo Cáo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.Yes)
+                {
+                    DataTable dtExcel = new DataTable();
+                    dtExcel = (DataTable)dgvBaoCao.DataSource;
+                    ExportToExcelBUS.Instance.ExportThang(dtExcel);
+                }
             }
+            
+            
 
         }
 
@@ -56,7 +65,15 @@ namespace GUI
             else
             {
                 dgvBaoCao.DataSource = dt;
+                DialogResult dlr = MessageBox.Show("Xuất ra File Excel?", "Xuất Báo Cáo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.Yes)
+                {
+                    DataTable dtExcel = new DataTable();
+                    dtExcel = (DataTable)dgvBaoCao.DataSource;
+                    ExportToExcelBUS.Instance.ExportNam(dtExcel);
+                }
             }
+          
         }
     }
 }

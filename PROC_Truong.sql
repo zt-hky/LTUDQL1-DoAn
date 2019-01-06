@@ -57,7 +57,7 @@ as
 	group by cb.MaCB
 go
 
-
+--drop proc ThongKeNam
 create proc ThongKeNam
 @nam int
 as
