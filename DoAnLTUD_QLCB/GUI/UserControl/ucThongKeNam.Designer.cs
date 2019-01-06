@@ -51,9 +51,9 @@
             // dgvBaoCao
             // 
             this.dgvBaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaoCao.Location = new System.Drawing.Point(0, 194);
+            this.dgvBaoCao.Location = new System.Drawing.Point(78, 194);
             this.dgvBaoCao.Name = "dgvBaoCao";
-            this.dgvBaoCao.Size = new System.Drawing.Size(702, 350);
+            this.dgvBaoCao.Size = new System.Drawing.Size(523, 350);
             this.dgvBaoCao.TabIndex = 1;
             // 
             // label2

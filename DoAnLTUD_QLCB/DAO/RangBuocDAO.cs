@@ -87,6 +87,47 @@ namespace DAO
             }
         }
 
-        
+        public int UpdateThoiGianThoiGianChamNhatDatVe(RangBuoc rb)
+        {
+            try
+            {
+                string strSQL = "ThayDoiThoiGianChamNhatDatVe @tgDat";
+                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] { rb.TGDatVe });
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int UpdateThoiGianThoiGianHuyDatVe(RangBuoc rb)
+        {
+            try
+            {
+                string strSQL = "ThayDoiThoiGianHuyDatVe @tgHuy";
+                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] { rb.TGHuyVe });
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int UpdateSoLuongHangVe(RangBuoc rb)
+        {
+            try
+            {
+                string strSQL = "ThayDoiSLHangVe @slHang1 , @slHang2";
+                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] { rb.SLHangVe1, rb.SLHangVe2 });
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

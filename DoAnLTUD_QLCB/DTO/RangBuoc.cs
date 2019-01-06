@@ -14,9 +14,10 @@ namespace DTO
         private int sbtgMax;
         private int tgDungMin;
         private int tgDungMax;
-        private int slHangVe;
-        private DateTime tgDatVe;
-        private DateTime tgHuyVe;
+        private int slHangVe1;
+        private int slHangVe2;
+        private int tgDatVe;
+        private int tgHuyVe;
 
 
 
@@ -26,9 +27,10 @@ namespace DTO
         public int SBTGMax { get => sbtgMax; set => sbtgMax = value; }
         public int TGDungMin { get => tgDungMin; set => tgDungMin = value; }
         public int TGDungMax { get => tgDungMax; set => tgDungMax = value; }
-        public int SLHangVe { get => slHangVe; set => slHangVe = value; }
-        public DateTime TGDatVe { get => tgDatVe; set => tgDatVe = value; }
-        public DateTime TGHuyVe { get => tgHuyVe; set => tgHuyVe = value; }
+        public int SLHangVe1 { get => slHangVe1; set => slHangVe1 = value; }
+        public int SLHangVe2 { get => slHangVe2; set => slHangVe2 = value; }
+        public int TGDatVe { get => tgDatVe; set => tgDatVe = value; }
+        public int TGHuyVe { get => tgHuyVe; set => tgHuyVe = value; }
 
 
     }
