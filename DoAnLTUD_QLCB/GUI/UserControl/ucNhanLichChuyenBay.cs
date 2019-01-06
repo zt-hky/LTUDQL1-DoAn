@@ -32,6 +32,7 @@ namespace GUI
 
         private void Load()
         {
+            this.dgwChuyenBay.Rows.Clear();
             // Load Danh sách chuyến bay
             List<ChuyenBay> dsChuyenBay = ChuyenBayBUS.Instance.getAll();
             List<SanBay> dsSanBay = SanBayBUS.Instance.getAll();
@@ -121,6 +122,35 @@ namespace GUI
                 this.dgwSBTrungGian.Rows.Add(CT.STT,CT.MaSBTG, CT.TGDung, CT.GhiChu);
             }
 
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int index = this.dgwChuyenBay.SelectedRows[0].Index;
+            if(index >=0)
+            {
+                string maCB = this.dgwChuyenBay.Rows[index].Cells["MaCB"].Value.ToString();
+                bool result = ChuyenBayBUS.Instance.Delete(maCB);
+                if(result)
+                {
+                    MessageBox.Show("Xóa thành công");
+                    Load();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại");
+                }
+            }
+        }
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            Load();
         }
     }
 }

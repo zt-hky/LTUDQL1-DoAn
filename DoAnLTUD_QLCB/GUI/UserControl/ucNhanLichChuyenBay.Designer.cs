@@ -34,6 +34,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgwSBTrungGian = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SBTrungGian = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TGDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.cbSBDen = new System.Windows.Forms.ComboBox();
             this.cbSBDi = new System.Windows.Forms.ComboBox();
@@ -60,14 +64,13 @@
             this.MaSBDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSBDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnExport = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnImport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEdit = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
             this.sanBayBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SBTrungGian = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.TGDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSBTrungGian)).BeginInit();
@@ -137,6 +140,40 @@
             this.dgwSBTrungGian.Name = "dgwSBTrungGian";
             this.dgwSBTrungGian.Size = new System.Drawing.Size(390, 153);
             this.dgwSBTrungGian.TabIndex = 4;
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.STT.FillWeight = 101.5228F;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 53;
+            // 
+            // SBTrungGian
+            // 
+            this.SBTrungGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SBTrungGian.DataSource = this.sanBayBindingSource;
+            this.SBTrungGian.DisplayMember = "TenSB";
+            this.SBTrungGian.FillWeight = 237.3304F;
+            this.SBTrungGian.HeaderText = "Sân bay trung gian";
+            this.SBTrungGian.Name = "SBTrungGian";
+            this.SBTrungGian.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SBTrungGian.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SBTrungGian.ValueMember = "MaSB";
+            this.SBTrungGian.Width = 93;
+            // 
+            // TGDung
+            // 
+            this.TGDung.FillWeight = 12.77933F;
+            this.TGDung.HeaderText = "TG Dừng";
+            this.TGDung.Name = "TGDung";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.FillWeight = 12.77933F;
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.Name = "GhiChu";
             // 
             // dtpTime
             // 
@@ -281,6 +318,7 @@
             // 
             this.dgwChuyenBay.AllowUserToAddRows = false;
             this.dgwChuyenBay.AllowUserToDeleteRows = false;
+            this.dgwChuyenBay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwChuyenBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwChuyenBay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCB,
@@ -381,6 +419,179 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chuyến bay";
             // 
+            // btnExport
+            // 
+            this.btnExport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExport.BorderRadius = 0;
+            this.btnExport.ButtonText = "Export";
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.DisabledColor = System.Drawing.Color.Gray;
+            this.btnExport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnExport.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnExport.Iconimage")));
+            this.btnExport.Iconimage_right = null;
+            this.btnExport.Iconimage_right_Selected = null;
+            this.btnExport.Iconimage_Selected = null;
+            this.btnExport.IconMarginLeft = 0;
+            this.btnExport.IconMarginRight = 0;
+            this.btnExport.IconRightVisible = true;
+            this.btnExport.IconRightZoom = 0D;
+            this.btnExport.IconVisible = true;
+            this.btnExport.IconZoom = 90D;
+            this.btnExport.IsTab = false;
+            this.btnExport.Location = new System.Drawing.Point(578, 257);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnExport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnExport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnExport.selected = false;
+            this.btnExport.Size = new System.Drawing.Size(92, 30);
+            this.btnExport.TabIndex = 26;
+            this.btnExport.Text = "Export";
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Textcolor = System.Drawing.Color.White;
+            this.btnExport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnImport
+            // 
+            this.btnImport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnImport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImport.BorderRadius = 0;
+            this.btnImport.ButtonText = "Import";
+            this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImport.DisabledColor = System.Drawing.Color.Gray;
+            this.btnImport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnImport.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnImport.Iconimage")));
+            this.btnImport.Iconimage_right = null;
+            this.btnImport.Iconimage_right_Selected = null;
+            this.btnImport.Iconimage_Selected = null;
+            this.btnImport.IconMarginLeft = 0;
+            this.btnImport.IconMarginRight = 0;
+            this.btnImport.IconRightVisible = true;
+            this.btnImport.IconRightZoom = 0D;
+            this.btnImport.IconVisible = true;
+            this.btnImport.IconZoom = 90D;
+            this.btnImport.IsTab = false;
+            this.btnImport.Location = new System.Drawing.Point(485, 257);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnImport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnImport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnImport.selected = false;
+            this.btnImport.Size = new System.Drawing.Size(92, 30);
+            this.btnImport.TabIndex = 26;
+            this.btnImport.Text = "Import";
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.Textcolor = System.Drawing.Color.White;
+            this.btnImport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(155)))), ((int)(((byte)(229)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(155)))), ((int)(((byte)(229)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 5;
+            this.bunifuFlatButton1.ButtonText = "Xóa";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = global::GUI.Properties.Resources.refesh;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(451, 258);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(155)))), ((int)(((byte)(229)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(155)))), ((int)(((byte)(229)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(28, 30);
+            this.bunifuFlatButton1.TabIndex = 26;
+            this.bunifuFlatButton1.Text = "Xóa";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click_1);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(44)))), ((int)(((byte)(0)))));
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(44)))), ((int)(((byte)(0)))));
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoa.BorderRadius = 0;
+            this.btnXoa.ButtonText = "Xóa";
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.DisabledColor = System.Drawing.Color.Gray;
+            this.btnXoa.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXoa.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXoa.Iconimage")));
+            this.btnXoa.Iconimage_right = null;
+            this.btnXoa.Iconimage_right_Selected = null;
+            this.btnXoa.Iconimage_Selected = null;
+            this.btnXoa.IconMarginLeft = 0;
+            this.btnXoa.IconMarginRight = 0;
+            this.btnXoa.IconRightVisible = true;
+            this.btnXoa.IconRightZoom = 0D;
+            this.btnXoa.IconVisible = true;
+            this.btnXoa.IconZoom = 90D;
+            this.btnXoa.IsTab = false;
+            this.btnXoa.Location = new System.Drawing.Point(316, 257);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(44)))), ((int)(((byte)(0)))));
+            this.btnXoa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(44)))), ((int)(((byte)(0)))));
+            this.btnXoa.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXoa.selected = false;
+            this.btnXoa.Size = new System.Drawing.Size(110, 30);
+            this.btnXoa.TabIndex = 26;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Textcolor = System.Drawing.Color.White;
+            this.btnXoa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEdit.BorderRadius = 0;
+            this.btnEdit.ButtonText = "Sửa";
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEdit.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEdit.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEdit.Iconimage")));
+            this.btnEdit.Iconimage_right = null;
+            this.btnEdit.Iconimage_right_Selected = null;
+            this.btnEdit.Iconimage_Selected = null;
+            this.btnEdit.IconMarginLeft = 0;
+            this.btnEdit.IconMarginRight = 0;
+            this.btnEdit.IconRightVisible = true;
+            this.btnEdit.IconRightZoom = 0D;
+            this.btnEdit.IconVisible = true;
+            this.btnEdit.IconZoom = 90D;
+            this.btnEdit.IsTab = false;
+            this.btnEdit.Location = new System.Drawing.Point(174, 257);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.btnEdit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.btnEdit.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEdit.selected = false;
+            this.btnEdit.Size = new System.Drawing.Size(110, 30);
+            this.btnEdit.TabIndex = 26;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Textcolor = System.Drawing.Color.White;
+            this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -402,7 +613,7 @@
             this.btnAdd.IconVisible = true;
             this.btnAdd.IconZoom = 90D;
             this.btnAdd.IsTab = false;
-            this.btnAdd.Location = new System.Drawing.Point(127, 258);
+            this.btnAdd.Location = new System.Drawing.Point(32, 257);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnAdd.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -415,118 +626,19 @@
             this.btnAdd.Textcolor = System.Drawing.Color.White;
             this.btnAdd.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Sửa";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(293, 258);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(110, 30);
-            this.bunifuFlatButton1.TabIndex = 26;
-            this.bunifuFlatButton1.Text = "Sửa";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Xóa";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(460, 258);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(110, 30);
-            this.bunifuFlatButton2.TabIndex = 26;
-            this.bunifuFlatButton2.Text = "Xóa";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // sanBayBindingSource
             // 
             this.sanBayBindingSource.DataSource = typeof(DTO.SanBay);
-            // 
-            // STT
-            // 
-            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.STT.FillWeight = 101.5228F;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            this.STT.Width = 53;
-            // 
-            // SBTrungGian
-            // 
-            this.SBTrungGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.SBTrungGian.DataSource = this.sanBayBindingSource;
-            this.SBTrungGian.DisplayMember = "TenSB";
-            this.SBTrungGian.FillWeight = 237.3304F;
-            this.SBTrungGian.HeaderText = "Sân bay trung gian";
-            this.SBTrungGian.Name = "SBTrungGian";
-            this.SBTrungGian.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SBTrungGian.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SBTrungGian.ValueMember = "MaSB";
-            this.SBTrungGian.Width = 93;
-            // 
-            // TGDung
-            // 
-            this.TGDung.FillWeight = 12.77933F;
-            this.TGDung.HeaderText = "TG Dừng";
-            this.TGDung.Name = "TGDung";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.FillWeight = 12.77933F;
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.Name = "GhiChu";
             // 
             // ucNhanLichChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -569,8 +681,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEdit;
+        private Bunifu.Framework.UI.BunifuFlatButton btnXoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCB;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGian;
         private System.Windows.Forms.DataGridViewTextBoxColumn TGBay;
@@ -585,5 +697,8 @@
         private System.Windows.Forms.BindingSource sanBayBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn TGDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private Bunifu.Framework.UI.BunifuFlatButton btnImport;
+        private Bunifu.Framework.UI.BunifuFlatButton btnExport;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
     }
 }
