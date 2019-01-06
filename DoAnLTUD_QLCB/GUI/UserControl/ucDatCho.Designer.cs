@@ -32,7 +32,6 @@ namespace GUI
         {
             this.txtBoxGiaTien = new System.Windows.Forms.TextBox();
             this.txtBoxMaKH = new System.Windows.Forms.TextBox();
-            this.txtBoxHangVe = new System.Windows.Forms.TextBox();
             this.txtBoxCMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@ namespace GUI
             this.cbMaCB = new System.Windows.Forms.ComboBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.dateTimePickerNgayGioDi = new System.Windows.Forms.DateTimePicker();
+            this.cbHangVe = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,15 +77,6 @@ namespace GUI
             this.txtBoxMaKH.ReadOnly = true;
             this.txtBoxMaKH.Size = new System.Drawing.Size(189, 27);
             this.txtBoxMaKH.TabIndex = 30;
-            // 
-            // txtBoxHangVe
-            // 
-            this.txtBoxHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxHangVe.Location = new System.Drawing.Point(482, 370);
-            this.txtBoxHangVe.Name = "txtBoxHangVe";
-            this.txtBoxHangVe.Size = new System.Drawing.Size(186, 27);
-            this.txtBoxHangVe.TabIndex = 29;
-            this.txtBoxHangVe.TextChanged += new System.EventHandler(this.txtBoxHangVe_TextChanged);
             // 
             // txtBoxCMND
             // 
@@ -314,10 +305,21 @@ namespace GUI
             this.dateTimePickerNgayGioDi.Size = new System.Drawing.Size(196, 26);
             this.dateTimePickerNgayGioDi.TabIndex = 46;
             // 
+            // cbHangVe
+            // 
+            this.cbHangVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHangVe.FormattingEnabled = true;
+            this.cbHangVe.Location = new System.Drawing.Point(482, 367);
+            this.cbHangVe.Name = "cbHangVe";
+            this.cbHangVe.Size = new System.Drawing.Size(189, 28);
+            this.cbHangVe.TabIndex = 47;
+            this.cbHangVe.SelectedIndexChanged += new System.EventHandler(this.cbHangVe_SelectedIndexChanged);
+            // 
             // ucDatCho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbHangVe);
             this.Controls.Add(this.dateTimePickerNgayGioDi);
             this.Controls.Add(this.cbMaCB);
             this.Controls.Add(this.dateTimePickerNgayDat);
@@ -332,7 +334,6 @@ namespace GUI
             this.Controls.Add(this.txtBoxSoDienThoai);
             this.Controls.Add(this.txtBoxHoTen);
             this.Controls.Add(this.txtBoxMaKH);
-            this.Controls.Add(this.txtBoxHangVe);
             this.Controls.Add(this.txtBoxCMND);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -356,7 +357,6 @@ namespace GUI
 
         private System.Windows.Forms.TextBox txtBoxGiaTien;
         private System.Windows.Forms.TextBox txtBoxMaKH;
-        private System.Windows.Forms.TextBox txtBoxHangVe;
         private System.Windows.Forms.TextBox txtBoxCMND;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -381,5 +381,6 @@ namespace GUI
         private System.Windows.Forms.ComboBox cbMaCB;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private DateTimePicker dateTimePickerNgayGioDi;
+        private ComboBox cbHangVe;
     }
 }

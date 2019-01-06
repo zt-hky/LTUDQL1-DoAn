@@ -31,7 +31,10 @@ namespace GUI
             cbMaCB.DataSource = dsChuyenBay;
             cbMaCB.DisplayMember = "MaCB";
             cbMaCB.ValueMember ="MaCB";
-           
+            List<int> ds = new List<int>();
+            ds.Add(1);
+            ds.Add(2);
+            cbHangVe.DataSource = ds;
         }
 
         private void cbMaCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,22 +68,9 @@ namespace GUI
             }
         }
 
-        private void txtBoxHangVe_TextChanged(object sender, EventArgs e)
-        {
-            if(txtBoxHangVe.Text!="")
-            {
-                VeChuyenBay ve = new VeChuyenBay();
-                ve.MaCB = cbMaCB.Text;
-                //ve.MaKH = int.Parse(txtBoxMaKH.Text);
-                ve.GheHang = int.Parse(txtBoxHangVe.Text);
-                int Gia = VeChuyenBayBUS.Instance.XemGiaVe_DatCho(ve);
-                txtBoxGiaTien.Text = Gia.ToString();
-            } 
-        }
-
         private void btnDatCho_Click(object sender, EventArgs e)
         {
-            if(txtBoxHangVe.Text=="" || txtBoxCMND.Text==""||cbMaCB.SelectedValue ==null)
+            if(cbHangVe.SelectedValue ==null || txtBoxCMND.Text==""||cbMaCB.SelectedValue ==null)
             {
                 MessageBox.Show("Không được để dữ liệu trống!", "Thông báo");
             }
@@ -89,7 +79,7 @@ namespace GUI
                 VeChuyenBay ve = new VeChuyenBay();
                 ve.MaCB = cbMaCB.Text;
                 ve.MaKH = int.Parse(txtBoxMaKH.Text);
-                ve.GheHang = int.Parse(txtBoxHangVe.Text);
+                ve.GheHang = int.Parse(cbHangVe.Text);
                 ve.NgayDat = DateTime.Parse(dateTimePickerNgayDat.Value.ToString());
                 ve.GiaVe = int.Parse(txtBoxGiaTien.Text);
                 int res = VeChuyenBayBUS.Instance.ThemVe_DatCho(ve);
@@ -119,6 +109,19 @@ namespace GUI
             txtBoxMaKH.Clear();
             txtBoxHoTen.Clear();
             txtBoxSoDienThoai.Clear();
+        }
+
+        private void cbHangVe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbHangVe.SelectedValue != null)
+            {
+                VeChuyenBay ve = new VeChuyenBay();
+                ve.MaCB = cbMaCB.Text;
+                //ve.MaKH = int.Parse(txtBoxMaKH.Text);
+                ve.GheHang = int.Parse(cbHangVe.Text);
+                int Gia = VeChuyenBayBUS.Instance.XemGiaVe_DatCho(ve);
+                txtBoxGiaTien.Text = Gia.ToString();
+            }
         }
     }
 }
