@@ -63,11 +63,11 @@
             this.dgvChuyenBay.AllowUserToDeleteRows = false;
             this.dgvChuyenBay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChuyenBay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChuyenBay.Location = new System.Drawing.Point(13, 117);
+            this.dgvChuyenBay.Location = new System.Drawing.Point(13, 80);
             this.dgvChuyenBay.Name = "dgvChuyenBay";
             this.dgvChuyenBay.ReadOnly = true;
             this.dgvChuyenBay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChuyenBay.Size = new System.Drawing.Size(676, 411);
+            this.dgvChuyenBay.Size = new System.Drawing.Size(676, 448);
             this.dgvChuyenBay.TabIndex = 22;
             this.dgvChuyenBay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenBay_CellContentClick);
             // 
