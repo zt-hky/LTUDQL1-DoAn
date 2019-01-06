@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -27,9 +28,35 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void ucThongKeNam_Load(object sender, EventArgs e)
-        {
 
+        private void btnBaoCaoThang_Click(object sender, EventArgs e)
+        {
+            int thang = int.Parse(dtpThang.Text);
+            int nam = int.Parse(dtpNam.Text);
+            DataTable dt = BaoCaoBUS.Instance.ThongKeThang(thang, nam);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Thống kê theo tháng KHÔNG thành công!");
+            }
+            else
+            {
+                dgvBaoCao.DataSource = dt;
+            }
+
+        }
+
+        private void btnBaoCaoNam_Click(object sender, EventArgs e)
+        {
+            int nam = int.Parse(dtpNam.Text);
+            DataTable dt = BaoCaoBUS.Instance.ThongKeNam(nam);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Thống kê theo năm KHÔNG thành công!");
+            }
+            else
+            {
+                dgvBaoCao.DataSource = dt;
+            }
         }
     }
 }

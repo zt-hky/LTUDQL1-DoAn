@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BangGia.cs" />
+    <Compile Include="BaoCaoNam.cs" />
+    <Compile Include="BaoCaoThang.cs" />
     <Compile Include="ChiTietChuyenBay.cs" />
     <Compile Include="ChuyenBay.cs" />
     <Compile Include="Class1.cs" />
