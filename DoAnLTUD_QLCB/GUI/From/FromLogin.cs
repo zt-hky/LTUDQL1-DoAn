@@ -49,13 +49,11 @@ namespace GUI.From
                     FrmMainNhanVien frmNhanVien = new FrmMainNhanVien();
                     this.Hide();
                     frmNhanVien.ShowDialog();
-                    Application.Exit();
                     break;
                 case 1:
                     FrmMainAdmin frmAdmin = new FrmMainAdmin();
                     this.Hide();
                     frmAdmin.ShowDialog();
-                    Application.Exit();
                     break;
             }
 
