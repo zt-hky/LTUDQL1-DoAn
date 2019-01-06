@@ -27,15 +27,14 @@ namespace GUI
         public ucNhanLichChuyenBay()
         {
             InitializeComponent();
-            LoadChuyenBay();
+            Load();
         }
 
-        private void LoadChuyenBay()
+        private void Load()
         {
+            // Load Danh sách chuyến bay
             List<ChuyenBay> dsChuyenBay = ChuyenBayBUS.Instance.getAll();
-
             List<SanBay> dsSanBay = SanBayBUS.Instance.getAll();
-
 
             foreach(ChuyenBay cb in dsChuyenBay)
             {
@@ -43,6 +42,23 @@ namespace GUI
                 string tenSBDen = dsSanBay.Find(x => x.MaSB == cb.SBDen).TenSB;
                 this.dgwChuyenBay.Rows.Add(cb.MaCB, cb.NgayGio, cb.TGBay, tenSBDi, tenSBDen, cb.SLGhe1, cb.SLGhe2);
             }
+
+            List<SanBay> dsSBDi = SanBayBUS.Instance.getAll(); ;
+            List<SanBay> dsSBDen = SanBayBUS.Instance.getAll(); ;
+
+            this.cbSBDi.DataSource = dsSBDi;
+            this.cbSBDi.DisplayMember = "TenSB";
+           
+
+            this.cbSBDen.DataSource = dsSBDen;
+            this.cbSBDen.DisplayMember = "TenSB";
+
+        }
+
+
+        private void LoadChiTietChuyenBay()
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
