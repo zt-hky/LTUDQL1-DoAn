@@ -40,7 +40,7 @@ namespace GUI
             {
                 string tenSBDi = dsSanBay.Find(x => x.MaSB == cb.SBDi).TenSB;
                 string tenSBDen = dsSanBay.Find(x => x.MaSB == cb.SBDen).TenSB;
-                this.dgwChuyenBay.Rows.Add(cb.MaCB, cb.NgayGio, cb.TGBay, tenSBDi, tenSBDen, cb.SLGhe1, cb.SLGhe2);
+                this.dgwChuyenBay.Rows.Add(cb.MaCB, cb.NgayGio, cb.TGBay, tenSBDi, tenSBDen, cb.SLGhe1, cb.SLGhe2,cb.SBDi,cb.SBDen);
             }
 
             List<SanBay> dsSBDi = SanBayBUS.Instance.getAll(); ;
@@ -48,10 +48,18 @@ namespace GUI
 
             this.cbSBDi.DataSource = dsSBDi;
             this.cbSBDi.DisplayMember = "TenSB";
-           
+            this.cbSBDi.ValueMember = "MaSB";
 
             this.cbSBDen.DataSource = dsSBDen;
             this.cbSBDen.DisplayMember = "TenSB";
+            this.cbSBDen.ValueMember = "MaSB";
+
+
+            List<SanBay> lstSBTG = SanBayBUS.Instance.getAll(); ;
+
+
+            this.SBTrungGian.DataSource = lstSBTG;
+
 
         }
 
@@ -83,6 +91,35 @@ namespace GUI
 
         private void dgwChuyenBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex >= 0 )
+            {
+                DataGridViewRow row = this.dgwChuyenBay.Rows[e.RowIndex];
+
+                this.tbMaCB.Text = row.Cells["MaCB"].Value.ToString();
+                this.dtpTime.Text = row.Cells["ThoiGian"].Value.ToString();
+                this.tbTGBay.Text = row.Cells["TGBay"].Value.ToString();
+                this.cbSBDi.SelectedValue = row.Cells["MaSBDi"].Value;
+                this.cbSBDen.SelectedValue = row.Cells["MaSBDen"].Value;
+                this.tbSLGhe1.Text = row.Cells["SLGhe1"].Value.ToString();
+                this.tbSLGhe2.Text = row.Cells["SLGhe2"].Value.ToString();
+
+                LoadDGWSanBayTrungGian(row.Cells["MaCB"].Value.ToString());
+
+            }
+           
+        }
+
+        private void LoadDGWSanBayTrungGian(string MaCB)
+        {
+            this.dgwSBTrungGian.Rows.Clear();
+
+            List<ChiTietChuyenBay> chiTietChuyenBays = ChiTietChuyenBayBUS.Instance.getByMaCB(MaCB);
+
+            foreach(ChiTietChuyenBay CT in chiTietChuyenBays )
+            {
+                                
+                this.dgwSBTrungGian.Rows.Add(CT.STT,CT.MaSBTG, CT.TGDung, CT.GhiChu);
+            }
 
         }
     }

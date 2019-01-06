@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNhanLichChuyenBay));
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgwSBTrungGian = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SBTrungGian = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.TGDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.cbSBDen = new System.Windows.Forms.ComboBox();
             this.cbSBDi = new System.Windows.Forms.ComboBox();
@@ -49,7 +47,7 @@
             this.tbTGBay = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txMaCB = new System.Windows.Forms.TextBox();
+            this.tbMaCB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgwChuyenBay = new System.Windows.Forms.DataGridView();
             this.MaCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,12 +57,23 @@
             this.SBDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SLGhe1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SLGhe2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSBDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSBDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.sanBayBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SBTrungGian = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TGDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSBTrungGian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwChuyenBay)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sanBayBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -104,11 +113,11 @@
             this.groupBox1.Controls.Add(this.tbTGBay);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txMaCB);
+            this.groupBox1.Controls.Add(this.tbMaCB);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 53);
+            this.groupBox1.Location = new System.Drawing.Point(13, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(676, 224);
+            this.groupBox1.Size = new System.Drawing.Size(676, 205);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Chuyến bay";
@@ -124,37 +133,16 @@
             this.SBTrungGian,
             this.TGDung,
             this.GhiChu});
-            this.dgwSBTrungGian.Location = new System.Drawing.Point(267, 52);
+            this.dgwSBTrungGian.Location = new System.Drawing.Point(267, 36);
             this.dgwSBTrungGian.Name = "dgwSBTrungGian";
             this.dgwSBTrungGian.Size = new System.Drawing.Size(390, 153);
             this.dgwSBTrungGian.TabIndex = 4;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // SBTrungGian
-            // 
-            this.SBTrungGian.HeaderText = "Sân bay trung gian";
-            this.SBTrungGian.Name = "SBTrungGian";
-            // 
-            // TGDung
-            // 
-            this.TGDung.HeaderText = "TG Dừng";
-            this.TGDung.Name = "TGDung";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.Name = "GhiChu";
             // 
             // dtpTime
             // 
             this.dtpTime.CustomFormat = "HH:mm   dd/MM/yyyy";
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTime.Location = new System.Drawing.Point(19, 96);
+            this.dtpTime.Location = new System.Drawing.Point(19, 80);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(135, 20);
             this.dtpTime.TabIndex = 3;
@@ -163,7 +151,7 @@
             // 
             this.cbSBDen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSBDen.FormattingEnabled = true;
-            this.cbSBDen.Location = new System.Drawing.Point(19, 184);
+            this.cbSBDen.Location = new System.Drawing.Point(19, 168);
             this.cbSBDen.Name = "cbSBDen";
             this.cbSBDen.Size = new System.Drawing.Size(135, 21);
             this.cbSBDen.TabIndex = 2;
@@ -172,7 +160,7 @@
             // 
             this.cbSBDi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSBDi.FormattingEnabled = true;
-            this.cbSBDi.Location = new System.Drawing.Point(19, 140);
+            this.cbSBDi.Location = new System.Drawing.Point(19, 124);
             this.cbSBDi.Name = "cbSBDi";
             this.cbSBDi.Size = new System.Drawing.Size(135, 21);
             this.cbSBDi.TabIndex = 2;
@@ -181,7 +169,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 168);
+            this.label3.Location = new System.Drawing.Point(16, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 1;
@@ -191,7 +179,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 124);
+            this.label2.Location = new System.Drawing.Point(16, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
@@ -201,7 +189,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(171, 168);
+            this.label7.Location = new System.Drawing.Point(171, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 1;
@@ -210,7 +198,7 @@
             // 
             // tbSLGhe2
             // 
-            this.tbSLGhe2.Location = new System.Drawing.Point(174, 186);
+            this.tbSLGhe2.Location = new System.Drawing.Point(174, 170);
             this.tbSLGhe2.Name = "tbSLGhe2";
             this.tbSLGhe2.Size = new System.Drawing.Size(74, 20);
             this.tbSLGhe2.TabIndex = 0;
@@ -219,7 +207,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(171, 124);
+            this.label6.Location = new System.Drawing.Point(171, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 1;
@@ -228,7 +216,7 @@
             // 
             // tbSLGhe1
             // 
-            this.tbSLGhe1.Location = new System.Drawing.Point(174, 142);
+            this.tbSLGhe1.Location = new System.Drawing.Point(174, 126);
             this.tbSLGhe1.Name = "tbSLGhe1";
             this.tbSLGhe1.Size = new System.Drawing.Size(74, 20);
             this.tbSLGhe1.TabIndex = 0;
@@ -237,7 +225,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(171, 78);
+            this.label5.Location = new System.Drawing.Point(171, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 1;
@@ -246,7 +234,7 @@
             // 
             // tbTGBay
             // 
-            this.tbTGBay.Location = new System.Drawing.Point(174, 96);
+            this.tbTGBay.Location = new System.Drawing.Point(174, 80);
             this.tbTGBay.Name = "tbTGBay";
             this.tbTGBay.Size = new System.Drawing.Size(74, 20);
             this.tbTGBay.TabIndex = 0;
@@ -255,7 +243,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(264, 34);
+            this.label8.Location = new System.Drawing.Point(264, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(149, 13);
             this.label8.TabIndex = 1;
@@ -265,24 +253,24 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 34);
+            this.label4.Location = new System.Drawing.Point(16, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã chuyến bay";
             this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txMaCB
+            // tbMaCB
             // 
-            this.txMaCB.Location = new System.Drawing.Point(19, 52);
-            this.txMaCB.Name = "txMaCB";
-            this.txMaCB.Size = new System.Drawing.Size(229, 20);
-            this.txMaCB.TabIndex = 0;
+            this.tbMaCB.Location = new System.Drawing.Point(19, 36);
+            this.tbMaCB.Name = "tbMaCB";
+            this.tbMaCB.Size = new System.Drawing.Size(229, 20);
+            this.tbMaCB.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 80);
+            this.label1.Location = new System.Drawing.Point(16, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
@@ -301,14 +289,16 @@
             this.SBDi,
             this.SBDen,
             this.SLGhe1,
-            this.SLGhe2});
+            this.SLGhe2,
+            this.MaSBDi,
+            this.MaSBDen});
             this.dgwChuyenBay.Location = new System.Drawing.Point(19, 19);
             this.dgwChuyenBay.Name = "dgwChuyenBay";
             this.dgwChuyenBay.ReadOnly = true;
             this.dgwChuyenBay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwChuyenBay.Size = new System.Drawing.Size(638, 206);
             this.dgwChuyenBay.TabIndex = 24;
-            this.dgwChuyenBay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwChuyenBay_CellContentClick);
+            this.dgwChuyenBay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwChuyenBay_CellContentClick);
             // 
             // MaCB
             // 
@@ -367,6 +357,20 @@
             this.SLGhe2.ReadOnly = true;
             this.SLGhe2.Width = 77;
             // 
+            // MaSBDi
+            // 
+            this.MaSBDi.HeaderText = "MaSBDi";
+            this.MaSBDi.Name = "MaSBDi";
+            this.MaSBDi.ReadOnly = true;
+            this.MaSBDi.Visible = false;
+            // 
+            // MaSBDen
+            // 
+            this.MaSBDen.HeaderText = "MaSBDen";
+            this.MaSBDen.Name = "MaSBDen";
+            this.MaSBDen.ReadOnly = true;
+            this.MaSBDen.Visible = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgwChuyenBay);
@@ -377,10 +381,153 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chuyến bay";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.BorderRadius = 0;
+            this.btnAdd.ButtonText = "Thêm";
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAdd.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAdd.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAdd.Iconimage")));
+            this.btnAdd.Iconimage_right = null;
+            this.btnAdd.Iconimage_right_Selected = null;
+            this.btnAdd.Iconimage_Selected = null;
+            this.btnAdd.IconMarginLeft = 0;
+            this.btnAdd.IconMarginRight = 0;
+            this.btnAdd.IconRightVisible = true;
+            this.btnAdd.IconRightZoom = 0D;
+            this.btnAdd.IconVisible = true;
+            this.btnAdd.IconZoom = 90D;
+            this.btnAdd.IsTab = false;
+            this.btnAdd.Location = new System.Drawing.Point(127, 258);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAdd.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnAdd.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAdd.selected = false;
+            this.btnAdd.Size = new System.Drawing.Size(110, 30);
+            this.btnAdd.TabIndex = 26;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Textcolor = System.Drawing.Color.White;
+            this.btnAdd.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Sửa";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(293, 258);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(110, 30);
+            this.bunifuFlatButton1.TabIndex = 26;
+            this.bunifuFlatButton1.Text = "Sửa";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "Xóa";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(460, 258);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(110, 30);
+            this.bunifuFlatButton2.TabIndex = 26;
+            this.bunifuFlatButton2.Text = "Xóa";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // sanBayBindingSource
+            // 
+            this.sanBayBindingSource.DataSource = typeof(DTO.SanBay);
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.STT.FillWeight = 101.5228F;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 53;
+            // 
+            // SBTrungGian
+            // 
+            this.SBTrungGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SBTrungGian.DataSource = this.sanBayBindingSource;
+            this.SBTrungGian.DisplayMember = "TenSB";
+            this.SBTrungGian.FillWeight = 237.3304F;
+            this.SBTrungGian.HeaderText = "Sân bay trung gian";
+            this.SBTrungGian.Name = "SBTrungGian";
+            this.SBTrungGian.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SBTrungGian.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SBTrungGian.ValueMember = "MaSB";
+            this.SBTrungGian.Width = 93;
+            // 
+            // TGDung
+            // 
+            this.TGDung.FillWeight = 12.77933F;
+            this.TGDung.HeaderText = "TG Dừng";
+            this.TGDung.Name = "TGDung";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.FillWeight = 12.77933F;
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.Name = "GhiChu";
+            // 
             // ucNhanLichChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -393,6 +540,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwSBTrungGian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwChuyenBay)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sanBayBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,7 +555,7 @@
         private System.Windows.Forms.DateTimePicker dtpTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txMaCB;
+        private System.Windows.Forms.TextBox tbMaCB;
         private System.Windows.Forms.DataGridView dgwChuyenBay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbTGBay;
@@ -418,12 +566,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSLGhe1;
         private System.Windows.Forms.DataGridView dgwSBTrungGian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewComboBoxColumn SBTrungGian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TGDung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCB;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGian;
         private System.Windows.Forms.DataGridViewTextBoxColumn TGBay;
@@ -431,5 +578,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SBDen;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLGhe1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLGhe2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSBDi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSBDen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewComboBoxColumn SBTrungGian;
+        private System.Windows.Forms.BindingSource sanBayBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TGDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }
