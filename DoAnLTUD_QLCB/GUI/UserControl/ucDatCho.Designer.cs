@@ -63,10 +63,10 @@ namespace GUI
             // txtBoxGiaTien
             // 
             this.txtBoxGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxGiaTien.Location = new System.Drawing.Point(138, 437);
+            this.txtBoxGiaTien.Location = new System.Drawing.Point(138, 436);
             this.txtBoxGiaTien.Name = "txtBoxGiaTien";
             this.txtBoxGiaTien.ReadOnly = true;
-            this.txtBoxGiaTien.Size = new System.Drawing.Size(196, 27);
+            this.txtBoxGiaTien.Size = new System.Drawing.Size(530, 27);
             this.txtBoxGiaTien.TabIndex = 33;
             // 
             // txtBoxMaKH
@@ -100,7 +100,7 @@ namespace GUI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 444);
+            this.label7.Location = new System.Drawing.Point(23, 443);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 20);
             this.label7.TabIndex = 26;

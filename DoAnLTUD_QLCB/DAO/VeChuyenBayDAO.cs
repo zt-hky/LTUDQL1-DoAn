@@ -57,5 +57,25 @@ namespace DAO
             }
 
         }
+        public int TimKiemMaDatCho(int maKH,string maCB)
+        {
+            try
+            {
+                int MaVe = 0;
+                string strSQL = "TimKiemMaDatCho @MaKH , @MaCB";
+                DataTable dt = DataProvider.Instance.ExecuteQuery(strSQL, new object[] { maKH,maCB });
+                if (dt.Rows.Count != 0)
+                {
+                    MaVe = int.Parse(dt.Rows[0]["MaVe"].ToString());
+                }
+                return MaVe;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
     }
 }
