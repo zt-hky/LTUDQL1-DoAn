@@ -112,5 +112,13 @@ namespace GUI
                 }
             }
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+            txtBoxMaKH.Clear();
+            txtBoxHoTen.Clear();
+            txtBoxSoDienThoai.Clear();
+        }
     }
 }
