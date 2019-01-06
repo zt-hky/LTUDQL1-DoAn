@@ -50,7 +50,6 @@ namespace GUI
             {
                 FrmThemKhachHang frmKH = new FrmThemKhachHang(txtBoxCMND.Text);
                 frmKH.ShowDialog();
-                MessageBox.Show("Thêm khách hàng thành công!");
             }
         }
     }

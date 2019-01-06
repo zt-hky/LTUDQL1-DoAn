@@ -285,7 +285,7 @@ namespace GUI
             // 
             // dateTimePickerNgayDat
             // 
-            this.dateTimePickerNgayDat.CustomFormat = "dd/MM/yyyy | hh:mm:ss";
+            this.dateTimePickerNgayDat.CustomFormat = "dd/MM/yyyy | HH:mm:ss";
             this.dateTimePickerNgayDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayDat.Location = new System.Drawing.Point(138, 369);
@@ -305,7 +305,7 @@ namespace GUI
             // 
             // dateTimePickerNgayGioDi
             // 
-            this.dateTimePickerNgayGioDi.CustomFormat = "dd/MM/yyyy | hh:mm:ss";
+            this.dateTimePickerNgayGioDi.CustomFormat = "dd/MM/yyyy | HH:mm:ss";
             this.dateTimePickerNgayGioDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayGioDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayGioDi.Location = new System.Drawing.Point(138, 291);

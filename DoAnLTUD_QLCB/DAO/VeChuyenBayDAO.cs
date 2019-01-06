@@ -77,5 +77,21 @@ namespace DAO
             }
 
         }
+
+        public int CapNhatLoaiVe_BanVe(int maDatCho)
+        {
+            try
+            {
+                
+                string strSQL = "CapNhatLoaiVe_BanVe @maVe";
+                int res = DataProvider.Instance.ExecuteNonQuery(strSQL, new object[] { maDatCho });
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

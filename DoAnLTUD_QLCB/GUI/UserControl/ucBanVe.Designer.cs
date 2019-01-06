@@ -252,6 +252,7 @@
             this.txtBoxMaDatCho.Name = "txtBoxMaDatCho";
             this.txtBoxMaDatCho.Size = new System.Drawing.Size(186, 27);
             this.txtBoxMaDatCho.TabIndex = 10;
+            this.txtBoxMaDatCho.TextChanged += new System.EventHandler(this.txtBoxMaDatCho_TextChanged);
             // 
             // label7
             // 
@@ -323,6 +324,7 @@
             this.btnBanVe.TabIndex = 3;
             this.btnBanVe.Text = "Bán vé";
             this.btnBanVe.UseVisualStyleBackColor = true;
+            this.btnBanVe.Click += new System.EventHandler(this.btnBanVe_Click);
             // 
             // btnHuy
             // 
@@ -333,6 +335,7 @@
             this.btnHuy.TabIndex = 2;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label1
             // 
