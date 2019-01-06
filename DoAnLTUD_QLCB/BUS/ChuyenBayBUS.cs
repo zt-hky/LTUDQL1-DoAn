@@ -53,5 +53,25 @@ namespace BUS
 
             return ChuyenBayDAO.Instance.Delete(MaCB);
         }
+
+        public bool checkMaCB(string MaCB)
+        {
+            return ChuyenBayDAO.Instance.checkMaCB(MaCB);
+        }
+
+        public ChuyenBay getByMaCB(string MaCB)
+        {
+            return ChuyenBayDAO.Instance.getByMaCB(MaCB);
+        }
+
+        public bool Insert(ChuyenBay cb, List<ChiTietChuyenBay> ct)
+        {
+            if(ChuyenBayDAO.Instance.Insert(cb))
+            {
+                if (ChiTietChuyenBayDAO.Instance.Insert(ct)) ;
+                return true;
+            }
+            return false;
+        }
     }
 }

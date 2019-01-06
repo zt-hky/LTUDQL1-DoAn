@@ -39,5 +39,17 @@ namespace DAO
 
             return lstCTCB;
         }
+
+        public bool Insert(List<ChiTietChuyenBay> cts)
+        {
+            string sql = "uc_InsertCTTB @stt , @MaCB , @SBTG , @TGDung , @ghichu ";
+            foreach (ChiTietChuyenBay ct in cts)
+            {
+                int n = DataProvider.Instance.ExecuteNonQuery(sql, new object[] { ct.STT, ct.MaCB, ct.MaSBTG, ct.TGDung, ct.GhiChu });
+                if (n == 0)
+                    return false;
+            }
+            return true;
+        }
     }
 }

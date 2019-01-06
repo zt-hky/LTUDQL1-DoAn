@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using GUI.From;
 
 namespace GUI
 {
@@ -126,7 +127,15 @@ namespace GUI
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            int index = this.dgwChuyenBay.SelectedRows[0].Index;
+            if(index > 0)
+            {
+                string maCB = this.dgwChuyenBay.Rows[index].Cells["MaCB"].Value.ToString();
+                FrmChuyenBay frm = new FrmChuyenBay(false, maCB);
+                frm.ShowDialog();
+            }
 
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -151,6 +160,14 @@ namespace GUI
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
             Load();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+                FrmChuyenBay frm = new FrmChuyenBay(true, "");
+                frm.ShowDialog();
+            
         }
     }
 }

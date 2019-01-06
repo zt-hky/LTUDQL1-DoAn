@@ -16,6 +16,8 @@ namespace DTO
         string _ghiChu;
         private DataRow row;
 
+        public ChiTietChuyenBay() {  }
+
         public ChiTietChuyenBay(DataRow row)
         {
             this._stt = int.Parse(row["STT"].ToString());

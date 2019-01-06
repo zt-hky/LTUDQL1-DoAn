@@ -24,6 +24,19 @@ namespace DAO
 
         private ChuyenBayDAO() { }
 
+        public ChuyenBay getByMaCB(string maCB)
+        {
+            string sql = "uc_getChuyenBayByMaCB  @MaCB";
+            DataTable dt =  DataProvider.Instance.ExecuteQuery(sql, new object[] { maCB });
+
+            ChuyenBay cb = new ChuyenBay(dt.Rows[0]);
+                return cb;
+        }
+        public bool checkMaCB(string MaCB)
+        {
+            string query = "uc_checkMaCB @MaCB";
+            return (int)DataProvider.Instance.ExecuteScalar(query, new object[] { MaCB }) > 0;
+        }
 
         public bool Delete(string MaCB)
         {
@@ -47,6 +60,13 @@ namespace DAO
             }
             return chuyenBays;
         }
+
+        public bool Insert(ChuyenBay cb)
+        {
+            string sql = "uc_ChuyenBayInsert @MaCB , @SBDi , @SBDen , @NgayGio ,  @TGbay , @SLGhe1 , @SLGhe2";
+            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { cb.MaCB, cb.SBDi, cb.SBDen, cb.NgayGio, cb.TGBay, cb.SLGhe1, cb.SLGhe2 }) > 0;
+        }
+
         //=========================== 1660637 - TRANG =======================
         public List<ChuyenBay> DatCho_DanhSachChuyenBay()
         {

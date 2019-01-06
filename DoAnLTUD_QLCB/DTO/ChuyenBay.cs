@@ -9,6 +9,8 @@ namespace DTO
 {
     public class ChuyenBay
     {
+        public ChuyenBay() {  }
+
         public ChuyenBay(string maCB, string sBDi, string sBDen, 
             DateTime ngayGio, int tGBay, int sLGhe1, int sLGhe2, 
             int soGheTrong, int soGheDat, int soVe, float tyLe, float DoanhThu )
