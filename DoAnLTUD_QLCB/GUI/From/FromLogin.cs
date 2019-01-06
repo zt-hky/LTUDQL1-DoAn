@@ -43,6 +43,7 @@ namespace GUI.From
             {
                 case -1:
                     MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
+                    this.tbPassword.text = "";
                     break;
                 case 0:
                     FrmMainNhanVien frmNhanVien = new FrmMainNhanVien();
