@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoCaoDAO.cs" />
+    <Compile Include="ChiTietChuyenBayDAO.cs" />
     <Compile Include="ChuyenBayDAO.cs" />
     <Compile Include="ChuyenBay_KhachHang_MaVeDAO.cs" />
     <Compile Include="Class1.cs" />

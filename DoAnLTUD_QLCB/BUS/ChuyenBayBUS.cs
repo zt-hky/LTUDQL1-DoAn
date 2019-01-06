@@ -43,5 +43,15 @@ namespace BUS
         {
             return ChuyenBayDAO.Instance.TimKiemChuyenBay(MaCB);
         }
+
+        public bool Delete(string MaCB)
+        {
+
+            if (VeChuyenBayDAO.Instance.countByMaCB(MaCB) > 0)
+                return false;
+
+
+            return ChuyenBayDAO.Instance.Delete(MaCB);
+        }
     }
 }
