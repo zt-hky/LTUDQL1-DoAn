@@ -123,8 +123,8 @@ go
 /* Table: BANGGIA                                               */
 /*==============================================================*/
 create table BANGGIA (
-   SBDi                 char(10)             not null,
-   SBDen                char(10)             not null,
+   SBDi                 varchar(10)             not null,
+   SBDen                varchar(10)             not null,
    GheHang              int                  not null,
    Gia                  float                null,
    constraint PK_BANGGIA primary key (GheHang, SBDen, SBDi)
@@ -135,9 +135,9 @@ go
 /* Table: CHITIETCHUYENBAY                                      */
 /*==============================================================*/
 create table CHITIETCHUYENBAY (
-   STT                  int      not null,
-   MaCB                 char(10)             not null,
-   MaSBTG               char(10)             null,
+   STT                  int IDENTITY(1,1)      not null,
+   MaCB                 varchar(10)             not null,
+   MaSBTG               varchar(10)             null,
    TGDung               int                  null,
    GhiChu               text                 null,
    constraint PK_CHITIETCHUYENBAY primary key (STT, MaCB)
@@ -148,9 +148,9 @@ go
 /* Table: CHUYENBAY                                             */
 /*==============================================================*/
 create table CHUYENBAY (
-   MaCB                 char(10)             not null,
-   SBDi                 char(10)             null,
-   SBDen                char(10)             null,
+   MaCB                 varchar(10)             not null,
+   SBDi                 varchar(10)             null,
+   SBDen                varchar(10)             null,
    NgayGio              datetime             null,
    TGBay                int                  null,
    SLGhe1               int                  null,
@@ -169,9 +169,9 @@ go
 /*==============================================================*/
 create table KHACHHANG (
    MaKH                 int IDENTITY(1,1)    not null,
-   TenKH                nvarchar(50)         null,
-   CMND                 char(20)             null,
-   DienThoai            char(20)             null,
+   TenKH                nvarchar(255)         null,
+   CMND                 varchar(20)             null,
+   DienThoai            varchar(20)             null,
    constraint PK_KHACHHANG primary key (MaKH),
     constraint UQ_CMND unique (CMND)
 )
@@ -198,7 +198,7 @@ go
 /* Table: SANBAY                                                */
 /*==============================================================*/
 create table SANBAY (
-   MaSB                 char(10)             not null,
+   MaSB                 varchar(10)             not null,
    TenSB                nvarchar(50)         null,
    constraint PK_SANBAY primary key (MaSB)
 )
@@ -221,9 +221,9 @@ go
 create table VECHUYENBAY (
 	MaVe				int IDENTITY(1,1)    not null,
    Loai                 int                  not null,
-   MaCB                 char(10)             not null,
+   MaCB                 varchar(10)             not null,
    MaKH                 int             not null,
-   GheHang              char(10)             null,
+   GheHang              varchar(10)             null,
    NgayDat              datetime             null,
    GiaVe				int						null,
    constraint PK_VECHUYENBAY primary key (MaVe),
