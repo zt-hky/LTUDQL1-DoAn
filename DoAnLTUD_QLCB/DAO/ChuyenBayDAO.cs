@@ -40,6 +40,7 @@ namespace DAO
             }
             return chuyenBays;
         }
+        //=========================== 1660637 - TRANG =======================
         public List<ChuyenBay> DatCho_DanhSachChuyenBay()
         {
             List<ChuyenBay> ds = new List<ChuyenBay>();
@@ -52,5 +53,23 @@ namespace DAO
             }
             return ds;
         }
+        public DataTable TimKiemKhachHang(string CMND)
+        {
+            string query = "TimKiemKhachHang @CMND";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { CMND });
+            return data;
+        }
+        public ChuyenBay TimKiemChuyenBay(string MaCB)
+        {
+            string query = "TimKiemChuyenBay @MaCB";
+            ChuyenBay cb = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaCB });
+            if(data.Rows.Count !=0)
+            {
+                cb = new ChuyenBay(data.Rows[0]);
+            }
+            return cb;
+        }
+        //========================== Het phần của 1660647 - Trang =======================
     }
 }

@@ -135,7 +135,7 @@ go
 /* Table: CHITIETCHUYENBAY                                      */
 /*==============================================================*/
 create table CHITIETCHUYENBAY (
-   STT                  int IDENTITY(1,1)      not null,
+   STT                  int      not null,
    MaCB                 char(10)             not null,
    MaSBTG               char(10)             null,
    TGDung               int                  null,

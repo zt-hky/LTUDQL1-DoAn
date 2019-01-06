@@ -20,18 +20,6 @@ namespace DAO
                 return instance;
             }
         }
-        //Sai roi
-        public List<VeChuyenBay> DatCho_DanhSachChuyenBay()
-        {
-            List<VeChuyenBay> ds = new List<VeChuyenBay>();
-            string query = "DatCho_DanhSachChuyenBay";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach(DataRow item in data.Rows)
-            {
-                VeChuyenBay ve = new VeChuyenBay(item);
-                ds.Add(ve);
-            }
-            return ds;
-        }
+      
     }
 }
